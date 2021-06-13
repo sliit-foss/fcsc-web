@@ -1,3 +1,5 @@
+![fcsc-web](https://socialify.git.ci/sliit-foss/fcsc-web/image?description=1&forks=1&language=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Light)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -1,9 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>SLIIT Faculty of Students' Community | Official Website</title>
         <meta
@@ -11,17 +10,19 @@ export default function Home() {
           content="SLIIT Faculty of Students' Community | Official Website"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://unpkg.com/@primer/css@^16.0.0/dist/primer.css"
-          rel="stylesheet"
-        />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <br />{" "}
-          <a href="https://nextjs.org">SLIIT Faculty of Students' Community</a>
-        </h1>
+      <main>
+        <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+            Welcome{" "}
+          </h1>
+          <p className="mb-8 leading-relaxed">
+            <a href="https://nextjs.org">
+              SLIIT Faculty of Students' Community
+            </a>
+          </p>
+        </div>
       </main>
     </div>
   );

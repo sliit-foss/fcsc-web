@@ -1,9 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>SLIIT Faculty of Students' Community | Official Website</title>
         <meta
@@ -17,8 +16,8 @@ export default function Home() {
         />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <main>
+        <h1>
           Welcome to <br />{" "}
           <a href="https://nextjs.org">SLIIT Faculty of Students' Community</a>
         </h1>

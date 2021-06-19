@@ -5,7 +5,9 @@ module.exports = {
     gradientColorStops: (theme) => ({
       ...theme("colors"),
       orange: "#F15A24",
+      blue_fcsc: "#1c1364",
     }),
+    extend: {},
   },
   variants: {
     extend: {

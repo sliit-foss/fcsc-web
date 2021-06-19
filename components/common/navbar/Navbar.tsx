@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <header className="text-white body-font bg-gradient-to-r from-blue-500 via-purple-600 to-red-500">
+    <header className="text-white body-font bg-gradient-to-r from-blue-500 via-purple-600 to-orange">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
           <svg

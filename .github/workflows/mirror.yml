@@ -15,7 +15,7 @@ jobs:
     - name: Mirror to personal repository
       uses: cpina/github-action-push-to-another-repository@main
       env:
-        API_TOKEN_GITHUB: ${{ secrets.GITHUB_MIRROR_TOKEN }}
+        API_TOKEN_GITHUB: ${{ secrets.SITHUM_MIRROR_TOKEN }}
       with:
         source-directory: '.'
         destination-github-username: 'sithumonline'

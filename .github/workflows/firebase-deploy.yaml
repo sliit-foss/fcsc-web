@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '15.x'
       - run: yarn
-      - run: yarn run build:deploy
+      - run: yarn run build && yarn run export
       - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting

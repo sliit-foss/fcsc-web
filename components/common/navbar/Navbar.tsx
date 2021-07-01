@@ -39,5 +39,5 @@ export default function Navbar() {
         </button>
       </div>
     </header>
-  );
+  )
 }

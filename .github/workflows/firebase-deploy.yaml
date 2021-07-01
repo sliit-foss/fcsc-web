@@ -7,7 +7,6 @@ on:
 
 jobs:
   firebase-deploy:
-
     runs-on: ubuntu-latest
 
     steps:

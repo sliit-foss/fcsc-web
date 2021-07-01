@@ -25,7 +25,7 @@
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
     ],
     "no-unused-expressions": "error",
-    "semi": ["error", "always"],
+    "semi": ["error", "never"],
     "semi-style": ["error", "last"]
   }
 }

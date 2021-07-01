@@ -1,44 +1,44 @@
 {
-  "name": "fcsc-web",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "10.2.3",
-    "prettier": "^2.3.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/eslint-parser": "^7.14.7",
-    "@types/react": "17.0.11",
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
-    "@typescript-eslint/parser": "^4.28.1",
-    "autoprefixer": "^10.2.6",
-    "eslint": "^7.29.0",
-    "husky": "^7.0.0",
-    "postcss": "^8.3.2",
-    "tailwindcss": "^2.1.4",
-    "typescript": "4.3.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn run build"
-    }
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "yarn run lint:fix"
-    ],
-    "**/*.{md,mdx,json}": [
-      "prettier --write"
-    ]
-  }
+	"name": "fcsc-web",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"next": "10.2.3",
+		"prettier": "^2.3.2",
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.14.6",
+		"@babel/eslint-parser": "^7.14.7",
+		"@types/react": "17.0.11",
+		"@typescript-eslint/eslint-plugin": "^4.28.1",
+		"@typescript-eslint/parser": "^4.28.1",
+		"autoprefixer": "^10.2.6",
+		"eslint": "^7.29.0",
+		"husky": "^7.0.0",
+		"postcss": "^8.3.2",
+		"tailwindcss": "^2.1.4",
+		"typescript": "4.3.2"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"pre-push": "yarn run build"
+		}
+	},
+	"lint-staged": {
+		"**/*.{js,jsx,ts,tsx}": [
+			"prettier --write",
+			"yarn run lint:fix"
+		],
+		"**/*.{md,mdx,json}": [
+			"prettier --write"
+		]
+	}
 }

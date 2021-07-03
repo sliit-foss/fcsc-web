@@ -11,6 +11,7 @@ import foss from '../../public/foss.png'
 
 const events = [
   <Event
+    key=""
     image={foss}
     title="SEMESTER FINAL EXAMINATION - 2021"
     subtitle="Study Support Sessions IWT"
@@ -18,6 +19,7 @@ const events = [
     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
   />,
   <Event
+    key=""
     image={foss}
     title="Event 2 Title"
     subtitle="Event 2 Subtitle"
@@ -25,6 +27,7 @@ const events = [
     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
   />,
   <Event
+    key=""
     image={foss}
     title="Event 3 Title"
     subtitle="Event 3 Subtitle"
@@ -32,6 +35,7 @@ const events = [
     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt in culpa qui officia deserunt mollit anim id est laborum"
   />,
   <Event
+    key=""
     image={foss}
     title="Event 4 Title"
     subtitle="Event 4 Subtitle"
@@ -39,6 +43,7 @@ const events = [
     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt in culpa qui officia deserunt mollit tur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt inanim id est laborum"
   />,
   <Event
+    key=""
     image={foss}
     title="Event 5 Title"
     subtitle="Event 5 Subtitle"
@@ -46,6 +51,7 @@ const events = [
     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modtur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt intur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt intur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt ino consequat. Duis nulla pariatur. Eident, sunt in culpa qui officia deserunt mollit anim id est laborum"
   />,
   <Event
+    key=""
     image={foss}
     title="Event 5 Title"
     subtitle="Event 5 Subtitle"

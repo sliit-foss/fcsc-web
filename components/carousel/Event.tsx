@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { ImCalendar } from 'react-icons/im'
 
 interface EventProps {
+  key: string
   image: StaticImageData
   title: string
   subtitle: string

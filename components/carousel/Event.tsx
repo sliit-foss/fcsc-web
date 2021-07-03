@@ -14,16 +14,15 @@ export default function Footer(props: EventProps) {
   return (
     <a>
       <div className="flex flex-col md:flex-row p-12">
-        <div className="relative group flex items-center justify-end max-w-md mx-auto overflow-hidden shadow-md rounded-2xl ">
+        <div className="relative group flex items-center justify-end ">
           <Image
-            className="rounded-2xl"
+            className="rounded-2xl group-hover:opacity-80 transition-all ease-out duration-500"
             src={props.image}
             alt="SLIIT FOSS"
             quality={90}
             layout="intrinsic"
             placeholder="blur"
           />
-          <div className="absolute bottom-0 h-full w-full opacity-0 group-hover:opacity-20 transition-all ease-out duration-500 bg-gradient-to-r from-blue_fcsc via-orange to-blue_fcsc"></div>
         </div>
         <div className="p-10 px-0 md:px-10 w-full md:w-3/4  justify-items-center md:justify-items-start ">
           <h1 className="font-semibold text-3xl text-center md:text-left px-0">

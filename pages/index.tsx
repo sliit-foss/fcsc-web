@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import EventCarousel from '../components/carousel/EventCarousel'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
               SLIIT Faculty of Students' Community
             </a>
           </p>
+          <EventCarousel/>
         </div>
       </main>
     </div>

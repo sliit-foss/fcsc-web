@@ -10,7 +10,7 @@ interface EventProps {
   description: string
 }
 
-export default function Footer(props: EventProps) {
+export default function Event(props: EventProps) {
   return (
     <a>
       <div className="flex flex-col md:flex-row p-12">
@@ -18,7 +18,7 @@ export default function Footer(props: EventProps) {
           <Image
             className="rounded-2xl group-hover:opacity-80 transition-all ease-out duration-500"
             src={props.image}
-            alt="SLIIT FOSS"
+            alt="SLIIT FCSC"
             quality={90}
             layout="intrinsic"
             placeholder="blur"

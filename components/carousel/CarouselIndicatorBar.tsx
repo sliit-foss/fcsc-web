@@ -1,12 +1,9 @@
-import Image from 'next/image'
-import { ImCalendar } from 'react-icons/im'
-
 interface IndicatorProps {
   eventCount: number
   currentIndex: number
 }
 
-export default function CarouselIndicatorBar(props: IndicatorProps) {
+export default function CarouselIndicatorBar(props: IndicatorProps):JSX.Element {
   const selectedIndicatorCSS =
     'w-10 h-10 m-2 rounded-full hover:bg-orange-dark shadow hover:shadow-lg transition ease-in duration-200 bg-orange-dark'
   const unSelectedIndicatorCSS =
@@ -22,7 +19,7 @@ export default function CarouselIndicatorBar(props: IndicatorProps) {
   }
 
   //build indicator row
-  let indicators = []
+  const indicators = []
   for (let i = 0; i < props.eventCount; i++) {
     indicators.push(renderIndicator(i == props.currentIndex,i))
   }

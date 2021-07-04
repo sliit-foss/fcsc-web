@@ -1,1 +1,3 @@
-export function apiInstance() {}
+export function apiInstance(): boolean {
+  return true
+}

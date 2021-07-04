@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
-export default function Home() {
+export default function Home():JSX.Element {
   return (
     <div>
       <Head>
-        <title>SLIIT Faculty of Students' Community | Official Website</title>
+        <title>SLIIT Faculty of Students&apos; Community | Official Website</title>
         <meta
           name="description"
           content="SLIIT Faculty of Students' Community | Official Website"
@@ -19,7 +19,7 @@ export default function Home() {
           </h1>
           <p className="mb-8 leading-relaxed">
             <a href="https://nextjs.org">
-              SLIIT Faculty of Students' Community
+              SLIIT Faculty of Students&apos; Community
             </a>
           </p>
         </div>

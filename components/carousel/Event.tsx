@@ -10,7 +10,7 @@ interface EventProps {
   description: string
 }
 
-export default function Event(props: EventProps) {
+export default function Event(props: EventProps):JSX.Element {
   return (
     <a>
       <div className="flex flex-col md:flex-row p-12">

@@ -60,7 +60,7 @@ const events = [
   />,
 ]
 
-export default function Events() {
+export default function Events():JSX.Element {
   return (
     <div className="justify-items-center ">
       <h1

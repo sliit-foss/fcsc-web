@@ -12,7 +12,7 @@ interface EventCarouselProps {
   eventData: Array<JSX.Element>
 }
 
-export default function EventCarousel(props: EventCarouselProps) {
+export default function EventCarousel(props: EventCarouselProps):JSX.Element {
   useEffect(() => {
     Aos.init({ duration: 1000 })
   }, [])

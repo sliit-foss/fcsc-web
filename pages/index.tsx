@@ -1,10 +1,12 @@
 import Head from 'next/head'
 
-export default function Home():JSX.Element {
+export default function Home(): JSX.Element {
   return (
     <div>
       <Head>
-        <title>SLIIT Faculty of Students&apos; Community | Official Website</title>
+        <title>
+          SLIIT Faculty of Students&apos; Community | Official Website
+        </title>
         <meta
           name="description"
           content="SLIIT Faculty of Students' Community | Official Website"

@@ -104,8 +104,8 @@ const Footer = (): JSX.Element => {
         <span
           className="md:absolute md:mb-2 md:-mt-3 md:left-9 sm:absolute lg:-mt-10 left-5 absolute w-11/12 bg-fcsc-orange h-1 rounded-md"/>
         <h5 className="pt-3 mt-3 md:pb-3 lg:mt-2 lg:pb-2 pb-2 text-white font-semibold">
-          Copyright © 2021 - All Rights Reserved | Powered By SLIIT FOSS
-          Community
+          Copyright © 2021 - All Rights Reserved | Powered By <a href="https://sliitfoss.org/">SLIIT FOSS
+          Community</a>
         </h5>
       </div>
     </div>

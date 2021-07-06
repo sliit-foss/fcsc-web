@@ -11,9 +11,12 @@ module.exports = {
       white: '#ffffff',
       green: '#18db4d',
       orange: {
-        light: '#feb6a8',
-        dark: '#fd5d3f',
+        light: '#fd5d3f',
+        dark: '#F15A24'
       },
+      blue: {
+        fcsc: '#1c1364'
+      }
     },
     extend: {},
   },

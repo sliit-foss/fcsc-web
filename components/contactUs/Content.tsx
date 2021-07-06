@@ -43,7 +43,7 @@ export default function Content(props: ContentProps): JSX.Element {
                 <div className="bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200  flex flex-col my-6 py-6  rounded-lg shadow-lg ">
                   <ImLocation2
                     size={30}
-                    color="fcsc-orange"
+                    color="#1c1364"
                     className="w-full my-3 mt-2"
                   />
                   <h2 className="text-base font-bold text-center">
@@ -56,7 +56,7 @@ export default function Content(props: ContentProps): JSX.Element {
                 <div className="bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200 flex flex-col my-6 py-6  rounded-lg shadow-lg">
                   <MdEmail
                     size={30}
-                    color="fcsc-orange"
+                    color="#1c1364"
                     className="w-full my-3 mt-2"
                   />
                   <h2 className="text-base font-bold text-center">Email Us</h2>

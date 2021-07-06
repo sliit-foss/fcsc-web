@@ -40,10 +40,10 @@ export default function Content(props: ContentProps): JSX.Element {
           <div className="w-full md:w-1/2">
             <div className="w-full rounded-lg flex flex-row  ">
               <div className="flex flex-col w-full md:mr-16 ">
-                <div className="bg-gray-200 hover:bg-orange-light transition ease-in duration-200  flex flex-col my-6 py-6  rounded-lg shadow-lg ">
+                <div className="bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200  flex flex-col my-6 py-6  rounded-lg shadow-lg ">
                   <ImLocation2
                     size={30}
-                    color="#fd5d3f"
+                    color="fcsc-orange"
                     className="w-full my-3 mt-2"
                   />
                   <h2 className="text-base font-bold text-center">
@@ -53,10 +53,10 @@ export default function Content(props: ContentProps): JSX.Element {
                     SLIIT Malabe
                   </h2>
                 </div>
-                <div className="bg-gray-200 hover:bg-orange-light transition ease-in duration-200 flex flex-col my-6 py-6  rounded-lg shadow-lg">
+                <div className="bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200 flex flex-col my-6 py-6  rounded-lg shadow-lg">
                   <MdEmail
                     size={30}
-                    color="#fd5d3f"
+                    color="fcsc-orange"
                     className="w-full my-3 mt-2"
                   />
                   <h2 className="text-base font-bold text-center">Email Us</h2>
@@ -74,14 +74,14 @@ export default function Content(props: ContentProps): JSX.Element {
                 id="name"
                 name="name"
                 placeholder="Name"
-                className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-orange-light  text-base outline-none text-gray-700 py-1 px-3 mb-5 md:mb-0 mr-0 md:mr-5 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light  text-base outline-none text-gray-700 py-1 px-3 mb-5 md:mb-0 mr-0 md:mr-5 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
               />
               <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Email"
-                className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-orange-light text-base outline-none text-gray-700 py-1 px-3 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light text-base outline-none text-gray-700 py-1 px-3 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
               />
             </div>
             <div className="relative mb-6">
@@ -90,7 +90,7 @@ export default function Content(props: ContentProps): JSX.Element {
                 id="subject"
                 name="subject"
                 placeholder="Subject"
-                className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-orange-light text-base outline-none text-gray-700 py-1 px-3 shadow-lg leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light text-base outline-none text-gray-700 py-1 px-3 shadow-lg leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
             <div className="relative mb-0">
@@ -98,7 +98,7 @@ export default function Content(props: ContentProps): JSX.Element {
                 id="message"
                 name="message"
                 placeholder="Message"
-                className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-orange-light h-52 text-base outline-none text-gray-700 py-1 pt-2 px-3 resize-none leading-6 shadow-lg transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light h-52 text-base outline-none text-gray-700 py-1 pt-2 px-3 resize-none leading-6 shadow-lg transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>

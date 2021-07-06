@@ -25,9 +25,9 @@ export default function Home(): JSX.Element {
             <a href="https://nextjs.org">
               SLIIT Faculty of Students&apos; Community
             </a>
-            <LaunchButton/>
-            <FAQ/>
           </p>
+          <LaunchButton/>
+          <FAQ/>
         </div>
       </main>
     </div>

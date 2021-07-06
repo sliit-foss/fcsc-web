@@ -13,9 +13,15 @@ module.exports = {
       orange: {
         light: '#feb6a8',
         dark: '#fd5d3f',
+        dark_lightShade: '#ff6d52',
+      },
+      blue:{
+        dark:'#302d63',
+        dark_lightShade:'#3d3a75',
       },
       gray:{
         light:'#e9e8f0',
+        dark:'#3b3b3b',
       }
     },
     boxShadow: {

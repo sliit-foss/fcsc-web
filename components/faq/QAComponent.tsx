@@ -12,7 +12,7 @@ export default function QAComponent(props: QAProps): JSX.Element {
     setVisibility(!visibility)
   }
   const visibleAnsCSS =
-    'mt-4 px-8 py-10 shadow-noOffset rounded-lg transition-height ease-in duration-200 bg-orange-dark'
+    'mt-4 px-8 py-10 shadow-noOffset rounded-lg transition-height ease-in duration-200 bg-fcsc-orange'
   const inVisibleAnsCSS =
     'mt-4 px-8 py-0 shadow-noOffset rounded-lg transition-height ease-in duration-200 h-0'
 
@@ -23,7 +23,7 @@ export default function QAComponent(props: QAProps): JSX.Element {
         onClick={toggleVisibility}
       >
         <div className="flex flex-row items-center justify-between content-between">
-          <div className="text-lg font-semibold group-hover:text-orange-dark">
+          <div className="text-lg font-semibold group-hover:text-fcsc-orange">
             {props.question}
           </div>
           <TiArrowSortedDown

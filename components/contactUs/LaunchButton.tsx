@@ -20,7 +20,7 @@ export default function LaunchButton(): JSX.Element {
       </div>
 
       <div
-        className="bg-orange-dark px-10 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 text-white cursor-pointer transition ease-in duration-200"
+        className="bg-fcsc-orange px-10 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 text-white cursor-pointer transition ease-in duration-200"
         onClick={toggleVisibility}
       >
         Contact Us

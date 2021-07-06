@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import LaunchButton from "../components/contactUs/LaunchButton";
 
 export default function Home(): JSX.Element {
   return (
@@ -23,6 +24,7 @@ export default function Home(): JSX.Element {
             <a href="https://nextjs.org">
               SLIIT Faculty of Students&apos; Community
             </a>
+            <LaunchButton/>
           </p>
         </div>
       </main>

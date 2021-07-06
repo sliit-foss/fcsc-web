@@ -1,0 +1,120 @@
+import { AiOutlineClose } from 'react-icons/ai'
+import { ImLocation2 } from 'react-icons/im'
+import { MdEmail } from 'react-icons/md'
+
+interface ContentProps {
+  show: boolean
+  toggleFunction: () => void
+}
+
+export default function Content(props: ContentProps): JSX.Element {
+  return (
+    <section
+      className={
+        props.show
+          ? 'opacity-100 transition ease-in duration-200'
+          : 'opacity-0 transition ease-in duration-200'
+      }
+    >
+      <section
+        style={{ backgroundImage: 'url(/contact/BG.png)' }}
+        className="bg-no-repeat bg-right-top bg-cover bg-white rounded-2xl shadow-xl px-10 md:px-16 py-10 pb-0 md:pb-10 w-full justify-center items-center"
+      >
+        <div className="w-full flex flex-row justify-end">
+          <div
+            className="mr-0 md:mr-5 m-5 my-2 mt-0 cursor-pointer transform hover:scale-105 transition ease-in duration-100 fill-current text-orange-dark hover:text-gray-dark"
+            onClick={props.toggleFunction}
+          >
+            <AiOutlineClose size={40} />
+          </div>
+        </div>
+        <div className="">
+          <div className="text-3xl font-bold md:text-left text-center mb-5 ">
+            Contact Us
+          </div>
+          <div className="text-base font-bold md:text-left text-center mb-5 ">
+            Fill up the form and our Team will get back to you within 24 hours.
+          </div>
+        </div>
+        <div className="container flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2">
+            <div className="w-full rounded-lg flex flex-row  ">
+              <div className="flex flex-col w-full md:mr-16 ">
+                <div className="bg-gray-light hover:bg-orange-light transition ease-in duration-200  flex flex-col my-6 py-6  rounded-lg shadow-lg ">
+                  <ImLocation2
+                    size={30}
+                    color="#fd5d3f"
+                    className="w-full my-3 mt-2"
+                  />
+                  <h2 className="text-base font-bold text-center">
+                    Our Address
+                  </h2>
+                  <h2 className="text-base font-medium text-center">
+                    SLIIT Malabe
+                  </h2>
+                </div>
+                <div className="bg-gray-light hover:bg-orange-light transition ease-in duration-200 flex flex-col my-6 py-6  rounded-lg shadow-lg">
+                  <MdEmail
+                    size={30}
+                    color="#fd5d3f"
+                    className="w-full my-3 mt-2"
+                  />
+                  <h2 className="text-base font-bold text-center">Email Us</h2>
+                  <p className="text-base font-medium text-center truncate">
+                    students.foc@sliit.lk
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full md:w-3/4  flex flex-col justify-center">
+            <div className="flex flex-col md:flex-row mt-2 mb-6">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                className="w-full bg-white rounded border border-gray-300 focus:border-orange-dark focus:ring-2 focus:ring-orange-light  text-base outline-none text-gray-700 py-1 px-3 mb-5 md:mb-0 mr-0 md:mr-5 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
+              ></input>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                className="w-full bg-white rounded border border-gray-300 focus:border-orange-dark focus:ring-2 focus:ring-orange-light text-base outline-none text-gray-700 py-1 px-3 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
+              ></input>
+            </div>
+            <div className="relative mb-6">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                className="w-full bg-white rounded border border-gray-300 focus:border-orange-dark focus:ring-2 focus:ring-orange-light text-base outline-none text-gray-700 py-1 px-3 shadow-lg leading-8 transition-colors duration-200 ease-in-out"
+              ></input>
+            </div>
+            <div className="relative mb-0">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message"
+                className="w-full bg-white rounded border border-gray-300 focus:border-orange-dark focus:ring-2 focus:ring-orange-light h-52 text-base outline-none text-gray-700 py-1 pt-2 px-3 resize-none leading-6 shadow-lg transition-colors duration-200 ease-in-out"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row mt-5 mb-10 md:mb-0 pb-10 md:pb-0 justify-end">
+          <button className="text-white bg-blue-dark border-0 py-2 px-14 focus:outline-none shadow-md hover:shadow-lg hover:bg-blue-dark_lightShade rounded text-lg mb-6 md:mb-0 mr-0 md:mr-5 transition ease-in duration-200">
+            Send
+          </button>
+          <button
+            className="text-white bg-orange-dark border-0 py-2 px-14 focus:outline-none shadow-md hover:shadow-lg hover:bg-orange-dark_lightShade rounded text-lg transition ease-in duration-200"
+            onClick={props.toggleFunction}
+          >
+            Cancel
+          </button>
+        </div>
+      </section>
+    </section>
+  )
+}

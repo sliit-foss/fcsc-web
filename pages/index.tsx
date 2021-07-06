@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import LaunchButton from "../components/contactUs/LaunchButton";
+import LaunchButton from "../components/contactUs/LaunchButton"
 
 export default function Home(): JSX.Element {
   return (

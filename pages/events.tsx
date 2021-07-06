@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
 //components
-import Event from '../components/carousel/Event'
-import EventCarousel from '../components/carousel/EventCarousel'
+import Event from '../components/carousel/event/Event'
+import EventCarousel from '../components/carousel/event/EventCarousel'
 
 //images
 import background from '../public/events/BG.png'
@@ -64,8 +64,8 @@ export default function Events(): JSX.Element {
   return (
     <div className="justify-items-center ">
       <h1
-        className="title-font sm:text-4xl text-3xl mb-14 font-medium text-white w-3/4 absolute ml-auto mr-auto left-0 right-0 p-0 md:p-14 z-20"
-        style={{ marginTop: '8%' }}
+        className="title-font sm:text-4xl text-3xl mb-14 font-medium text-white w-3/4 absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
+        style={{ marginTop: '8%', width: '77%' }}
       >
         EVENTS
       </h1>
@@ -99,14 +99,16 @@ export default function Events(): JSX.Element {
             pariatur. Eident
           </p>
         </div>
-        <Image
-          className=""
-          src={calendar}
-          alt="SLIIT FCSC"
-          quality={90}
-          layout="intrinsic"
-          placeholder="blur"
-        />
+        <div className="w-3/4 md:w-4/12">
+          <Image
+            className=""
+            src={calendar}
+            alt="SLIIT FCSC"
+            quality={90}
+            layout="intrinsic"
+            placeholder="blur"
+          />
+        </div>
       </div>
       <EventCarousel title="UPCOMING EVENTS" eventData={events} />
       <EventCarousel title="MAIN EVENTS" eventData={events} />

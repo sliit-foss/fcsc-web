@@ -1,5 +1,5 @@
 interface IndicatorProps {
-  eventCount: number
+  count: number
   currentIndex: number
 }
 
@@ -22,7 +22,7 @@ export default function CarouselIndicatorBar(
 
   //build indicator row
   const indicators: JSX.Element[] = []
-  for (let i = 0; i < props.eventCount; i++) {
+  for (let i = 0; i < props.count; i++) {
     indicators.push(renderIndicator(i == props.currentIndex, i))
   }
 

@@ -20,6 +20,7 @@ module.exports = {
         dark_lightShade:'#3d3a75',
       },
       gray:{
+        lighter:'#f8f7ff',
         light:'#e9e8f0',
         dark:'#3b3b3b',
       }
@@ -34,6 +35,8 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
       noOffset: '0 0px 10px 0px rgba(0, 0, 0, 0.25)',
+      noOffset_lighter: '0 0px 5px 0px rgba(0, 0, 0, 0.25)',
+      noOffset_thicker: '0 0px 8px 4px rgba(0, 0, 0, 0.3)',
     },
     extend: {},
   },

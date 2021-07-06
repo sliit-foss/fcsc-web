@@ -11,6 +11,11 @@ module.exports = {
       white: '#ffffff',
       green: '#18db4d',
       orange: {
+        light: '#fd5d3f',
+        dark: '#F15A24'
+      },
+      blue: {
+        fcsc: '#1c1364',
         light: '#feb6a8',
         dark: '#fd5d3f',
         dark_lightShade: '#ff6d52',

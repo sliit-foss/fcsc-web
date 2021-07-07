@@ -40,11 +40,10 @@ export default function Content(props: ContentProps): JSX.Element {
           <div className="w-full md:w-1/2">
             <div className="w-full rounded-lg flex flex-row  ">
               <div className="flex flex-col w-full md:mr-16 ">
-                <div className="bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200  flex flex-col my-6 py-6  rounded-lg shadow-lg ">
+                <div className="group bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200  flex flex-col my-6 py-6  rounded-lg shadow-lg ">
                   <ImLocation2
                     size={30}
-                    color="#1c1364"
-                    className="w-full my-3 mt-2"
+                    className="w-full my-3 mt-2 fill-current text-fcsc-orange group-hover:text-black transition ease-in duration-200"
                   />
                   <h2 className="text-base font-bold text-center">
                     Our Address
@@ -53,11 +52,10 @@ export default function Content(props: ContentProps): JSX.Element {
                     SLIIT Malabe
                   </h2>
                 </div>
-                <div className="bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200 flex flex-col my-6 py-6  rounded-lg shadow-lg">
+                <div className="group bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200 flex flex-col my-6 py-6  rounded-lg shadow-lg">
                   <MdEmail
                     size={30}
-                    color="#1c1364"
-                    className="w-full my-3 mt-2"
+                    className="w-full my-3 mt-2 fill-current text-fcsc-orange group-hover:text-black transition ease-in duration-200"
                   />
                   <h2 className="text-base font-bold text-center">Email Us</h2>
                   <p className="text-base font-medium text-center truncate">

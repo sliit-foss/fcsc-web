@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import LaunchButton from "../components/contactUs/LaunchButton"
-import FAQ from "../components/faq/FAQ"
+import LaunchButton from '../components/contactUs/LaunchButton'
+import FAQ from '../components/faq/FAQ'
 
 export default function Home(): JSX.Element {
   return (
@@ -26,8 +26,8 @@ export default function Home(): JSX.Element {
               SLIIT Faculty of Students&apos; Community
             </a>
           </p>
-          <LaunchButton/>
-          <FAQ/>
+          <LaunchButton />
+          <FAQ />
         </div>
       </main>
     </div>

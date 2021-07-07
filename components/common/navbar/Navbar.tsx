@@ -29,7 +29,7 @@ export default function Navbar(): JSX.Element {
           <Link href="/events">
             <a className="mr-5 hover:text-gray-900">Event</a>
           </Link>
-          <Link href="/">
+          <Link href="/notices">
             <a className="mr-5 hover:text-gray-900">Notice</a>
           </Link>
           <Link href="/">

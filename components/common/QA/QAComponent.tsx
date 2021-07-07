@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { TiArrowSortedDown } from 'react-icons/ti'
 
-interface QAProps {
-  question: string
-  answer: string
+export interface QAProps {
+  title: string
+  body: string
 }
 
 export default function QAComponent(props: QAProps): JSX.Element {
@@ -19,12 +19,12 @@ export default function QAComponent(props: QAProps): JSX.Element {
   return (
     <div className="flex flex-col w-full py-2">
       <div
-        className="group px-8 py-4 bg-gray-light shadow-md rounded-lg cursor-pointer"
+        className="group px-8 py-4 bg-gray-200 shadow-md rounded-lg cursor-pointer"
         onClick={toggleVisibility}
       >
         <div className="flex flex-row items-center justify-between content-between">
           <div className="text-lg font-semibold group-hover:text-fcsc-orange">
-            {props.question}
+            {props.title}
           </div>
           <TiArrowSortedDown
             size={25}
@@ -40,11 +40,11 @@ export default function QAComponent(props: QAProps): JSX.Element {
         <div
           className={
             visibility
-              ? 'text-white transition ease-in duration-200'
-              : 'text-white transition ease-in duration-200'
+              ? 'text-white opacity-100 transition ease-in duration-200'
+              : `text-white opacity-0 pointer-events-none select-none transition ease-in duration-200`
           }
         >
-          {props.answer}
+          {props.body}
         </div>
       </div>
     </div>

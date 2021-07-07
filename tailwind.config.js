@@ -2,31 +2,13 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    gradientColorStops: (theme) => ({
-      ...theme('colors'),
-      orange: '#F15A24',
-      blue_fcsc: '#1c1364',
-    }),
     colors: {
       white: '#ffffff',
-      green: '#18db4d',
-      orange: {
-        light: '#fd5d3f',
-        dark: '#F15A24'
-      },
-      blue: {
-        fcsc: '#1c1364',
-        light: '#feb6a8',
-        dark: '#fd5d3f',
-        dark_lightShade: '#ff6d52',
-      },
-      blue:{
-        dark:'#302d63',
-        dark_lightShade:'#3d3a75',
-      },
-      gray:{
-        light:'#e9e8f0',
-        dark:'#3b3b3b',
+      fcsc:{
+        blue: '#1c1364',  // genuine fcsc blue aka blue_dark
+        blue_light: '#33306f',
+        orange: '#f15a24',  // genuine fcsc orange aka orange_dark
+        orange_light: '#f86b57'
       }
     },
     boxShadow: {

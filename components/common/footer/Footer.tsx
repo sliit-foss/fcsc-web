@@ -5,8 +5,8 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaRegEnvelope, FaTwitter } from 'r
 
 const Footer = (): JSX.Element => {
   return (
-    <div className="lg:flex lg:flex-col bg-blue-fcsc">
-      <div className="lg:flex lg:flex-row bg-blue-fcsc lg:h-60">
+    <div className="lg:flex lg:flex-col bg-fcsc-blue">
+      <div className="lg:flex lg:flex-row bg-fcsc-blue lg:h-60">
         <div className="sm:w-full lg:w-1/3">
           <div className="h-24 flex flex-row items-center">
             <div className="bg-white w-56 ml-10 h-16 flex flex-row justify-around items-center rounded-lg text-white">
@@ -88,7 +88,7 @@ const Footer = (): JSX.Element => {
                     className="p-2 mt-5 w-3/4 rounded-lg block text-black shadow-md"
                   />
                   <button
-                    className="w-11 h-11  bg-orange-dark mt-5 shadow-md hover:bg-gradientPurple duration-150 transition ease-in font-medium rounded-lg block relative -left-7">
+                    className="w-11 h-11  bg-fcsc-orange mt-5 shadow-md hover:bg-gradientPurple duration-150 transition ease-in font-medium rounded-lg block relative -left-7">
                     <FaRegEnvelope
                       className="transform -rotate-12  relative top-0 left-0 right-0 bottom-0 m-auto"
                       size="25"
@@ -100,12 +100,12 @@ const Footer = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <div className="lg:flex lg:flex-col justify-around lg:items-center text-center bg-blue-fcsc">
+      <div className="lg:flex lg:flex-col justify-around lg:items-center text-center bg-fcsc-blue">
         <span
-          className="md:absolute md:mb-2 md:-mt-3 md:left-9 sm:absolute lg:-mt-10 left-5 absolute w-11/12 bg-orange-dark h-1 rounded-md"/>
+          className="md:absolute md:mb-2 md:-mt-3 md:left-9 sm:absolute lg:-mt-10 left-5 absolute w-11/12 bg-fcsc-orange h-1 rounded-md"/>
         <h5 className="pt-3 mt-3 md:pb-3 lg:mt-2 lg:pb-2 pb-2 text-white font-semibold">
-          Copyright © 2021 - All Rights Reserved | Powered By SLIIT FOSS
-          Community
+          Copyright © 2021 - All Rights Reserved | Powered By <a href="https://sliitfoss.org/">SLIIT FOSS
+          Community</a>
         </h5>
       </div>
     </div>

@@ -5,14 +5,15 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 //components
-import CarouselIndicatorBar from './CarouselIndicatorBar'
+import CarouselIndicatorBar from '../CarouselIndicatorBar'
 
-interface EventCarouselProps {
-  title: string
-  eventData: Array<JSX.Element>
+interface NoticeCarouselProps {
+  noticeData: Array<JSX.Element>
 }
 
-export default function EventCarousel(props: EventCarouselProps):JSX.Element {
+export default function NoticeCarousel(
+  props: NoticeCarouselProps
+): JSX.Element {
   useEffect(() => {
     Aos.init({ duration: 1000 })
   }, [])
@@ -26,13 +27,10 @@ export default function EventCarousel(props: EventCarouselProps):JSX.Element {
   return (
     <div
       data-aos="fade-up"
-      className="flex px-5 py-14 md:py-24 items-center justify-center flex-col"
+      className="flex px-5 pb-14 md:pb-24 pt-5 md:pt-10 items-center justify-center flex-col"
     >
-      <h1 className="title-font sm:text-4xl text-3xl mb-14 font-medium text-gray-900">
-        {props.title}
-      </h1>
       <Carousel
-        className="shadow-xl hover:shadow-2xl rounded-3xl transition ease-in duration-200"
+        className="transition ease-in duration-200"
         showThumbs={false}
         showArrows={false}
         showStatus={false}
@@ -46,10 +44,10 @@ export default function EventCarousel(props: EventCarouselProps):JSX.Element {
         width={(carouselWidth * 100).toString() + 'vw'}
         onChange={onEventChange}
       >
-        {props.eventData}
+        {props.noticeData}
       </Carousel>
       <CarouselIndicatorBar
-        eventCount={props.eventData.length}
+        count={props.noticeData.length}
         currentIndex={currentCarouselIndex}
       />
     </div>

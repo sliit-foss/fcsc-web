@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { TiArrowSortedDown } from 'react-icons/ti'
 
-interface QAProps {
-  question: string
-  answer: string
+export interface QAProps {
+  title: string
+  body: string
 }
 
 export default function QAComponent(props: QAProps): JSX.Element {
@@ -12,19 +12,19 @@ export default function QAComponent(props: QAProps): JSX.Element {
     setVisibility(!visibility)
   }
   const visibleAnsCSS =
-    'mt-4 px-8 py-10 shadow-noOffset rounded-lg transition-height ease-in duration-200 bg-orange-dark'
+    'mt-4 px-8 py-10 shadow-noOffset rounded-lg transition-height ease-in duration-200 bg-fcsc-orange'
   const inVisibleAnsCSS =
     'mt-4 px-8 py-0 shadow-noOffset rounded-lg transition-height ease-in duration-200 h-0'
 
   return (
     <div className="flex flex-col w-full py-2">
       <div
-        className="group px-8 py-4 bg-gray-light shadow-md rounded-lg cursor-pointer"
+        className="group px-8 py-4 bg-gray-200 shadow-md rounded-lg cursor-pointer"
         onClick={toggleVisibility}
       >
         <div className="flex flex-row items-center justify-between content-between">
-          <div className="text-lg font-semibold group-hover:text-orange-dark">
-            {props.question}
+          <div className="text-lg font-semibold group-hover:text-fcsc-orange">
+            {props.title}
           </div>
           <TiArrowSortedDown
             size={25}
@@ -40,11 +40,11 @@ export default function QAComponent(props: QAProps): JSX.Element {
         <div
           className={
             visibility
-              ? 'text-white transition ease-in duration-200'
-              : 'text-white transition ease-in duration-200'
+              ? 'text-white opacity-100 transition ease-in duration-200'
+              : `text-white opacity-0 pointer-events-none select-none transition ease-in duration-200`
           }
         >
-          {props.answer}
+          {props.body}
         </div>
       </div>
     </div>

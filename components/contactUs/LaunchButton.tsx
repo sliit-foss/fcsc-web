@@ -25,9 +25,8 @@ export default function LaunchButton(): JSX.Element {
       )}
 
       <div
-        className="w-10/12 md:w-3/4 fixed top-1/2 md:top-1/2 sm:top-full left-1/2 z-30 scrollbar-hide"
+        className="w-10/12 md:w-3/4 fixed top-full md:top-1/2 sm:top-full left-1/2 transform -translate-x-2/4 -translate-y-full md:-translate-y-2/4 z-30 scrollbar-hide"
         style={{
-          transform: 'translate(-50%, -50%)',
           pointerEvents: !visibility ? 'none' : 'all',
           overflow: 'auto',
           maxHeight: '100vh',

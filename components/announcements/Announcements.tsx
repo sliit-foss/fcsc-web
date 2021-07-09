@@ -1,6 +1,8 @@
-import QAComponent, { QAProps } from '../common/QA/QAComponent'
-
+import { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import { GiSpeaker } from 'react-icons/gi'
+import QAComponent, { QAProps } from '../common/QA/QAComponent'
 
 interface AnnouncementProps {
   title: string
@@ -8,8 +10,15 @@ interface AnnouncementProps {
 }
 
 export default function Announcements(props: AnnouncementProps): JSX.Element {
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  }, [])
+
   return (
-    <section className="flex flex-col md:flex-row justify-center items-center ">
+    <section
+      className="flex flex-col md:flex-row justify-center items-center"
+      data-aos="fade-up"
+    >
       <div className="flex flex-col py-10 w-10/12 px-3">
         <div className="flex flex-col md:flex-row pb-4 md:pb-0 items-center text-2xl font-semibold md:text-left text-center mb-10 bg-gray-100 rounded-lg shadow-noOffset_lighter">
           <GiSpeaker size={70} className="mx-5" />

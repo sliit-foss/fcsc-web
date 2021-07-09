@@ -5,7 +5,7 @@ import Event from '../components/carousel/event/Event'
 import EventCarousel from '../components/carousel/event/EventCarousel'
 
 //images
-import background from '../public/events/BG.png'
+import background from '../public/shapes/1.png'
 import calendar from '../public/events/eventCalendar.png'
 import foss from '../public/events/foss.png'
 
@@ -64,7 +64,7 @@ export default function Events(): JSX.Element {
   return (
     <div className="justify-items-center ">
       <h1
-        className="title-font sm:text-4xl text-3xl mb-14 font-medium text-white w-3/4 absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
+        className="title-font sm:text-4xl text-3xl font-medium text-white w-3/4 absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
         style={{ marginTop: '8%', width: '77%' }}
       >
         EVENTS

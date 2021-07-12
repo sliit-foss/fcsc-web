@@ -36,7 +36,7 @@ export default function FAQ(): JSX.Element {
 
   return (
     <section
-      className="flex flex-col md:flex-row items-center "
+      className="flex flex-col md:flex-row items-center z-0"
       data-aos="fade-up"
     >
       <div className="w-10/12 md:w-9/12">

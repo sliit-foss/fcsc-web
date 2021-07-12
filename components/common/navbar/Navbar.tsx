@@ -58,7 +58,7 @@ function Navbar(): JSX.Element {
           ))}
         </div>
         <div
-          className="block lg:hidden z-20 cursor-pointer transition ease-in  sm:mr-3  md:mr-3 lg:mr-0"
+          className="block lg:hidden z-20 cursor-pointer transition ease-in  mr-3  md:mr-3 lg:mr-0"
           onClick={toggleNav}
         >
           {!isOpen ? (

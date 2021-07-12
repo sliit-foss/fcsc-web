@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function About():JSX.Element {
+export default function About(): JSX.Element {
   return (
     <div>
       <Head>

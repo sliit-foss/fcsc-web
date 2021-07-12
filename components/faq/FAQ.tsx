@@ -1,3 +1,6 @@
+import { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import Image from 'next/image'
 import QAComponent, { QAProps } from '../common/QA/QAComponent'
 
@@ -5,6 +8,10 @@ import QAComponent, { QAProps } from '../common/QA/QAComponent'
 import imgFaq from '../../public/faq/FAQ.png'
 
 export default function FAQ(): JSX.Element {
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  }, [])
+
   const data: Array<QAProps> = [
     {
       title: 'Lorem ipsum dolor sit amet',
@@ -28,8 +35,11 @@ export default function FAQ(): JSX.Element {
   ]
 
   return (
-    <section className="flex flex-col md:flex-row items-center ">
-      <div className="w-10/12 md:w-8/12">
+    <section
+      className="flex flex-col md:flex-row items-center "
+      data-aos="fade-up"
+    >
+      <div className="w-10/12 md:w-9/12">
         <Image
           src={imgFaq}
           alt="SLIIT FCSC"
@@ -39,10 +49,10 @@ export default function FAQ(): JSX.Element {
         />
       </div>
       <div
-        className="flex flex-col py-10 px-8 md:px-14 "
+        className="flex flex-col py-10 px-8 md:px-14 md:pr-0 "
         style={{ width: '85vw' }}
       >
-        <h2 className="text-4xl sm:text-5xl font-bold md:text-left text-center mb-10 md:ml-7">
+        <h2 className="text-3xl sm:text-4xl font-bold md:text-left text-center mb-10 md:ml-7">
           FAQs
         </h2>
         <div>

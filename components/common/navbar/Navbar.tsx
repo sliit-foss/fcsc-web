@@ -5,13 +5,8 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-// animations
-import {
-  mobileNavVariants,
-  navElementsVariants,
-} from '../../../animations/index'
+import { mobileNavVariants, navElementsVariants } from '../../../animations'
 
-// icons
 import { HiMenuAlt2 } from 'react-icons/hi'
 import { RiCloseFill } from 'react-icons/ri'
 

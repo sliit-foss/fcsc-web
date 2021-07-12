@@ -28,9 +28,10 @@ function Navbar(): JSX.Element {
   ]
 
   return (
-    <header className="sticky top-0 flex flex-row w-full h-14 justify-between items-center shadow-noOffset z-10">
-      <div className="w-28 h-12 flex flex-row items-center ml-9">
-        <Image src={fcscLogo} alt="FCSC Logo" className="w-max" />
+    <header
+      className="sticky top-0 flex flex-row w-full h-14 justify-between items-center shadow-noOffset z-30 bg-white">
+      <div className="w-28 h-12 flex flex-row items-center ml-9 z-10 bg-white">
+        <Image src={fcscLogo} alt="FCSC Logo" className="w-max"/>
       </div>
       <div className="flex flex-row justify-end  items-center w-4/6 h-14 bg-white">
         <div className="flex flex-row mr-2">

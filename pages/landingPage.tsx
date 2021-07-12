@@ -98,8 +98,8 @@ export default function LandingPage(): JSX.Element {
           width: '40%',
         }}
       >
-        <div className="sm:mb-3 md:mb-3 flex flex-row">
-          <FaFacebook className="fill-current text-white mb-3 mr-3" size="22" />
+        <div className="sm:mb-3 md:mb-3 flex flex-row z-0">
+          <FaFacebook className="fill-current text-white mb-3 mr-3" size="22"/>
           <FaInstagram
             className="fill-current text-white mb-3  mr-3"
             size="22"
@@ -108,9 +108,9 @@ export default function LandingPage(): JSX.Element {
             className="fill-current text-white mb-3  mr-3"
             size="22"
           />
-          <FaTwitter className="fill-current text-white mb-3  mr-3" size="22" />
+          <FaTwitter className="fill-current text-white mb-3  mr-3" size="22"/>
         </div>
-        <h1 className="title-font lg:text-4xl  text-xl font-medium text-white ">
+        <h1 className="title-font lg:text-4xl  text-xl font-medium text-white z-0">
           Faculty of Computing Students Community
         </h1>
         <p className="my-5 text-white text-left text-sm">
@@ -118,7 +118,9 @@ export default function LandingPage(): JSX.Element {
           adipiscing elit.
         </p>
         <a href="#faq">
-          <div className="bg-fcsc-orange px-5 py-1 w-2 w-24 lg:w-32 my-5 justify-center rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 text-white text-md md:text-lg font-semibold cursor-pointer transition ease-in duration-200 flex flex-row items-center">
+          <div className="bg-fcsc-orange px-5 py-1 w-2 w-24 lg:w-32 my-5 justify-center rounded-md shadow-lg
+          hover:shadow-xl transform hover:scale-105 text-white text-md md:text-lg font-semibold cursor-pointer
+          transition ease-in duration-200 flex flex-row items-center z-0">
             <div>FAQs</div>
             <AiOutlineArrowDown size={22} className="ml-1 animate-bounce"/>
           </div>

@@ -1,13 +1,29 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import fcscLogo from '../../../public/logo/fcsc.png'
-import { withRouter } from 'next/router'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
-interface NavbarProps {
-  router: any
-}
+// animations
+import {
+  mobileNavVariants,
+  navElementsVariants,
+} from '../../../animations/index'
 
-function Navbar({ router }: NavbarProps): JSX.Element {
+// icons
+import { HiMenuAlt2 } from 'react-icons/hi'
+import { RiCloseFill } from 'react-icons/ri'
+
+function Navbar(): JSX.Element {
+  const router = useRouter()
+
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleNav = () => {
+    setIsOpen((prev) => !prev)
+  }
+
   const navs = [
     { text: 'Home', href: '/' },
     { text: 'Community', href: '/community' },
@@ -26,7 +42,7 @@ function Navbar({ router }: NavbarProps): JSX.Element {
           {navs.map((nav, key) => (
             <div
               key={key}
-              className={`flex flex-row items-center justify-center mr-10 h-7 rounded-md bg-fcsc-orange text-center font-semibold ${
+              className={`flex flex-row hidden lg:block  items-center justify-center mr-10 h-7 rounded-md bg-fcsc-orange text-center font-semibold ${
                 nav.text == 'Community' ? 'w-28' : ' w-16'
               }`}
             >
@@ -44,13 +60,107 @@ function Navbar({ router }: NavbarProps): JSX.Element {
             </div>
           ))}
         </div>
-        <label className="md:block sm :block lg:hidden" htmlFor="toggle">
-          &#9776;
-        </label>
-        <input className="hidden" type="checkbox" id="toggle" />
+        <div
+          className="block lg:hidden z-20 cursor-pointer transition ease-in"
+          onClick={toggleNav}
+        >
+          {!isOpen ? (
+            <HiMenuAlt2 className="h-6 w-6 hover:text-gray-default transition ease-in" />
+          ) : (
+            ''
+          )}
+        </div>
+        <AnimatePresence exitBeforeEnter>
+          {isOpen ? (
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={mobileNavVariants}
+              className={`fixed bg-white top-0 left-0 bottom-0 z-10 min-h-screen ${
+                isOpen ? `w-full` : `w-0`
+              } bg-blue flex flex-col items-center justify-center`}
+            >
+              <div
+                className="absolute top-4 right-4 cursor-pointer"
+                onClick={toggleNav}
+              >
+                {isOpen ? (
+                  <RiCloseFill className="h-6 w-6 hover:text-gray-light text-fcsc-blue transition ease-in" />
+                ) : (
+                  ''
+                )}
+              </div>
+              <motion.div
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={navElementsVariants}
+                className="h-32 w-48 flex items-center mb-5"
+              >
+                <Image
+                  src={fcscLogo}
+                  alt="foss logo"
+                  layout="intrinsic"
+                  quality={90}
+                />
+              </motion.div>
+              <motion.ul
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={navElementsVariants}
+                className="flex flex-col items-center justify-center space-y-6"
+              >
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/">
+                    <a>Home</a>
+                  </Link>
+                </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/community">
+                    <a>Community</a>
+                  </Link>
+                </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/events">
+                    <a>Event</a>
+                  </Link>
+                </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/notices">
+                    <a>Notice</a>
+                  </Link>
+                </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/about">
+                    <a>About</a>
+                  </Link>
+                </li>
+              </motion.ul>
+            </motion.div>
+          ) : (
+            ''
+          )}
+        </AnimatePresence>
       </div>
     </header>
   )
 }
 
-export default withRouter(Navbar)
+export default Navbar

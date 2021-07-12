@@ -120,7 +120,7 @@ export default function LandingPage(): JSX.Element {
         <a href="#faq">
           <div className="bg-fcsc-orange px-5 py-1 w-2 w-24 lg:w-32 my-5 justify-center rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 text-white text-md md:text-lg font-semibold cursor-pointer transition ease-in duration-200 flex flex-row items-center">
             <div>FAQs</div>
-            <AiOutlineArrowDown size={28} className="ml-1" />
+            <AiOutlineArrowDown size={22} className="ml-1 animate-bounce"/>
           </div>
         </a>
       </div>

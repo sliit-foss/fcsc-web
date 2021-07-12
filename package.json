@@ -17,6 +17,7 @@
     "react-icons": "^4.2.0",
     "react-responsive-carousel": "^3.2.19",
     "framer-motion": "^4.1.17"
+    "tailwind-scrollbar-hide": "^1.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",

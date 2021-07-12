@@ -17,7 +17,7 @@ export default function Content(props: ContentProps): JSX.Element {
       }
     >
       <section
-        style={{ backgroundImage: 'url(/contact/BG.png)' }}
+        style={{ backgroundImage: 'url(/shapes/2.png)' }}
         className="bg-no-repeat bg-right-top bg-cover bg-white rounded-2xl shadow-xl px-10 md:px-16 py-10 pb-0 md:pb-10 w-full justify-center items-center"
       >
         <div className="w-full flex flex-row justify-end">

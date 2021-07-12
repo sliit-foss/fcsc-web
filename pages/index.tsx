@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import LaunchButton from '../components/contactUs/LaunchButton'
-import FAQ from '../components/faq/FAQ'
+import LandingPage from './landingPage'
 
 export default function Home(): JSX.Element {
   return (
@@ -17,18 +16,7 @@ export default function Home(): JSX.Element {
       </Head>
 
       <main>
-        <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            Welcome{' '}
-          </h1>
-          <p className="mb-8 leading-relaxed">
-            <a href="https://nextjs.org">
-              SLIIT Faculty of Students&apos; Community
-            </a>
-          </p>
-          <LaunchButton />
-          <FAQ />
-        </div>
+        <LandingPage />
       </main>
     </div>
   )

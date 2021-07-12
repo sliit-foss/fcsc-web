@@ -1,16 +1,16 @@
 import Image from 'next/image'
-import { MdPermContactCalendar } from 'react-icons/md'
 
 //components
 import Notice from '../components/carousel/notice/Notice'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
 
 //images
-import background from '../public/events/BG.png'
+import background from '../public/shapes/1.png'
 import noticeboard from '../public/notices/noticeboard.png'
 import notice from '../public/notices/notice.png'
 import Announcements from '../components/announcements/Announcements'
 import { QAProps } from '../components/common/QA/QAComponent'
+import NoticeCalendar from '../components/common/buttons/noticeCalendar'
 
 const notices = [
   <Notice key="" image={notice} />,
@@ -45,7 +45,7 @@ export default function Notices(): JSX.Element {
   return (
     <div className="justify-items-center">
       <h1
-        className="title-font sm:text-4xl text-3xl mb-14 font-medium text-white   absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
+        className="title-font sm:text-4xl text-3xl font-medium text-white   absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
         style={{ marginTop: '8%', width: '77%' }}
       >
         NOTICE
@@ -91,13 +91,7 @@ export default function Notices(): JSX.Element {
           />
         </div>
       </div>
-      <div className="w-full md:w-11/12 flex flex-row justify-center md:justify-end">
-        <div className="bg-fcsc-orange mr-0 md:mr-4 px-5 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 text-white font-semibold cursor-pointer transition ease-in duration-200 flex flex-row items-center">
-          <MdPermContactCalendar size={28} className="mr-3" />
-
-          <div>Notice Calendar</div>
-        </div>
-      </div>
+      <NoticeCalendar />
       <NoticeCarousel noticeData={notices} />
       <div>
         <Announcements

@@ -42,9 +42,11 @@ function Navbar(): JSX.Element {
           {navs.map((nav, key) => (
             <div
               key={key}
-              className={`flex flex-row hidden lg:block  items-center justify-center mr-10 h-7 rounded-md bg-fcsc-orange text-center font-semibold ${
-                nav.text == 'Community' ? 'w-28' : ' w-16'
-              }`}
+              className={`flex flex-row hidden lg:block  items-center justify-center mr-10 h-7 rounded-md text-center font-semibold 
+              ${
+                router.pathname == nav.href ? 'bg-fcsc-orange w-16' : 'bg-white'
+              } ${nav.text == 'Community' ? 'w-28' : ' w-16'}
+              `}
             >
               <Link href={nav.href}>
                 <a

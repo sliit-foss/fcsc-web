@@ -9,7 +9,7 @@ module.exports = {
           blue: '#1c1364', // genuine fcsc blue aka blue_dark
           blue_light: '#33306f',
           orange: '#f15a24', // genuine fcsc orange aka orange_dark
-          orange_light: '#f86b57',
+          orange_light: '#feb6a8',
         },
       },
       boxShadow: {

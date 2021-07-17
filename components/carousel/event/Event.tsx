@@ -24,7 +24,7 @@ export default function Event(props: EventProps): JSX.Element {
             placeholder="blur"
           />
         </div>
-        <div className="p-10 px-0 md:px-10 w-full md:w-3/4  justify-items-center md:justify-items-start ">
+        <div className="p-10 px-0 md:px-10 w-full justify-items-center md:justify-items-start ">
           <h1 className="font-semibold text-3xl text-center md:text-left px-0">
             {props.title}
           </h1>

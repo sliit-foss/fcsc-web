@@ -35,13 +35,14 @@ export default function LaunchButton(): JSX.Element {
       >
         <Content show={visibility} toggleFunction={toggleVisibility} />
       </div>
-
-      <div
-        className="bg-fcsc-orange px-10 py-3 mt-8 mb-36 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 text-white cursor-pointer transition ease-in duration-200 w-full"
-        onClick={toggleVisibility}
-        data-aos="fade-up"
-      >
-        Contact Us
+      <div className="transform hover:scale-105 shadow-lg hover:shadow-xl transition ease-in duration-200">
+        <div
+          className="bg-fcsc-orange px-10 py-3 mt-8 mb-36 rounded-lg   transform hover:scale-105 text-white cursor-pointer w-full"
+          onClick={toggleVisibility}
+          data-aos="fade-up"
+        >
+          Contact Us
+        </div>
       </div>
     </div>
   )

@@ -110,8 +110,8 @@ export default function Events(): JSX.Element {
           />
         </div>
       </div>
-      <EventCarousel title="UPCOMING EVENTS" eventData={events} />
-      <EventCarousel title="MAIN EVENTS" eventData={events} />
+      <EventCarousel title="" eventData={events}/>
+      <EventCarousel title="" eventData={events}/>
     </div>
   )
 }

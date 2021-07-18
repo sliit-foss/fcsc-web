@@ -8,7 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
     "aos": "^2.3.4",
+    "framer-motion": "^4.1.17",
     "next": "11.0.1",
     "next-optimized-images": "^2.6.2",
     "prettier": "^2.3.2",
@@ -16,7 +18,6 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-responsive-carousel": "^3.2.19",
-    "framer-motion": "^4.1.17",
     "tailwind-scrollbar-hide": "^1.0.3"
   },
   "devDependencies": {

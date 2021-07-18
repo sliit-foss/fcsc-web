@@ -17,6 +17,14 @@ module.exports = {
         noOffset_lighter: '0 0px 5px 0px rgba(0, 0, 0, 0.25)',
         noOffset_thicker: '0 0px 8px 4px rgba(0, 0, 0, 0.3)',
       },
+      aspectRatio: {
+        1.25: '1.25',
+        1.5: '1.5',
+        2.5: '2.5',
+        3.5: '3.5',
+        4.5: '4.5',
+        5.5: '5.5',
+      }
     },
   },
   variants: {
@@ -25,5 +33,5 @@ module.exports = {
       height: ['group-hover'],
     },
   },
-  plugins: [ require('tailwind-scrollbar-hide')],
+  plugins: [ require('tailwind-scrollbar-hide'),require('@tailwindcss/aspect-ratio')],
 }

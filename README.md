@@ -12,6 +12,7 @@ First, run the development server:
 npm install
 npm run dev
 # or
+yarn install
 yarn dev
 ```
 

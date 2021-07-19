@@ -4,7 +4,6 @@ import { Carousel } from 'react-responsive-carousel'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-//components
 import CarouselIndicatorBar from '../CarouselIndicatorBar'
 
 interface EventCarouselProps {

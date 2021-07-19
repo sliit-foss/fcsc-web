@@ -4,7 +4,6 @@ import 'aos/dist/aos.css'
 import Image from 'next/image'
 import QAComponent, { QAProps } from '../common/QA/QAComponent'
 
-//images
 import imgFaq from '../../public/faq/FAQ.png'
 
 export default function FAQ(): JSX.Element {

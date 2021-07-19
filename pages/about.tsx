@@ -4,10 +4,6 @@ import Image from 'next/image'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { TiArrowSortedDown } from 'react-icons/ti'
-
-//components
-
-//images
 import background from '../public/shapes/1.png'
 import image from '../public/aboutUs/aboutUs.png'
 import photo from '../public/aboutUs/photo.png'

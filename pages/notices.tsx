@@ -1,11 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-
-//components
 import Notice from '../components/carousel/notice/Notice'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
-
-//images
 import background from '../public/shapes/1.png'
 import noticeboard from '../public/notices/noticeboard.png'
 import notice from '../public/notices/notice.png'

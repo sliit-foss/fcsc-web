@@ -1,6 +1,4 @@
 import Image from 'next/image'
-
-//images
 import background1 from '../../public/shapes/1.png'
 
 export default function ResponsiveBackground(): JSX.Element {

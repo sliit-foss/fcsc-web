@@ -1,11 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-
-//components
 import Event from '../components/carousel/event/Event'
 import EventCarousel from '../components/carousel/event/EventCarousel'
-
-//images
 import background from '../public/shapes/1.png'
 import calendar from '../public/events/eventCalendar.png'
 import foss from '../public/events/foss.png'

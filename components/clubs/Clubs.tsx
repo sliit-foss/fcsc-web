@@ -4,7 +4,6 @@ import 'aos/dist/aos.css'
 
 import ClubLogo from './ClubLogo'
 
-//images
 import foss from '../../public/clubs/foss.png'
 import fcsc from '../../public/clubs/fcsc.png'
 import ms from '../../public/clubs/ms.png'

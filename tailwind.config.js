@@ -31,6 +31,7 @@ module.exports = {
     extend: {
       gradientColorStops: ['active'],
       height: ['group-hover'],
+      brightness: ['hover'],
     },
   },
   plugins: [ require('tailwind-scrollbar-hide'),require('@tailwindcss/aspect-ratio')],

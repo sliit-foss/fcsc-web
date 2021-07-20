@@ -30,15 +30,18 @@ export default function WhoWeAre(): JSX.Element {
               pariatur. Eident, sunt in culpa qui officia deserunt mollit anim
               id est laborum ipiscing elit, sed modtur adipiscing elit.
             </p>
-            <div className="bg-fcsc-orange lg:mx-4 my-10 mb-5 w-full lg:w-3/12 px-5 py-2 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 text-white font-semibold cursor-pointer transition ease-in duration-200 flex justify-center ">
+            <div className="bg-fcsc-orange xl:mx-4 my-10 mb-5 w-full xl:w-3/12 px-5 py-2 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 text-white font-semibold cursor-pointer transition ease-in duration-200 flex justify-center ">
               <div>Find More</div>
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center">
-          <div className="w-full">
+        <div className="flex justify-center items-center w-full xl:w-1/2">
+          <div
+            className="shadow-lg hover:shadow-xl filter hover:brightness-110 rounded-2xl transition-all ease-out duration-500"
+            style={{ lineHeight: 0 }}
+          >
             <Image
-              className="hover:opacity-80 transition-all ease-out duration-500"
+              className="rounded-2xl transition-all ease-out duration-500 h-full"
               src={image}
               alt="SLIIT FCSC"
               quality={90}

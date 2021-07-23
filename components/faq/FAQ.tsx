@@ -38,7 +38,7 @@ export default function FAQ(): JSX.Element {
       className="flex flex-col md:flex-row items-center z-0"
       data-aos="fade-up"
     >
-      <div className="w-10/12 md:w-9/12">
+      <div className="w-full md:w-9/12">
         <Image
           src={imgFaq}
           alt="SLIIT FCSC"
@@ -48,7 +48,7 @@ export default function FAQ(): JSX.Element {
         />
       </div>
       <div
-        className="flex flex-col py-10 px-8 md:px-14 md:pr-0 "
+        className="flex flex-col py-10 px-1 md:px-14 md:pr-0 "
         style={{ width: '85vw' }}
       >
         <h2 className="text-3xl sm:text-4xl font-bold md:text-left text-center mb-10 md:ml-7">

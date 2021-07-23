@@ -13,11 +13,11 @@ export default function WhoWeAre(): JSX.Element {
   return (
     <div className="flex justify-center mt-24">
       <div
-        className="flex flex-col lg:flex-row w-10/12 px-5 mb-24 justify-between"
+        className="flex flex-col lg:flex-row w-11/12 md:w-10/12 px-5 mb-24 justify-between"
         data-aos="fade-up"
       >
         <div className="flex h-full w-full justify-between items-center">
-          <div className="flex flex-col bg-white py-10 px-8 ml-0 lg:mr-24 mb-28 lg:mb-0  w-full h-auto rounded-3xl shadow-xl hover:shadow-2xl transition-all ease-out duration-500">
+          <div className="flex flex-col bg-white py-10 px-6 md:px-8 ml-0 lg:mr-24 mb-28 lg:mb-0  w-full h-auto rounded-3xl shadow-xl hover:shadow-2xl transition-all ease-out duration-500">
             <h2 className="text-3xl font-bold lg:text-left text-center mb-10 lg:mx-4">
               Who We Are
             </h2>

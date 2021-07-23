@@ -156,7 +156,7 @@ const Footer = (): JSX.Element => {
                     Don’t forget to subscribe to our news letters, enter your
                     e-mail here.
                   </p>
-                  <div className="flex flex-row item-center sm:mb-3">
+                  <div className="flex flex-row item-center mb-4 sm:mb-3">
                     <input
                       type="email"
                       placeholder="Email Address"

@@ -23,14 +23,13 @@ export default function NoticeCarousel(
   const onEventChange = function (currentIndex: number) {
     setCurrentCarouselIndex(currentIndex)
   }
-  const carouselWidth = 10 / 12 //of screen width
   return (
     <div
       data-aos="fade-up"
-      className="flex px-5 pb-14 md:pb-24 pt-5 md:pt-10 items-center justify-center flex-col"
+      className="flex pb-14 md:pb-24 pt-5 md:pt-10 items-center justify-center flex-col"
     >
       <Carousel
-        className="transition ease-in duration-200"
+        className="transition ease-in duration-200 w-11/12 md:w-10/12"
         showThumbs={false}
         showArrows={false}
         showStatus={false}
@@ -41,7 +40,7 @@ export default function NoticeCarousel(
         infiniteLoop={true}
         emulateTouch={true}
         swipeable={true}
-        width={(carouselWidth * 100).toString() + 'vw'}
+     
         onChange={onEventChange}
       >
         {props.noticeData}

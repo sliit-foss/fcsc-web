@@ -30,7 +30,7 @@ export default function EventCarousel(props: EventCarouselProps): JSX.Element {
         {props.title}
       </h1>
       <Carousel
-        className="shadow-xl hover:shadow-2xl rounded-3xl transition ease-in duration-200 w-10/12 bg-white"
+        className="shadow-xl hover:shadow-2xl rounded-3xl transition ease-in duration-200 w-11/12 md:w-10/12 bg-white"
         showThumbs={false}
         showArrows={false}
         showStatus={false}

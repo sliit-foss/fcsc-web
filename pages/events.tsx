@@ -66,7 +66,7 @@ export default function Events(): JSX.Element {
       <div className="justify-items-center ">
         <h1
           className="title-font sm:text-4xl text-3xl font-medium text-white w-3/4 absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
-          style={{ marginTop: '8%', width: '77%' }}
+          style={{ marginTop: '8%', width: '85%' }}
         >
           EVENTS
         </h1>
@@ -81,7 +81,7 @@ export default function Events(): JSX.Element {
         />
 
         <div className="flex flex-col-reverse md:flex-row pb-0 md:pb-6 place-content-center items-center">
-          <div className="flex flex-col w-full md:w-1/2 place-content-center p-14">
+          <div className="flex flex-col w-full md:w-1/2 place-content-center p-14 px-10 md:px-14">
             <h1 className="font-bold text-2xl text-center md:text-left">
               What Are Events
             </h1>

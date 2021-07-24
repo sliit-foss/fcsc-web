@@ -13,7 +13,7 @@ interface EventProps {
 export default function Event(props: EventProps): JSX.Element {
   return (
     <a>
-      <div className="flex flex-col md:flex-row p-12">
+      <div className="flex flex-col md:flex-row p-8 md:p-12">
         <div className="relative group flex items-center justify-end ">
           <Image
             className="rounded-2xl group-hover:opacity-80 transition-all ease-out duration-500"

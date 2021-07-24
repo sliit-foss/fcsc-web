@@ -4,7 +4,6 @@ import 'aos/dist/aos.css'
 
 import ClubLogo from './ClubLogo'
 
-//images
 import foss from '../../public/clubs/foss.png'
 import fcsc from '../../public/clubs/fcsc.png'
 import ms from '../../public/clubs/ms.png'
@@ -30,7 +29,7 @@ export default function Clubs(): JSX.Element {
               Our Clubs And Communities
             </h2>
             <div className="flex justify-center">
-              <p className="w-10/12 lg: lg:w-5/12 text-center text-gray-700">
+              <p className="w-full md:w-10/12 lg: lg:w-5/12 text-center text-gray-700">
                 A very big thank you to all our partners for their continued
                 partnership. If you&apos;re interested in being showcased
                 throughout, contact SLIIT FCSC to discuss sponsorship

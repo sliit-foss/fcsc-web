@@ -5,4 +5,4 @@ Due to security reasons, we won't be able to upload the full documentation here.
 <br/> However, if you found any vulnerabilities in this domain, please don't hesitate to contact the [SLIIT FOSS Community](https://github.com/sliit-foss). Then we would be able to take remediations for the certain vulnerability.
 
 Thank you,
-SLIIT FOSS Community.
+<br/> SLIIT FOSS Community.

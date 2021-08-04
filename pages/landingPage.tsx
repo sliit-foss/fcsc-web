@@ -3,16 +3,13 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
 
-//icons
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
-//images
 import background2 from '../public/shapes/2.png'
 import people from '../public/landing/people.png'
 import notice from '../public/notices/notice.png'
 
-//components
 import LaunchButton from '../components/contactUs/LaunchButton'
 import NoticeCalendar from '../components/common/buttons/noticeCalendar'
 import Notice from '../components/carousel/notice/Notice'
@@ -99,16 +96,22 @@ export default function LandingPage(): JSX.Element {
         }}
       >
         <div className="sm:mb-3 md:mb-3 flex flex-row z-0">
-          <FaFacebook className="fill-current text-white mb-3 mr-3" size="22"/>
+          <FaFacebook
+            className="mb-3 mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
+            size="22"
+          />
           <FaInstagram
-            className="fill-current text-white mb-3  mr-3"
+            className="mb-3  mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
             size="22"
           />
           <FaLinkedin
-            className="fill-current text-white mb-3  mr-3"
+            className="mb-3  mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
             size="22"
           />
-          <FaTwitter className="fill-current text-white mb-3  mr-3" size="22"/>
+          <FaTwitter
+            className="mb-3  mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
+            size="22"
+          />
         </div>
         <h1 className="title-font lg:text-4xl  text-xl font-medium text-white z-0">
           Faculty of Computing Students Community
@@ -118,11 +121,13 @@ export default function LandingPage(): JSX.Element {
           adipiscing elit.
         </p>
         <a href="#faq">
-          <div className="bg-fcsc-orange px-5 py-1 w-2 w-24 lg:w-32 my-5 justify-center rounded-md shadow-lg
+          <div
+            className="bg-fcsc-orange px-5 py-1 w-2 w-24 lg:w-32 my-5 justify-center rounded-md shadow-lg
           hover:shadow-xl transform hover:scale-105 text-white text-md md:text-lg font-semibold cursor-pointer
-          transition ease-in duration-200 flex flex-row items-center z-0">
+          transition ease-in duration-200 flex flex-row items-center z-0"
+          >
             <div>FAQs</div>
-            <AiOutlineArrowDown size={22} className="ml-1 animate-bounce"/>
+            <AiOutlineArrowDown size={22} className="ml-1 animate-bounce" />
           </div>
         </a>
       </div>

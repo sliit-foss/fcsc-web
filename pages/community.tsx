@@ -115,7 +115,8 @@ export default function Community(): JSX.Element {
           </li>
         </ol>
 
-        <p>"Wiramaya" is arguably the most prominent event organized by the Student Community of SLIIT. This event is
+        <p><b>Wiramaya</b> is arguably the most prominent event organized by the Student Community of SLIIT. This event
+          is
           organized by the Faculty of Computing Students’ Community (FCSC) of SLIIT and pays homage to the Classical
           aspect of Sri Lankan music.</p>
       </div>
@@ -144,7 +145,7 @@ export default function Community(): JSX.Element {
 
     <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
       <div className="grid-cols-1 w-full pl-10">
-        <ol className="list-decimal font-bold" start="2">
+        <ol className="list-decimal font-bold" start={2}>
           <li>
             Blood Donation
           </li>
@@ -179,7 +180,7 @@ export default function Community(): JSX.Element {
 
     <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
       <div className="grid-cols-1 w-full pl-10">
-        <ol className="list-decimal font-bold" start="3">
+        <ol className="list-decimal font-bold" start={3}>
           <li>
             Mini Hackathon
           </li>
@@ -214,7 +215,7 @@ export default function Community(): JSX.Element {
 
     <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
       <div className="grid-cols-1 w-full pl-10">
-        <ol className="list-decimal font-bold" start="4">
+        <ol className="list-decimal font-bold" start={4}>
           <li>
             Annual Pirith Ceremony
           </li>
@@ -249,7 +250,7 @@ export default function Community(): JSX.Element {
 
     <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
       <div className="grid-cols-1 w-full pl-10">
-        <ol className="list-decimal font-bold" start="5">
+        <ol className="list-decimal font-bold" start={5}>
           <li>
             Talk with Giant
           </li>
@@ -265,7 +266,7 @@ export default function Community(): JSX.Element {
 
     <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
       <div className="grid-cols-1 w-full pl-10">
-        <ol className="list-decimal font-bold" start="6">
+        <ol className="list-decimal font-bold" start={6}>
           <li>
             SLIIT GAMBIT
           </li>
@@ -280,7 +281,7 @@ export default function Community(): JSX.Element {
 
     <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
       <div className="grid-cols-1 w-full pl-10">
-        <ol className="list-decimal font-bold" start="7">
+        <ol className="list-decimal font-bold" start={7}>
           <li>
             Wasantha Muwadora
           </li>
@@ -315,7 +316,7 @@ export default function Community(): JSX.Element {
 
     <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
       <div className="grid-cols-1 w-full pl-10">
-        <ol className="list-decimal font-bold" start="8">
+        <ol className="list-decimal font-bold" start={8}>
           <li>
             SLIIT BASH
           </li>
@@ -350,7 +351,7 @@ export default function Community(): JSX.Element {
 
     <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
       <div className="grid-cols-1 w-full pl-10">
-        <ol className="list-decimal font-bold" start="8">
+        <ol className="list-decimal font-bold" start={9}>
           <li>
             BUILD-UP Wednesday
           </li>

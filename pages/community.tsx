@@ -3,11 +3,14 @@ import background from '../public/shapes/1.png'
 import communityVector from '../public/community/communityHeroSectVector.svg'
 import sliitImage from '../public/community/smallImage.svg'
 import viramayaPic01 from '../public/community/Picture1.jpg'
-import viramayaPic02 from '../public/community/Picture2.jpg'
+import bl1 from '../public/community/Picture2_1.jpg'
+import bl2 from '../public/community/Picture2_2.jpg'
+import miniHack1 from '../public/community/Picture3_1.jpg'
+import miniHack2 from '../public/community/Picture3_2.jpg'
+import pirithC1 from '../public/community/Picture4_1.jpg'
+import wh01 from '../public/community/Picture7_1.jpg'
 import bash01 from '../public/community/Picture8_1.jpg'
 import bash02 from '../public/community/Picture8_2.jpg'
-import wh01 from '../public/community/Picture7_1.jpg'
-import wh02 from '../public/community/Picture7_2.jpg'
 
 export default function Community(): JSX.Element {
 
@@ -129,7 +132,7 @@ export default function Community(): JSX.Element {
           </div>
           <div className="lg:w-2/5 md:w-full">
             <Image
-              src={viramayaPic02}
+              src={viramayaPic01}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
@@ -156,7 +159,7 @@ export default function Community(): JSX.Element {
         <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
           <div className="lg:w-2/5 md:w-full">
             <Image
-              src={viramayaPic01}
+              src={bl1}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
@@ -164,7 +167,7 @@ export default function Community(): JSX.Element {
           </div>
           <div className="lg:w-2/5 md:w-full">
             <Image
-              src={viramayaPic02}
+              src={bl2}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
@@ -191,7 +194,7 @@ export default function Community(): JSX.Element {
         <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
           <div className="lg:w-2/5 md:w-full">
             <Image
-              src={viramayaPic01}
+              src={miniHack1}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
@@ -199,7 +202,7 @@ export default function Community(): JSX.Element {
           </div>
           <div className="lg:w-2/5 md:w-full">
             <Image
-              src={viramayaPic02}
+              src={miniHack2}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
@@ -226,7 +229,7 @@ export default function Community(): JSX.Element {
         <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
           <div className="lg:w-2/5 md:w-full">
             <Image
-              src={viramayaPic01}
+              src={pirithC1}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
@@ -234,7 +237,7 @@ export default function Community(): JSX.Element {
           </div>
           <div className="lg:w-2/5 md:w-full">
             <Image
-              src={viramayaPic02}
+              src={pirithC1}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
@@ -273,27 +276,6 @@ export default function Community(): JSX.Element {
           to host a Virtual Chess championship the titled as “Gambit”. This chess tournament is an open event for all
           the faculties.</p>
       </div>
-
-      <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
-        <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
-          <div className="lg:w-2/5 md:w-full">
-            <Image
-              src={viramayaPic01}
-              alt="SLIIT FCSC"
-              quality={90}
-              layout="intrinsic"
-            />
-          </div>
-          <div className="lg:w-2/5 md:w-full">
-            <Image
-              src={viramayaPic02}
-              alt="SLIIT FCSC"
-              quality={90}
-              layout="intrinsic"
-            />
-          </div>
-        </div>
-      </div>
     </div>
 
     <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
@@ -321,7 +303,7 @@ export default function Community(): JSX.Element {
           </div>
           <div className="lg:w-2/5 md:w-full">
             <Image
-              src={wh02}
+              src={wh01}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
@@ -377,26 +359,6 @@ export default function Community(): JSX.Element {
         <p>This is organized by the FCSC in collaboration with the Career Guidance Unit of SLIIT. This is held on every
           Wednesday with the participation of Students and Industry experts who will share their experience with the
           students.</p>
-      </div>
-      <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
-        <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
-          <div className="lg:w-2/5 md:w-full">
-            <Image
-              src={viramayaPic01}
-              alt="SLIIT FCSC"
-              quality={90}
-              layout="intrinsic"
-            />
-          </div>
-          <div className="lg:w-2/5 md:w-full">
-            <Image
-              src={viramayaPic02}
-              alt="SLIIT FCSC"
-              quality={90}
-              layout="intrinsic"
-            />
-          </div>
-        </div>
       </div>
     </div>
 

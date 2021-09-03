@@ -2,14 +2,11 @@ import { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
-
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
-
 import background2 from '../public/shapes/2.png'
 import people from '../public/landing/people.png'
 import notice from '../public/notices/notice.png'
-
 import LaunchButton from '../components/contactUs/LaunchButton'
 import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
 import Notice from '../components/carousel/notice/Notice'

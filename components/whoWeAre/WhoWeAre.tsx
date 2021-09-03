@@ -7,16 +7,16 @@ import image from '../../public/whoWeAre/image.png'
 
 export default function WhoWeAre(): JSX.Element {
   useEffect(() => {
-    Aos.init({ duration: 1000 })
+    Aos.init({ offset: 0, duration: 1000 })
   }, [])
 
   return (
     <div className="flex justify-center mt-24">
-      <div
-        className="flex flex-col lg:flex-row w-11/12 md:w-10/12 px-5 mb-24 justify-between"
-        data-aos="fade-up"
-      >
-        <div className="flex h-full w-full justify-between items-center">
+      <div className="flex flex-col lg:flex-row w-11/12 md:w-10/12 px-5 mb-24 justify-between">
+        <div
+          className="flex h-full w-full justify-between items-center"
+          data-aos="fade-right"
+        >
           <div className="flex flex-col bg-white py-10 px-6 md:px-8 ml-0 lg:mr-24 mb-28 lg:mb-0  w-full h-auto rounded-3xl shadow-xl hover:shadow-2xl transition-all ease-out duration-500">
             <h2 className="text-3xl font-bold lg:text-left text-center mb-10 lg:mx-4">
               Who We Are
@@ -35,7 +35,10 @@ export default function WhoWeAre(): JSX.Element {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center w-full xl:w-1/2">
+        <div
+          className="flex justify-center items-center w-full xl:w-1/2"
+          data-aos="fade-left"
+        >
           <div
             className="shadow-lg hover:shadow-xl filter hover:brightness-110 rounded-2xl transition-all ease-out duration-500"
             style={{ lineHeight: 0 }}

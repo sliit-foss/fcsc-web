@@ -4,9 +4,7 @@ import fcscLogo from '../../../public/logo/fcsc.png'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-
 import { mobileNavVariants, navElementsVariants } from '../../../animations'
-
 import { HiMenuAlt2 } from 'react-icons/hi'
 import { RiCloseFill } from 'react-icons/ri'
 
@@ -15,8 +13,23 @@ function Navbar(): JSX.Element {
 
   const [isOpen, setIsOpen] = useState(false)
 
+  let loginStatus = false
+  if (process.browser) {
+    loginStatus = window.localStorage.getItem('LoggedIn') === 'true'
+  }
   const toggleNav = () => {
     setIsOpen((prev) => !prev)
+  }
+
+  const logOut = () => {
+    window.localStorage.setItem('RememberMe', 'false')
+    window.localStorage.setItem('LoggedIn', 'false')
+    window.localStorage.setItem('Token', '')
+    window.localStorage.setItem('Role', '')
+    window.localStorage.setItem('MenuOptionCache', '')
+    router.push({
+      pathname: '/',
+    })
   }
 
   const navs = [
@@ -25,36 +38,60 @@ function Navbar(): JSX.Element {
     { text: 'Event', href: '/events' },
     { text: 'Notice', href: '/notices' },
     { text: 'About', href: '/about' },
+    { text: 'Login', href: '/login' },
   ]
 
+  if (loginStatus) {
+    navs.splice(navs.length - 1, 0, { text: 'Management', href: '/admin' })
+  }
+
   return (
-    <header
-      className="sticky top-0 flex flex-row w-full h-14 justify-between items-center shadow-noOffset z-30 bg-white">
+    <header className="sticky top-0 flex flex-row w-full h-14 justify-between items-center shadow-noOffset z-30 bg-white">
       <div className="w-28 h-12 flex flex-row items-center ml-9 z-10 bg-white">
-        <Image src={fcscLogo} alt="FCSC Logo" className="w-max"/>
+        <Image src={fcscLogo} alt="FCSC Logo" className="w-max" />
       </div>
       <div className="flex flex-row justify-end  items-center w-4/6 h-14 bg-white">
         <div className="flex flex-row mr-2">
           {navs.map((nav, key) => (
             <div
               key={key}
-              className={`flex flex-row hidden lg:block  items-center justify-center mr-10 h-7 rounded-md text-center font-semibold 
+              className={`flex flex-row hidden lg:block  items-center justify-center mr-10 h-8 rounded-md text-center font-semibold transition ease-in duration-150 
               ${
-                router.pathname == nav.href ? 'bg-fcsc-orange w-16' : 'bg-white'
-              } ${nav.text == 'Community' ? 'w-28' : ' w-16'}
+                router.pathname == nav.href
+                  ? 'bg-fcsc-orange filter hover:brightness-110 w-16'
+                  : 'bg-white'
+              } ${
+                nav.text == 'Community' || nav.text == 'Management'
+                  ? 'w-28'
+                  : 'w-20'
+              }
               `}
             >
-              <Link href={nav.href}>
-                <a
-                  className={`${
+              {' '}
+              {key == navs.length - 1 && loginStatus ? (
+                <div
+                  className={`h-full flex items-center justify-center cursor-pointer ${
                     router.pathname == nav.href
-                      ? 'text-white w-28'
+                      ? 'text-white'
                       : 'text-fcsc-blue'
                   }`}
+                  onClick={logOut}
                 >
-                  {nav.text}
-                </a>
-              </Link>
+                  LogOut
+                </div>
+              ) : (
+                <Link href={nav.href}>
+                  <a
+                    className={`h-full flex items-center justify-center ${
+                      router.pathname == nav.href
+                        ? 'text-white'
+                        : 'text-fcsc-blue'
+                    }`}
+                  >
+                    {nav.text}
+                  </a>
+                </Link>
+              )}
             </div>
           ))}
         </div>
@@ -150,6 +187,37 @@ function Navbar(): JSX.Element {
                     <a>About</a>
                   </Link>
                 </li>
+                {loginStatus ? (
+                  <li
+                    className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <Link href="/admin">
+                      <a>Management</a>
+                    </Link>
+                  </li>
+                ) : (
+                  <div></div>
+                )}
+
+                <button
+                  onClick={
+                    loginStatus
+                      ? logOut
+                      : () => {
+                          router.push({
+                            pathname: '/login',
+                          })
+                        }
+                  }
+                >
+                  <li
+                    className="font-medium text-2xl bg-fcsc-blue hover:bg-fcsc-blue_light py-1.5 px-8 text-white shadow hover:shadow-md transform hover:scale-105 transition duration-400 rounded-lg cursor-pointer "
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {loginStatus ? 'Sign Out' : 'Sign In'}
+                  </li>
+                </button>
               </motion.ul>
             </motion.div>
           ) : (

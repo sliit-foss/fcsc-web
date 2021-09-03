@@ -7,7 +7,7 @@ import noticeboard from '../public/notices/noticeboard.png'
 import notice from '../public/notices/notice.png'
 import Announcements from '../components/announcements/Announcements'
 import { QAProps } from '../components/common/QA/QAComponent'
-import NoticeCalendar from '../components/common/buttons/noticeCalendar'
+import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
 
 const notices = [
   <Notice key="" image={notice} />,
@@ -46,8 +46,7 @@ export default function Notices(): JSX.Element {
       </Head>
       <div className="justify-items-center">
         <h1
-          className="title-font sm:text-4xl text-3xl font-medium text-white   absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
-          style={{ marginTop: '8%', width: '85%' }}
+          className="title-font sm:text-4xl text-3xl font-medium text-white absolute w-85% ml-auto mr-auto mt-8% left-0 right-0 p-0 md:py-14 z-20"
         >
           NOTICE
         </h1>

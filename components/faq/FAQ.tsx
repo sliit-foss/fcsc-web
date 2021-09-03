@@ -8,7 +8,7 @@ import imgFaq from '../../public/faq/FAQ.png'
 
 export default function FAQ(): JSX.Element {
   useEffect(() => {
-    Aos.init({ duration: 1000 })
+    Aos.init({ offset: 0, duration: 1000 })
   }, [])
 
   const data: Array<QAProps> = [
@@ -36,9 +36,8 @@ export default function FAQ(): JSX.Element {
   return (
     <section
       className="flex flex-col md:flex-row items-center z-0"
-      data-aos="fade-up"
     >
-      <div className="w-full md:w-9/12">
+      <div className="w-full md:w-9/12" data-aos="fade-right">
         <Image
           src={imgFaq}
           alt="SLIIT FCSC"
@@ -51,17 +50,21 @@ export default function FAQ(): JSX.Element {
         className="flex flex-col py-10 px-1 md:px-14 md:pr-0 "
         style={{ width: '85vw' }}
       >
-        <h2 className="text-3xl sm:text-4xl font-bold md:text-left text-center mb-10 md:ml-7">
+        <h2
+          className="text-3xl sm:text-4xl font-bold md:text-left text-center mb-10 md:ml-7"
+          data-aos="fade-left"
+        >
           FAQs
         </h2>
         <div>
-          {data.map((item) => {
+          {data.map((item, index) => {
             return (
-              <QAComponent
-                title={item.title}
-                body={item.body}
+              <div
                 key={item.title + item.body}
-              />
+                data-aos={index % 2 == 1 ? 'fade-left' : 'fade-right'}
+              >
+                <QAComponent title={item.title} body={item.body} />
+              </div>
             )
           })}
         </div>

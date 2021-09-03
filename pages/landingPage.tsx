@@ -11,7 +11,7 @@ import people from '../public/landing/people.png'
 import notice from '../public/notices/notice.png'
 
 import LaunchButton from '../components/contactUs/LaunchButton'
-import NoticeCalendar from '../components/common/buttons/noticeCalendar'
+import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
 import Notice from '../components/carousel/notice/Notice'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
 import FAQ from '../components/faq/FAQ'
@@ -82,19 +82,11 @@ const notices = [
 
 export default function LandingPage(): JSX.Element {
   useEffect(() => {
-    Aos.init({ duration: 1000 })
+    Aos.init({ offset: 0, duration: 1000 })
   }, [])
   return (
     <div className="justify-items-center ">
-      <div
-        className="w-1/2 absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
-        style={{
-          marginLeft: '5%',
-          marginTop: '4%',
-          marginRight: '10%',
-          width: '40%',
-        }}
-      >
+      <div className="w-40% absolute ml-5% mr-10% mt-4% left-0 right-0 p-0 md:py-14 z-20">
         <div className="sm:mb-3 md:mb-3 flex flex-row z-0">
           <FaFacebook
             className="mb-3 mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
@@ -173,7 +165,7 @@ export default function LandingPage(): JSX.Element {
       <EventCarousel title="UPCOMING EVENTS" eventData={events} />
       <WhoWeAre />
       <Clubs />
-      <div className="flex justify-center">
+      <div className="flex justify-center" >
         <LaunchButton />
       </div>
     </div>

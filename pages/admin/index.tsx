@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import SideNav from '../../components/Admin/Layout/SideNav'
-import AdminUsers from '../../modules/Admin/AdminUsers'
+import AdminUsers from '../../modules/Admin/AdminNotices'
 import BottomBar from '../../components/Admin/Layout/BottomBar'
 
 const Admin = (): JSX.Element => {

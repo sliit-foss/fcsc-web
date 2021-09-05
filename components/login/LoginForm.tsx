@@ -38,7 +38,7 @@ const LoginForm = ({
         Swal.fire({
           heightAuto: false,
           icon: 'success',
-          title: 'Signed in sucessfully!',
+          title: `<div class="text-2xl">Signed in sucessfully!</div>`,
           showConfirmButton: false,
           timer: 1500,
           willClose: () => {
@@ -56,7 +56,7 @@ const LoginForm = ({
         Swal.fire({
           icon: 'error',
           heightAuto: false,
-          title: 'Failed to sign in!',
+          title: `<div class="text-2xl">Failed to sign in!</div>`,
           showConfirmButton: false,
           timer: 1500,
         })
@@ -80,7 +80,7 @@ const LoginForm = ({
         Swal.fire({
           heightAuto: false,
           icon: 'success',
-          title: 'Signed up sucessfully!',
+          title: `<div class="text-2xl">Signed up sucessfully!</div>`,
           showConfirmButton: false,
           timer: 1500,
           willClose: () => {
@@ -96,7 +96,7 @@ const LoginForm = ({
         Swal.fire({
           icon: 'error',
           heightAuto: false,
-          title: 'Failed to sign up!',
+          title: `<div class="text-2xl">Failed to sign up!</div>`,
           showConfirmButton: false,
           timer: 1500,
         })

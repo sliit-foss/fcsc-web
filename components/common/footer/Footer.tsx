@@ -39,7 +39,7 @@ const Footer = (): JSX.Element => {
       <div className="lg:flex lg:flex-col bg-fcsc-blue_light">
    
         <div className="lg:flex lg:flex-row bg-fcsc-blue_light lg:h-60">
-          <div className="sm:w-full lg:w-1/3 mt-2">
+          <div className="sm:w-full lg:w-1/3 ">
             <div className="h-24 flex flex-row items-center">
               <div className="bg-white w-56 ml-10 h-16 flex flex-row justify-around items-center rounded-lg text-white">
                 <a>

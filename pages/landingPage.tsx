@@ -2,76 +2,22 @@ import { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
-
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
-
 import background2 from '../public/shapes/2.png'
 import people from '../public/landing/people.png'
 import notice from '../public/notices/notice.png'
-
 import LaunchButton from '../components/contactUs/LaunchButton'
-import NoticeCalendar from '../components/common/buttons/noticeCalendar'
+import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
 import Notice from '../components/carousel/notice/Notice'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
 import FAQ from '../components/faq/FAQ'
 import Event from '../components/carousel/event/Event'
-import foss from '../public/events/foss.png'
 import EventCarousel from '../components/carousel/event/EventCarousel'
 import WhoWeAre from '../components/whoWeAre/WhoWeAre'
 import Clubs from '../components/clubs/Clubs'
 import ResponsiveBackground from '../components/common/ResponsiveBackground'
-
-const events = [
-  <Event
-    key=""
-    image={foss}
-    title="SEMESTER FINAL EXAMINATION - 2021"
-    subtitle="Study Support Sessions IWT"
-    date="03-06-2021"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-  />,
-  <Event
-    key=""
-    image={foss}
-    title="Event 2 Title"
-    subtitle="Event 2 Subtitle"
-    date="08-08-2021"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-  />,
-  <Event
-    key=""
-    image={foss}
-    title="Event 3 Title"
-    subtitle="Event 3 Subtitle"
-    date="15-09-2021"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-  />,
-  <Event
-    key=""
-    image={foss}
-    title="Event 4 Title"
-    subtitle="Event 4 Subtitle"
-    date="19-09-2021"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt in culpa qui officia deserunt mollit tur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt inanim id est laborum"
-  />,
-  <Event
-    key=""
-    image={foss}
-    title="Event 5 Title"
-    subtitle="Event 5 Subtitle"
-    date="10-10-2021"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modtur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt intur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt intur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt ino consequat. Duis nulla pariatur. Eident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-  />,
-  <Event
-    key=""
-    image={foss}
-    title="Event 5 Title"
-    subtitle="Event 5 Subtitle"
-    date="10-10-2021"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modtur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt intur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt intur adipiscing elit, sed modo consequat. Duis nulla pariatur. Eident, sunt ino consequat. Duis nulla pariatur. Eident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-  />,
-]
+import { useGetLatestEvents } from '../queries/useGetEvent'
 
 const notices = [
   <Notice key="" image={notice} />,
@@ -82,19 +28,38 @@ const notices = [
 
 export default function LandingPage(): JSX.Element {
   useEffect(() => {
-    Aos.init({ duration: 1000 })
+    Aos.init({ offset: 0, duration: 1000 })
   }, [])
+
+  const { data: latestEvents = [], isSuccess: isSuccessLatest = false } =
+    useGetLatestEvents()
+
+  let latestEventsList: Array<JSX.Element> = []
+  if (isSuccessLatest && latestEvents) {
+    latestEventsList = latestEvents.map((event, index) => (
+      <Event
+        key={index.toString()}
+        image={event.headerImage}
+        title={event.name}
+        subtitle={event.name}
+        date={new Date(event ? event.startTime : 0)
+          .toLocaleString('en-US', {
+            month: 'short',
+            day: '2-digit',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true,
+          })
+          .replaceAll(',', ' ')}
+        description={event.description}
+      />
+    ))
+  }
+
   return (
     <div className="justify-items-center ">
-      <div
-        className="w-1/2 absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
-        style={{
-          marginLeft: '5%',
-          marginTop: '4%',
-          marginRight: '10%',
-          width: '40%',
-        }}
-      >
+      <div className="w-40% absolute ml-5% mr-10% mt-4% left-0 right-0 p-0 md:py-14 z-20">
         <div className="sm:mb-3 md:mb-3 flex flex-row z-0">
           <FaFacebook
             className="mb-3 mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
@@ -169,8 +134,20 @@ export default function LandingPage(): JSX.Element {
           <FAQ />
         </div>
       </div>
-
-      <EventCarousel title="UPCOMING EVENTS" eventData={events} />
+      {isSuccessLatest && latestEvents ? (
+        latestEvents.length != 0 ? (
+          <EventCarousel title="LATEST EVENTS" eventData={latestEventsList} />
+        ) : (
+          <div></div>
+        )
+      ) : (
+        <div
+          className=" flex justify-center items-center"
+          style={{ height: '90vh' }}
+        >
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-fcsc-orange_light" />
+        </div>
+      )}
       <WhoWeAre />
       <Clubs />
       <div className="flex justify-center">

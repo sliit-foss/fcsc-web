@@ -13,11 +13,11 @@ export default function Event(props: EventProps): JSX.Element {
   return (
     <a>
       <div className="flex flex-col xl:flex-row p-8 xl:p-12">
-        <div className="relative group flex items-center justify-center xl:justify-end ">
+        <div className="h-full xl:w-30vw relative group flex items-center justify-center xl:justify-end ">
           <img
             src={props.image}
             alt="Header Image"
-            className="h-full md:h-25vw object-cover rounded-2xl group-hover:opacity-80 transition-all ease-out duration-500"
+            className="object-cover rounded-2xl group-hover:opacity-80 transition-all ease-out duration-500"
           ></img>
         </div>
         <div className="p-10 pb-0 px-0 xl:px-10 w-full justify-items-center xl:justify-items-start">

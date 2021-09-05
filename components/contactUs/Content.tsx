@@ -31,7 +31,7 @@ export default function Content(props: ContentProps): JSX.Element {
         Swal.fire({
           heightAuto: false,
           icon: 'success',
-          title: 'Message sent sucessfully',
+          title: `<div class="text-2xl">Message sent sucessfully</div>`,
           showConfirmButton: false,
           timer: 1500,
           willClose: () => {
@@ -46,12 +46,12 @@ export default function Content(props: ContentProps): JSX.Element {
         })
       })
       .catch((e) => {
-        const error = JSON.parse(e)
+        const error = JSON.parse(e).data.error
         setShowLoading(false)
         Swal.fire({
           icon: 'error',
           heightAuto: false,
-          title: error.data.error,
+          title: `<div class="text-2xl">${error}</div>`,
           showConfirmButton: false,
           timer: 1500,
         })

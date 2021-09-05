@@ -30,7 +30,7 @@ const AdminUsers = (): JSX.Element => {
     setShowModal((prev) => !prev)
   }
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<any>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -58,7 +58,7 @@ const AdminUsers = (): JSX.Element => {
           Swal.fire({
             heightAuto: false,
             icon: 'success',
-            title: 'Notice Added sucessfully!',
+            title: `<div class="text-2xl">Notice Added sucessfully!</div>`,
             showConfirmButton: false,
             timer: 1500,
             willClose: () => {
@@ -72,26 +72,28 @@ const AdminUsers = (): JSX.Element => {
         })
         .catch((e) => {
           const error = JSON.parse(e).data.error
-          let errorMessage
-          switch (true) {
-            case error.includes('Path `title` is required.'):
-              errorMessage = 'Please enter a notice title'
-              break
-            case error.includes('Path `body` is required.'):
-              errorMessage = 'Please enter a notice body'
-              break
-            case error.includes('Path `category` is required.'):
-              errorMessage = 'Please select a category'
-              break
-            default:
-              errorMessage = error
-              break
+          let errorMessage = 'Failed to add notice'
+          if (error) {
+            switch (true) {
+              case error.includes('Path `title` is required.'):
+                errorMessage = 'Please enter a notice title'
+                break
+              case error.includes('Path `body` is required.'):
+                errorMessage = 'Please enter a notice body'
+                break
+              case error.includes('Path `category` is required.'):
+                errorMessage = 'Please select a category'
+                break
+              default:
+                errorMessage = error
+                break
+            }
           }
           setShowLoading(false)
           Swal.fire({
             icon: 'error',
             heightAuto: false,
-            title: errorMessage,
+            title: `<div class="text-2xl">${errorMessage}</div>`,
             showConfirmButton: false,
             timer: 1500,
           })
@@ -106,7 +108,7 @@ const AdminUsers = (): JSX.Element => {
           Swal.fire({
             heightAuto: false,
             icon: 'success',
-            title: 'Notice edited sucessfully!',
+            title: `<div class="text-2xl">Notice edited sucessfully!</div>`,
             showConfirmButton: false,
             timer: 1500,
             willClose: () => {
@@ -124,7 +126,7 @@ const AdminUsers = (): JSX.Element => {
           Swal.fire({
             icon: 'error',
             heightAuto: false,
-            title: error,
+            title: `<div class="text-2xl">${error}</div>`,
             showConfirmButton: false,
             timer: 1500,
           })
@@ -149,7 +151,7 @@ const AdminUsers = (): JSX.Element => {
         Swal.fire({
           heightAuto: false,
           icon: 'success',
-          title: 'Notice removed sucessfully!',
+          title: `<div class="text-2xl">Notice removed sucessfully!</div>`,
           showConfirmButton: false,
           timer: 1500,
           willClose: () => {
@@ -167,7 +169,7 @@ const AdminUsers = (): JSX.Element => {
         Swal.fire({
           icon: 'error',
           heightAuto: false,
-          title: error,
+          title: `<div class="text-2xl">${error}</div>`,
           showConfirmButton: false,
           timer: 1500,
         })
@@ -218,87 +220,95 @@ const AdminUsers = (): JSX.Element => {
               <h3 className="md:col-span-3">Category</h3>
               <div className="md:col-span-1" />
             </div>
-            {/* data goes here */}
-            <div className="flex flex-col space-y-2 md:max-h-65vh pb-4 md:overflow-y-scroll scrollbar-hide">
-              {notices.map(({ _id, title, body, category }, i) => {
-                const editAction = () => {
-                  setEditingNoticeId(_id)
-                  setFormData({
-                    title: title,
-                    body: body,
-                    category: category,
-                  })
-                  toggleModal()
-                  setModalAction('Edit')
-                }
+            {notices.length != 0 ? (
+              <div className="flex flex-col space-y-2 md:max-h-65vh pb-4 md:overflow-y-scroll scrollbar-hide">
+                {notices.map(({ _id, title, body, category }, i) => {
+                  const editAction = () => {
+                    setEditingNoticeId(_id)
+                    setFormData({
+                      title: title,
+                      body: body,
+                      category: category,
+                    })
+                    toggleModal()
+                    setModalAction('Edit')
+                  }
 
-                return (
-                  <div
-                    key={i}
-                    className="grid grid-rows-1 grid-cols-1 sm:grid-cols-4 md:grid-cols-10 gap-2 sm:gap-4 rounded-sm shadow-lg p-4 md:px-8 justify-center items-center"
-                    data-aos={i % 2 == 1 ? 'fade-right' : 'fade-left'}
-                  >
-                    <p className="sm:col-span-3 md:col-span-2 font-semibold text-xl md:text-base text-gray-700">
-                      {title}
-                    </p>
-                    <div className="sm:col-span-3 md:col-span-3 flex flex-row justify-start items-center">
-                      <div className="w-27 md:w-0 md:h-0 mr-4 md:mr-0">
-                        <MdEmail
-                          className="text-gray-700 hover:text-fcsc-blue_light transition ease-in duration-200 md:w-0 md:h-0 "
-                          size={27}
-                        />
+                  return (
+                    <div
+                      key={i}
+                      className="grid grid-rows-1 grid-cols-1 sm:grid-cols-4 md:grid-cols-10 gap-2 sm:gap-4 rounded-sm shadow-lg p-4 md:px-8 justify-center items-center"
+                      data-aos={i % 2 == 1 ? 'fade-right' : 'fade-left'}
+                    >
+                      <p className="sm:col-span-3 md:col-span-2 font-semibold text-xl md:text-base text-gray-700">
+                        {title}
+                      </p>
+                      <div className="sm:col-span-3 md:col-span-3 flex flex-row justify-start items-center">
+                        <div className="w-27 md:w-0 md:h-0 mr-4 md:mr-0">
+                          <MdEmail
+                            className="text-gray-700 hover:text-fcsc-blue_light transition ease-in duration-200 md:w-0 md:h-0 "
+                            size={27}
+                          />
+                        </div>
+                        <p
+                          className="font-medium text-gray-700 w-3/4 md:w-full"
+                          style={{ wordWrap: 'break-word' }}
+                        >
+                          {body}
+                        </p>
                       </div>
-                      <p
-                        className="font-medium text-gray-700 w-3/4 md:w-full"
-                        style={{ wordWrap: 'break-word' }}
-                      >
-                        {body}
-                      </p>
-                    </div>
 
-                    <div className="sm:col-span-2 md:col-span-3 flex flex-row justify-start items-end">
-                      <HiUserGroup
-                        className="text-gray-700 hover:text-fcsc-blue_light transition ease-in duration-200 md:w-0 md:h-0 mr-4 md:mr-0"
-                        size={26}
-                      />
-                      <p className="font-medium text-md md:text-base text-gray-700">
-                        {category}
-                      </p>
+                      <div className="sm:col-span-2 md:col-span-3 flex flex-row justify-start items-end">
+                        <HiUserGroup
+                          className="text-gray-700 hover:text-fcsc-blue_light transition ease-in duration-200 md:w-0 md:h-0 mr-4 md:mr-0"
+                          size={26}
+                        />
+                        <p className="font-medium text-md md:text-base text-gray-700">
+                          {category}
+                        </p>
+                      </div>
+                      <button
+                        className="col-span-1 lg:col-span-1 hidden lg:flex items-center justify-center outline-none"
+                        onClick={editAction}
+                      >
+                        <AiTwotoneEdit
+                          className="text-lg text-gray-700 hover:text-green-500 transition ease-in duration-200"
+                          size={32}
+                        />
+                      </button>
+                      <button
+                        className="md:col-span-1 py-2 mt-2 mb-1 rounded-md bg-fcsc-blue hover:bg-fcsc-blue_light text-white transition ease-in flex md:hidden items-center justify-center outline-none"
+                        onClick={editAction}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="sm:col-span-1 md:col-span-1 md:flex hidden items-center justify-center outline-none"
+                        onClick={deleteNotice.bind(this, _id)}
+                      >
+                        <MdDelete
+                          className="text-lg hidden md:block text-gray-700 hover:text-red-500 transition ease-in duration-200"
+                          size={32}
+                        />
+                      </button>
+                      <button
+                        className="md:col-span-1 py-2 rounded-md bg-fcsc-blue hover:bg-fcsc-blue_light text-white transition ease-in flex md:hidden items-center justify-center outline-none"
+                        onClick={deleteNotice.bind(this, _id)}
+                      >
+                        Remove
+                      </button>
                     </div>
-                    <button
-                      className="col-span-1 lg:col-span-1 hidden lg:flex items-center justify-center outline-none"
-                      onClick={editAction}
-                    >
-                      <AiTwotoneEdit
-                        className="text-lg text-gray-700 hover:text-green-500 transition ease-in duration-200"
-                        size={32}
-                      />
-                    </button>
-                    <button
-                      className="md:col-span-1 py-2 mt-2 mb-1 rounded-md bg-fcsc-blue hover:bg-fcsc-blue_light text-white transition ease-in flex md:hidden items-center justify-center outline-none"
-                      onClick={editAction}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className="sm:col-span-1 md:col-span-1 md:flex hidden items-center justify-center outline-none"
-                      onClick={deleteNotice.bind(this, _id)}
-                    >
-                      <MdDelete
-                        className="text-lg hidden md:block text-gray-700 hover:text-red-500 transition ease-in duration-200"
-                        size={32}
-                      />
-                    </button>
-                    <button
-                      className="md:col-span-1 py-2 rounded-md bg-fcsc-blue hover:bg-fcsc-blue_light text-white transition ease-in flex md:hidden items-center justify-center outline-none"
-                      onClick={deleteNotice.bind(this, _id)}
-                    >
-                      Remove
-                    </button>
-                  </div>
-                )
-              })}
-            </div>
+                  )
+                })}
+              </div>
+            ) : (
+              <div
+                className="font-inter font-semibold text-xl lg:text-2xl text-center mt-25vh lg:mt-30vh mb-20 px-8 text-gray-800"
+                data-aos="fade-left"
+              >
+                There are no notices at the moment.
+              </div>
+            )}
           </>
         ) : (
           <div className="h-84vh-32">
@@ -333,14 +343,14 @@ const AdminUsers = (): JSX.Element => {
               name="title"
               value={formData.title}
             />
-            <input
+            <textarea
               onChange={handleInputChange}
               className="rounded-md mb-2 py-2 px-3 shadow-ds2 border-0 placeholder-gray-400 w-full"
               placeholder="Body"
-              type="text"
               name="body"
               value={formData.body}
-            />
+              rows={4}
+            ></textarea>
             <select
               className="rounded-md mb-6 py-2 px-2 shadow-ds2 border-0 placeholder-gray-400 w-full"
               name="category"

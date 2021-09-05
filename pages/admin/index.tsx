@@ -28,8 +28,7 @@ const Admin = (): JSX.Element => {
   return (
     <div title="Management | FCSC SLIIT">
       <section
-        style={{ backgroundImage: 'url(/patterns/clubs.svg)' }}
-        className="bg-no-repeat bg-right-top bg-cover grid grid-rows-1 grid-cols-1 md:grid-cols-8 gap-4 min-h-90vh"
+        className="grid grid-rows-1 grid-cols-1 md:grid-cols-8 gap-4 min-h-90vh"
       >
         <SideNav
           onMenuItemSelect={updateSelectedMenuOption}

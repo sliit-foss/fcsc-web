@@ -77,7 +77,7 @@ function Navbar(): JSX.Element {
                   }`}
                   onClick={logOut}
                 >
-                  LogOut
+                  Logout
                 </div>
               ) : (
                 <Link href={nav.href}>
@@ -215,7 +215,7 @@ function Navbar(): JSX.Element {
                     className="font-medium text-2xl bg-fcsc-blue hover:bg-fcsc-blue_light py-1.5 px-8 text-white shadow hover:shadow-md transform hover:scale-105 transition duration-400 rounded-lg cursor-pointer "
                     onClick={() => setIsOpen(false)}
                   >
-                    {loginStatus ? 'Sign Out' : 'Sign In'}
+                    {loginStatus ? 'Logout' : 'Login'}
                   </li>
                 </button>
               </motion.ul>

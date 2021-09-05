@@ -4,7 +4,7 @@ const Loginpage = (): JSX.Element => {
   return (
     <div title="Login | FCSC">
       <div
-        className="min-h-screen flex p-3 lg:p-0"
+        className="flex p-3 lg:p-0 min-h-95vh"
         style={{
           background: 'url(/shapes/1.png) no-repeat center center ',
           backgroundSize: 'cover',

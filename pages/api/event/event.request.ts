@@ -10,3 +10,13 @@ export async function getEvents(): Promise<EventData[] | boolean> {
     return false
   }
 }
+
+export async function getLatestEvents(): Promise<EventData[] | boolean> {
+  try {
+    const response = await apiInstance.get('/events/latest')
+    return response.data as EventData[]
+  } catch (e:any) {
+    console.error(e.message)
+    return false
+  }
+}

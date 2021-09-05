@@ -266,7 +266,7 @@ const AdminUsers = (): JSX.Element => {
                       </p>
                     </div>
                     <button
-                      className="col-span-1 lg:col-span-1 hidden lg:flex items-center justify-center"
+                      className="col-span-1 lg:col-span-1 hidden lg:flex items-center justify-center outline-none"
                       onClick={editAction}
                     >
                       <AiTwotoneEdit
@@ -275,13 +275,13 @@ const AdminUsers = (): JSX.Element => {
                       />
                     </button>
                     <button
-                      className="md:col-span-1 py-2 mt-2 mb-1 rounded-md bg-fcsc-blue hover:bg-fcsc-blue_light text-white transition ease-in flex md:hidden items-center justify-center"
+                      className="md:col-span-1 py-2 mt-2 mb-1 rounded-md bg-fcsc-blue hover:bg-fcsc-blue_light text-white transition ease-in flex md:hidden items-center justify-center outline-none"
                       onClick={editAction}
                     >
                       Edit
                     </button>
                     <button
-                      className="sm:col-span-1 md:col-span-1 md:flex hidden items-center justify-center"
+                      className="sm:col-span-1 md:col-span-1 md:flex hidden items-center justify-center outline-none"
                       onClick={deleteNotice.bind(this, _id)}
                     >
                       <MdDelete
@@ -290,7 +290,7 @@ const AdminUsers = (): JSX.Element => {
                       />
                     </button>
                     <button
-                      className="md:col-span-1 py-2 rounded-md bg-fcsc-blue hover:bg-fcsc-blue_light text-white transition ease-in flex md:hidden items-center justify-center"
+                      className="md:col-span-1 py-2 rounded-md bg-fcsc-blue hover:bg-fcsc-blue_light text-white transition ease-in flex md:hidden items-center justify-center outline-none"
                       onClick={deleteNotice.bind(this, _id)}
                     >
                       Remove
@@ -320,9 +320,9 @@ const AdminUsers = (): JSX.Element => {
                 </div>
               </div>
             </div>
-            <div className="inline-flex items-center justify-center w-full mb-4">
+            <div className="inline-flex items-center justify-center w-full mb-6">
               <div className="font-semibold text-2xl sm:text-2xl text-fcsc-blue">
-                Add Notice
+                {`${modalAction} Notice`}
               </div>
             </div>
             <input

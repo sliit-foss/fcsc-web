@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState, useEffect } from 'react'
-import { MdDelete, MdEmail } from 'react-icons/md'
+import { MdDelete, MdEmail, MdAddAPhoto } from 'react-icons/md'
 import { AiOutlineClose, AiTwotoneEdit } from 'react-icons/ai'
 import { HiUserGroup } from 'react-icons/hi'
 import Aos from 'aos'
@@ -24,6 +24,7 @@ const AdminUsers = (): JSX.Element => {
     title: '',
     body: '',
     category: '',
+    photo: '',
   })
 
   const toggleModal = () => {
@@ -44,6 +45,24 @@ const AdminUsers = (): JSX.Element => {
         [e.target.name]: e.target.value,
       })
     }
+
+  const encodeImage = (fileInput: any) => {
+    if (fileInput.target.files && fileInput.target.files[0]) {
+      const reader = new FileReader()
+      reader.onload = (e: any) => {
+        const image = new Image()
+        image.src = e.target.result
+        image.onload = () => {
+          const imgBase64Path = e.target.result
+          setFormData({
+            ...formData,
+            [fileInput.target.name]: imgBase64Path.split(',')[1],
+          })
+        }
+      }
+      reader.readAsDataURL(fileInput.target.files[0])
+    }
+  }
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -139,6 +158,7 @@ const AdminUsers = (): JSX.Element => {
       title: '',
       body: '',
       category: '',
+      photo: '',
     })
   }
 
@@ -222,13 +242,14 @@ const AdminUsers = (): JSX.Element => {
             </div>
             {notices.length != 0 ? (
               <div className="flex flex-col space-y-2 md:max-h-65vh pb-4 md:overflow-y-scroll scrollbar-hide">
-                {notices.map(({ _id, title, body, category }, i) => {
+                {notices.map(({ _id, title, body, category, photo }, i) => {
                   const editAction = () => {
                     setEditingNoticeId(_id)
                     setFormData({
                       title: title,
                       body: body,
                       category: category,
+                      photo: photo,
                     })
                     toggleModal()
                     setModalAction('Edit')
@@ -335,6 +356,41 @@ const AdminUsers = (): JSX.Element => {
                 {`${modalAction} Notice`}
               </div>
             </div>
+            <button className="w-full h-full rounded-md shadow-ds2 relative mb-2">
+              <input
+                type="file"
+                id="photo"
+                name="photo"
+                className="absolute left-0 w-full h-full opacity-0 cursor-pointer"
+                onChange={encodeImage}
+                disabled={false}
+              ></input>
+              {formData.photo ? (
+                <div className="w-full h-full flex flex-col justify-center items-center">
+                  <img
+                    className="object-cover"
+                    src={
+                      formData.photo.includes(
+                        'https://firebasestorage.googleapis.com'
+                      )
+                        ? formData.photo
+                        : `data:image/jpeg;base64,${formData.photo}`
+                    }
+                    alt="speakerImage"
+                  ></img>
+                </div>
+              ) : (
+                <div className="h-full w-full flex flex-col justify-center items-center p-8">
+                  <MdAddAPhoto
+                    className="fill-current-color text-gray-400"
+                    size={80}
+                  />
+                  <div className="mt-4 text-lg text-gray-400 font-semibold">
+                    Add Notice Photo
+                  </div>
+                </div>
+              )}
+            </button>
             <input
               onChange={handleInputChange}
               className="rounded-md mb-2 py-2 px-3 shadow-ds2 border-0 placeholder-gray-400 w-full"

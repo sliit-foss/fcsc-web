@@ -62,6 +62,7 @@ module.exports = {
       },
       height: {
         '35vh': '35vh',
+        '45vh': '45vh',
         '84vh-32': 'calc(84vh - 32px)',
         '84vh': '84vh',
         '85vh-50': 'calc(85vh - 50px)',

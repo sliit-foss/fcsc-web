@@ -6,10 +6,9 @@ import { AiOutlineArrowDown } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import background2 from '../public/shapes/2.png'
 import people from '../public/landing/people.png'
-import notice from '../public/notices/notice.png'
 import LaunchButton from '../components/contactUs/LaunchButton'
 import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
-import Notice from '../components/carousel/notice/Notice'
+
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
 import FAQ from '../components/faq/FAQ'
 import Event from '../components/carousel/event/Event'
@@ -18,13 +17,8 @@ import WhoWeAre from '../components/whoWeAre/WhoWeAre'
 import Clubs from '../components/clubs/Clubs'
 import ResponsiveBackground from '../components/common/ResponsiveBackground'
 import { useGetLatestEvents } from '../queries/useGetEvent'
-
-const notices = [
-  <Notice key="" image={notice} />,
-  <Notice key="" image={notice} />,
-  <Notice key="" image={notice} />,
-  <Notice key="" image={notice} />,
-]
+import { useGetNotices } from '../queries/useGetNotice'
+import { getFilteredNotices } from '../utils/noticeFilter'
 
 export default function LandingPage(): JSX.Element {
   useEffect(() => {
@@ -33,6 +27,8 @@ export default function LandingPage(): JSX.Element {
 
   const { data: latestEvents = [], isSuccess: isSuccessLatest = false } =
     useGetLatestEvents()
+
+  const { data: noticeList = [], isSuccess } = useGetNotices()
 
   let latestEventsList: Array<JSX.Element> = []
   if (isSuccessLatest && latestEvents) {
@@ -56,6 +52,8 @@ export default function LandingPage(): JSX.Element {
       />
     ))
   }
+
+  const noticeImages = getFilteredNotices(isSuccess, noticeList)
 
   return (
     <div className="justify-items-center ">
@@ -128,7 +126,7 @@ export default function LandingPage(): JSX.Element {
       <div className="">
         <NoticeCalendar />
       </div>
-      <NoticeCarousel noticeData={notices} />
+      <NoticeCarousel noticeData={noticeImages} />
       <div className="w-full flex justify-center" id="faq">
         <div className="w-10/12 md:px-4">
           <FAQ />

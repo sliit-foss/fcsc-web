@@ -1,27 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Notice from '../components/carousel/notice/Notice'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
 import background from '../public/shapes/1.png'
 import noticeboard from '../public/notices/noticeboard.png'
-import notice from '../public/notices/notice.png'
 import Announcements from '../components/announcements/Announcements'
 import { QAProps } from '../components/common/QA/QAComponent'
 import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
 import { useGetNotices } from '../queries/useGetNotice'
-
-const notices = [
-  <Notice key="" image={notice} />,
-  <Notice key="" image={notice} />,
-  <Notice key="" image={notice} />,
-  <Notice key="" image={notice} />,
-]
+import { getFilteredNotices } from '../utils/noticeFilter'
 
 export default function Notices(): JSX.Element {
   const { data: noticeList = [], isSuccess } = useGetNotices()
 
   let latestNotices: Array<QAProps> = []
   let olderNotices: Array<QAProps> = []
+  const noticeImages = getFilteredNotices(isSuccess, noticeList)
 
   if (isSuccess && noticeList) {
     latestNotices = noticeList.filter((notice) => {
@@ -84,7 +77,7 @@ export default function Notices(): JSX.Element {
           </div>
         </div>
         <NoticeCalendar />
-        <NoticeCarousel noticeData={notices} />
+        <NoticeCarousel noticeData={noticeImages} />
         {isSuccess && noticeList ? (
           <>
             {latestNotices.length != 0 ? (

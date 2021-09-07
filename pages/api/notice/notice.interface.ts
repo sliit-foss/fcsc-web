@@ -3,5 +3,7 @@ export interface NoticeData {
     title: string
     body: string
     category: string
+    photo:string
+    createdAt:string
   }
   

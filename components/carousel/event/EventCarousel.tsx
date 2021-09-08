@@ -4,15 +4,14 @@ import { Carousel } from 'react-responsive-carousel'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-//components
-import CarouselIndicatorBar from './CarouselIndicatorBar'
+import CarouselIndicatorBar from '../CarouselIndicatorBar'
 
 interface EventCarouselProps {
   title: string
   eventData: Array<JSX.Element>
 }
 
-export default function EventCarousel(props: EventCarouselProps):JSX.Element {
+export default function EventCarousel(props: EventCarouselProps): JSX.Element {
   useEffect(() => {
     Aos.init({ duration: 1000 })
   }, [])
@@ -22,17 +21,16 @@ export default function EventCarousel(props: EventCarouselProps):JSX.Element {
   const onEventChange = function (currentIndex: number) {
     setCurrentCarouselIndex(currentIndex)
   }
-  const carouselWidth = 10 / 12 //of screen width
   return (
     <div
       data-aos="fade-up"
       className="flex px-5 py-14 md:py-24 items-center justify-center flex-col"
     >
-      <h1 className="title-font sm:text-4xl text-3xl mb-14 font-medium text-gray-900">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10">
         {props.title}
       </h1>
       <Carousel
-        className="shadow-xl hover:shadow-2xl rounded-3xl transition ease-in duration-200"
+        className="shadow-xl hover:shadow-2xl rounded-3xl transition ease-in duration-200 w-11/12 md:w-10/12 bg-white"
         showThumbs={false}
         showArrows={false}
         showStatus={false}
@@ -43,13 +41,12 @@ export default function EventCarousel(props: EventCarouselProps):JSX.Element {
         infiniteLoop={true}
         emulateTouch={true}
         swipeable={true}
-        width={(carouselWidth * 100).toString() + 'vw'}
         onChange={onEventChange}
       >
         {props.eventData}
       </Carousel>
       <CarouselIndicatorBar
-        eventCount={props.eventData.length}
+        count={props.eventData.length}
         currentIndex={currentCarouselIndex}
       />
     </div>

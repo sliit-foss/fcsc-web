@@ -1,42 +1,232 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import fcscLogo from '../../../public/logo/fcsc.png'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { mobileNavVariants, navElementsVariants } from '../../../animations'
+import { HiMenuAlt2 } from 'react-icons/hi'
+import { RiCloseFill } from 'react-icons/ri'
 
-export default function Navbar(): JSX.Element {
+function Navbar(): JSX.Element {
+  const router = useRouter()
+
+  const [isOpen, setIsOpen] = useState(false)
+
+  let loginStatus = false
+  if (process.browser) {
+    loginStatus = window.localStorage.getItem('LoggedIn') === 'true'
+  }
+  const toggleNav = () => {
+    setIsOpen((prev) => !prev)
+  }
+
+  const logOut = () => {
+    window.localStorage.setItem('RememberMe', 'false')
+    window.localStorage.setItem('LoggedIn', 'false')
+    window.localStorage.setItem('Token', '')
+    window.localStorage.setItem('Role', '')
+    window.localStorage.setItem('MenuOptionCache', '')
+    router.push({
+      pathname: '/',
+    })
+  }
+
+  const navs = [
+    { text: 'Home', href: '/' },
+    { text: 'Community', href: '/community' },
+    { text: 'Event', href: '/events' },
+    { text: 'Notice', href: '/notices' },
+    { text: 'About', href: '/about' },
+    { text: 'Login', href: '/login' },
+  ]
+
+  if (loginStatus) {
+    navs.splice(navs.length - 1, 0, { text: 'Management', href: '/admin' })
+  }
+
   return (
-    <header className="text-white body-font bg-gradient-to-r from-blue_fcsc via-orange to-blue_fcsc">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            className="w-10 h-10 text-white p-2 bg-blue-500 rounded-full"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-          </svg>
-          <span className="ml-3 text-xl">FCSC</span>
-        </a>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link href="/">
-            <a className="mr-5 hover:text-gray-900"> Home</a>
-          </Link>
-          <Link href="/">
-            <a className="mr-5 hover:text-gray-900">Community</a>
-          </Link>
-          <Link href="/events">
-            <a className="mr-5 hover:text-gray-900">Event</a>
-          </Link>
-          <Link href="/">
-            <a className="mr-5 hover:text-gray-900">Notice</a>
-          </Link>
-          <Link href="/">
-            <a className="mr-5 hover:text-gray-900">About</a>
-          </Link>
-        </nav>
+    <header className="sticky top-0 flex flex-row w-full h-14 justify-between items-center shadow-noOffset z-30 bg-white">
+      <div className="w-28 h-12 flex flex-row items-center ml-9 z-10 bg-white">
+        <Image src={fcscLogo} alt="FCSC Logo" className="w-max" />
+      </div>
+      <div className="flex flex-row justify-end  items-center w-4/6 h-14 bg-white">
+        <div className="flex flex-row mr-2">
+          {navs.map((nav, key) => (
+            <div
+              key={key}
+              className={`flex flex-row hidden lg:block  items-center justify-center mr-10 h-8 rounded-md text-center font-semibold transition ease-in duration-150 
+              ${
+                router.pathname == nav.href
+                  ? 'bg-fcsc-orange filter hover:brightness-110 w-16'
+                  : 'bg-white'
+              } ${
+                nav.text == 'Community' || nav.text == 'Management'
+                  ? 'w-28'
+                  : 'w-20'
+              }
+              `}
+            >
+              {' '}
+              {key == navs.length - 1 && loginStatus ? (
+                <div
+                  className={`h-full flex items-center justify-center cursor-pointer ${
+                    router.pathname == nav.href
+                      ? 'text-white'
+                      : 'text-fcsc-blue'
+                  }`}
+                  onClick={logOut}
+                >
+                  Logout
+                </div>
+              ) : (
+                <Link href={nav.href}>
+                  <a
+                    className={`h-full flex items-center justify-center ${
+                      router.pathname == nav.href
+                        ? 'text-white'
+                        : 'text-fcsc-blue'
+                    }`}
+                  >
+                    {nav.text}
+                  </a>
+                </Link>
+              )}
+            </div>
+          ))}
+        </div>
+        <div
+          className="block lg:hidden z-20 cursor-pointer transition ease-in  mr-3  md:mr-3 lg:mr-0"
+          onClick={toggleNav}
+        >
+          {!isOpen ? (
+            <HiMenuAlt2 className="h-6 w-6 hover:text-gray-default transition ease-in" />
+          ) : (
+            ''
+          )}
+        </div>
+        <AnimatePresence exitBeforeEnter>
+          {isOpen ? (
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={mobileNavVariants}
+              className={`fixed bg-white top-0 left-0 bottom-0 z-10 min-h-screen ${
+                isOpen ? `w-full` : `w-0`
+              } bg-blue flex flex-col items-center justify-center`}
+            >
+              <div
+                className="absolute top-4 right-4 cursor-pointer"
+                onClick={toggleNav}
+              >
+                {isOpen ? (
+                  <RiCloseFill className="h-6 w-6 hover:text-gray-light text-fcsc-blue transition ease-in" />
+                ) : (
+                  ''
+                )}
+              </div>
+              <motion.div
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={navElementsVariants}
+                className="h-32 w-48 flex items-center mb-5"
+              >
+                <Image
+                  src={fcscLogo}
+                  alt="foss logo"
+                  layout="intrinsic"
+                  quality={90}
+                />
+              </motion.div>
+              <motion.ul
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={navElementsVariants}
+                className="flex flex-col items-center justify-center space-y-6"
+              >
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/">
+                    <a>Home</a>
+                  </Link>
+                </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/community">
+                    <a>Community</a>
+                  </Link>
+                </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/events">
+                    <a>Event</a>
+                  </Link>
+                </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/notices">
+                    <a>Notice</a>
+                  </Link>
+                </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/about">
+                    <a>About</a>
+                  </Link>
+                </li>
+                {loginStatus ? (
+                  <li
+                    className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <Link href="/admin">
+                      <a>Management</a>
+                    </Link>
+                  </li>
+                ) : (
+                  <div></div>
+                )}
+
+                <button
+                  onClick={
+                    loginStatus
+                      ? logOut
+                      : () => {
+                          router.push({
+                            pathname: '/login',
+                          })
+                        }
+                  }
+                >
+                  <li
+                    className="font-medium text-2xl bg-fcsc-blue hover:bg-fcsc-blue_light py-1.5 px-8 text-white shadow hover:shadow-md transform hover:scale-105 transition duration-400 rounded-lg cursor-pointer "
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {loginStatus ? 'Logout' : 'Login'}
+                  </li>
+                </button>
+              </motion.ul>
+            </motion.div>
+          ) : (
+            ''
+          )}
+        </AnimatePresence>
       </div>
     </header>
   )
 }
+
+export default Navbar

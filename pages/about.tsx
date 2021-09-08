@@ -123,7 +123,7 @@ export default function AboutUs(): JSX.Element {
       <Head>
         <title>About</title>
       </Head>
-      <div className="justify-items-center ">
+      <div className="justify-items-center">
         <h1
           className="title-font sm:text-4xl text-3xl font-medium text-white w-88% absolute ml-auto mr-auto mt-8% left-0 right-0 p-0 md:py-14 z-20"
         >

@@ -363,7 +363,6 @@ export default function Community(): JSX.Element {
                 Wasantha Muwadora
               </li>
             </ol>
-
             <p>This event is the main event to celebrate the Sinhala and Tamil new year in Sri Lanka. An <b>Awurudu
               Uthsawaya</b>that is open to all students of SLIIT And the Staff members. It is a day full of traditional
               games and events.
@@ -455,7 +454,6 @@ export default function Community(): JSX.Element {
                 BUILD-UP Wednesday
               </li>
             </ol>
-
             <p>This is organized by the FCSC in collaboration with the Career Guidance Unit of SLIIT. This is held on
               every
               Wednesday with the participation of Students and Industry experts who will share their experience with the
@@ -472,7 +470,6 @@ export default function Community(): JSX.Element {
             </p>
           </div>
         </div>
-
       </div>
     </>
   )

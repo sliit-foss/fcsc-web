@@ -1,6 +1,5 @@
 import NextImage from '../../common/NextImage'
 import image from '../../../public/admin/sideNav/image.svg'
-import React from 'react'
 
 interface props {
   onMenuItemSelect: any

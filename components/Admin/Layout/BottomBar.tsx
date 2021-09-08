@@ -5,7 +5,8 @@ interface props {
 const BottomBar = ({ onMenuItemSelect }: props): JSX.Element => {
   const menuItems = ['Notices']
   return (
-    <div className="sticky bottom-0 left-0 right-0 md:hidden bg-gradient-to-b from-fcsc-blue to-fcsc-blue_light inline-flex items-center justify-between px-3 py-2">
+    <div
+      className="sticky bottom-0 left-0 right-0 md:hidden bg-gradient-to-b from-fcsc-blue to-fcsc-blue_light inline-flex items-center justify-between px-3 py-2">
       <div className=" sm:text-lg text-white font-medium cursor-default">
         Management
       </div>

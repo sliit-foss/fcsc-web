@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { ChangeEvent, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Aos from 'aos'
@@ -17,8 +17,8 @@ const board = [
       fb: 'fbLink',
       twitter: 'twitterLink',
       insta: 'instaLink',
-      linkedln: 'linkedlnLink',
-    },
+      linkedln: 'linkedlnLink'
+    }
   },
   {
     name: 'name',
@@ -28,8 +28,8 @@ const board = [
       fb: 'fbLink',
       twitter: 'twitterLink',
       insta: 'instaLink',
-      linkedln: 'linkedlnLink',
-    },
+      linkedln: 'linkedlnLink'
+    }
   },
   {
     name: 'name',
@@ -39,8 +39,8 @@ const board = [
       fb: 'fbLink',
       twitter: 'twitterLink',
       insta: 'instaLink',
-      linkedln: 'linkedlnLink',
-    },
+      linkedln: 'linkedlnLink'
+    }
   },
   {
     name: 'name',
@@ -50,8 +50,8 @@ const board = [
       fb: 'fbLink',
       twitter: 'twitterLink',
       insta: 'instaLink',
-      linkedln: 'linkedlnLink',
-    },
+      linkedln: 'linkedlnLink'
+    }
   },
   {
     name: 'name',
@@ -61,8 +61,8 @@ const board = [
       fb: 'fbLink',
       twitter: 'twitterLink',
       insta: 'instaLink',
-      linkedln: 'linkedlnLink',
-    },
+      linkedln: 'linkedlnLink'
+    }
   },
   {
     name: 'name',
@@ -72,8 +72,8 @@ const board = [
       fb: 'fbLink',
       twitter: 'twitterLink',
       insta: 'instaLink',
-      linkedln: 'linkedlnLink',
-    },
+      linkedln: 'linkedlnLink'
+    }
   },
   {
     name: 'name',
@@ -83,8 +83,8 @@ const board = [
       fb: 'fbLink',
       twitter: 'twitterLink',
       insta: 'instaLink',
-      linkedln: 'linkedlnLink',
-    },
+      linkedln: 'linkedlnLink'
+    }
   },
   {
     name: 'name',
@@ -94,9 +94,9 @@ const board = [
       fb: 'fbLink',
       twitter: 'twitterLink',
       insta: 'instaLink',
-      linkedln: 'linkedlnLink',
-    },
-  },
+      linkedln: 'linkedlnLink'
+    }
+  }
 ]
 export default function AboutUs(): JSX.Element {
   useEffect(() => {
@@ -112,7 +112,7 @@ export default function AboutUs(): JSX.Element {
 
   const [selectedYear, setSelectedYear] = useState(years[years.length - 1])
 
-  const toggleYear = () => (e: any) => {
+  const toggleYear = () => (e: ChangeEvent<HTMLSelectElement>) => {
     if (e.target.value != 'Select Year') {
       setSelectedYear(e.target.value)
     }

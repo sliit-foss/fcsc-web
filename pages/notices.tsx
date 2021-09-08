@@ -1,54 +1,38 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Notice from '../components/carousel/notice/Notice'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
 import background from '../public/shapes/1.png'
 import noticeboard from '../public/notices/noticeboard.png'
-import notice from '../public/notices/notice.png'
 import Announcements from '../components/announcements/Announcements'
 import { QAProps } from '../components/common/QA/QAComponent'
-import NoticeCalendar from '../components/common/buttons/noticeCalendar'
-
-const notices = [
-  <Notice key="" image={notice} />,
-  <Notice key="" image={notice} />,
-  <Notice key="" image={notice} />,
-  <Notice key="" image={notice} />,
-]
-
-const announcements: Array<QAProps> = [
-  {
-    title: 'Lorem ipsum dolor sit amet,',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat, ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus. In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae. Fusce sed commodo purus, at tempus turpis.',
-  },
-  {
-    title: 'Nunc maximus, magna at ultricies elementum',
-
-    body: 'Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.',
-  },
-  {
-    title: 'Curabitur laoreet, mauris vel blandit fringilla',
-
-    body: 'Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncusnunc, ac sagittis leo elit vel lorem. Fusce tempor lacus ut liberoposuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreetvel quam. Sed dolor urna, lobortis in arcu auctor, tincidunt mattisante. Vivamus venenatis ultricies nibh in volutpat. Cras eu metusquis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcused massa euismod dignissim.',
-  },
-  {
-    title: 'risus turpis vulputate quam, vitae convallis',
-
-    body: 'current version is 1.2.1',
-  },
-]
+import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
+import { useGetNotices } from '../queries/useGetNotice'
+import { getFilteredNotices } from '../utils/noticeFilter'
 
 export default function Notices(): JSX.Element {
+  const { data: noticeList = [], isSuccess } = useGetNotices()
+
+  let latestNotices: Array<QAProps> = []
+  let olderNotices: Array<QAProps> = []
+  const noticeImages = getFilteredNotices(isSuccess, noticeList)
+
+  if (isSuccess && noticeList) {
+    latestNotices = noticeList.filter((notice) => {
+      return notice.category == 'Latest'
+    })
+
+    olderNotices = noticeList.filter((notice) => {
+      return notice.category == 'Older'
+    })
+  }
+
   return (
     <div>
       <Head>
         <title>Notices</title>
       </Head>
       <div className="justify-items-center">
-        <h1
-          className="title-font sm:text-4xl text-3xl font-medium text-white   absolute ml-auto mr-auto left-0 right-0 p-0 md:py-14 z-20"
-          style={{ marginTop: '8%', width: '85%' }}
-        >
+        <h1 className="title-font sm:text-4xl text-3xl font-medium text-white absolute w-85% ml-auto mr-auto mt-8% left-0 right-0 p-0 md:py-14 z-20">
           NOTICE
         </h1>
         <Image
@@ -93,15 +77,40 @@ export default function Notices(): JSX.Element {
           </div>
         </div>
         <NoticeCalendar />
-        <NoticeCarousel noticeData={notices} />
-        <div>
-          <Announcements
-            title="Latest announcements"
-            announcments={announcements}
-          />
-          <Announcements title="Older Topics" announcments={announcements} />
-          <div className="mb-10"></div>
-        </div>
+        <NoticeCarousel noticeData={noticeImages} />
+        {isSuccess && noticeList ? (
+          <>
+            {latestNotices.length != 0 ? (
+              <div>
+                <Announcements
+                  title="Latest announcements"
+                  announcments={latestNotices}
+                />
+                <div className="mb-10"></div>
+              </div>
+            ) : (
+              <div></div>
+            )}
+            {olderNotices.length != 0 ? (
+              <div>
+                <Announcements
+                  title="Older Topics"
+                  announcments={olderNotices}
+                />
+                <div className="mb-10"></div>
+              </div>
+            ) : (
+              <div></div>
+            )}
+          </>
+        ) : (
+          <div
+            className=" flex justify-center items-center"
+            style={{ height: '90vh' }}
+          >
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-fcsc-orange_light" />
+          </div>
+        )}
       </div>
     </div>
   )

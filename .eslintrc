@@ -26,6 +26,7 @@
     ],
     "no-unused-expressions": "error",
     "semi": ["error", "never"],
-    "semi-style": ["error", "last"]
+    "semi-style": ["error", "last"],
+    "@next/next/no-img-element": "off"
   }
 }

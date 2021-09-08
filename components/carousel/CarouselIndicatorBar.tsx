@@ -7,9 +7,9 @@ export default function CarouselIndicatorBar(
   props: IndicatorProps
 ): JSX.Element {
   const selectedIndicatorCSS =
-    'w-9 h-9 m-2 rounded-full hover:bg-fcsc-orange shadow hover:shadow-lg transition ease-in duration-200 bg-fcsc-orange'
+    'w-8 h-8 m-2 rounded-full hover:bg-fcsc-orange shadow hover:shadow-lg transition ease-in duration-200 bg-fcsc-orange'
   const unSelectedIndicatorCSS =
-    'w-9 h-9 m-2 rounded-full hover:bg-fcsc-orange shadow hover:shadow-lg transition ease-in duration-200 bg-fcsc-orange_light'
+    'w-8 h-8 m-2 rounded-full hover:bg-fcsc-orange shadow hover:shadow-lg transition ease-in duration-200 bg-fcsc-orange_light'
 
   function renderIndicator(isSelected: boolean, index: number) {
     return (

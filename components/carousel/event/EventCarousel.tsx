@@ -3,7 +3,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loa
 import { Carousel } from 'react-responsive-carousel'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-
 import CarouselIndicatorBar from '../CarouselIndicatorBar'
 
 interface EventCarouselProps {

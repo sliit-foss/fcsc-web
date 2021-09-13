@@ -184,7 +184,7 @@ export default function AboutUs(): JSX.Element {
             />
 
             <select
-              className="border border-gray-300 rounded-md shadow-md text-gray-400 font-medium h-10 pl-5 pr-28 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+              className="border border-gray-300 rounded-md shadow text-gray-400 font-medium h-10 pl-5 pr-28 bg-white hover:border-gray-400 focus:outline-none appearance-none"
               onChange={toggleYear()}
             >
               <option>Select Year</option>

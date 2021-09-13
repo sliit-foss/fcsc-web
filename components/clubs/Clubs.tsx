@@ -1,11 +1,8 @@
 import { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-
 import ClubLogo from './ClubLogo'
-
 import foss from '../../public/clubs/foss.png'
-import fcsc from '../../public/clubs/fcsc.png'
 import ms from '../../public/clubs/ms.png'
 import fcscMedia from '../../public/clubs/fcscMedia.png'
 import mozilla from '../../public/clubs/mozilla.png'
@@ -42,9 +39,6 @@ export default function Clubs(): JSX.Element {
           <div className="flex  justify-center mt-6">
             <div data-aos="fade-up">
               <ClubLogo image={foss} />
-            </div>
-            <div data-aos="fade-down">
-              <ClubLogo image={fcsc} />
             </div>
             <div data-aos="fade-up">
               <ClubLogo image={ms} />

@@ -85,6 +85,7 @@ export default function Community(): JSX.Element {
                 alt="SLIIT FCSC"
                 quality={90}
                 layout="intrinsic"
+                className="rounded-md filter hover:brightness-105 transition ease-in duration-200"                
               />
             </div>
 
@@ -156,13 +157,14 @@ export default function Community(): JSX.Element {
           </div>
 
           <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
-            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
+            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
               <div className="lg:w-2/5 md:w-full">
                 <Image
                   src={viramayaPic01}
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
               <div className="lg:w-2/5 md:w-full">
@@ -173,6 +175,7 @@ export default function Community(): JSX.Element {
                   layout="intrinsic"
                   width={630}
                   height={418}
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
             </div>
@@ -202,13 +205,14 @@ export default function Community(): JSX.Element {
           </div>
 
           <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
-            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
+            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
               <div className="lg:w-2/5 md:w-full">
                 <Image
                   src={bl1}
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
               <div className="lg:w-2/5 md:w-full">
@@ -217,6 +221,7 @@ export default function Community(): JSX.Element {
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
             </div>
@@ -242,13 +247,14 @@ export default function Community(): JSX.Element {
           </div>
 
           <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
-            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
+            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
               <div className="lg:w-2/5 md:w-full">
                 <Image
                   src={miniHack1}
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
               <div className="lg:w-2/5 md:w-full">
@@ -257,6 +263,7 @@ export default function Community(): JSX.Element {
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
             </div>
@@ -279,13 +286,14 @@ export default function Community(): JSX.Element {
           </div>
 
           <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
-            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
+            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
               <div className="lg:w-2/5 md:w-full">
                 <Image
                   src={pirithC1}
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
               <div className="lg:w-2/5 md:w-full">
@@ -296,6 +304,7 @@ export default function Community(): JSX.Element {
                   layout="intrinsic"
                   height={421}
                   width={632}
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
             </div>
@@ -364,7 +373,7 @@ export default function Community(): JSX.Element {
               </li>
             </ol>
             <p>This event is the main event to celebrate the Sinhala and Tamil new year in Sri Lanka. An <b>Awurudu
-              Uthsawaya</b>that is open to all students of SLIIT And the Staff members. It is a day full of traditional
+              Uthsawaya</b> that is open to all students of SLIIT And the Staff members. It is a day full of traditional
               games and events.
             </p><br/>
             <p>
@@ -380,13 +389,14 @@ export default function Community(): JSX.Element {
           </div>
 
           <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
-            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
+            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
               <div className="lg:w-2/5 md:w-full">
                 <Image
                   src={wh01}
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
               <div className="lg:w-2/5 md:w-full">
@@ -395,7 +405,8 @@ export default function Community(): JSX.Element {
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
-                  height={755}
+                  height={730}
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
             </div>
@@ -426,13 +437,14 @@ export default function Community(): JSX.Element {
           </div>
 
           <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
-            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around">
+            <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
               <div className="lg:w-2/5 md:w-full">
                 <Image
                   src={bash01}
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
               <div className="lg:w-2/5 md:w-full">
@@ -441,13 +453,14 @@ export default function Community(): JSX.Element {
                   alt="SLIIT FCSC"
                   quality={90}
                   layout="intrinsic"
+                  className="rounded-md filter hover:brightness-105 transition ease-in duration-200"
                 />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-rows-1 pl-4 pr-10 pb-8">
+        <div className="grid grid-rows-1 pl-4 pr-10 pb-8 mb-12">
           <div className="grid-cols-1 w-full pl-10">
             <ol className="list-decimal font-bold" start={9}>
               <li>

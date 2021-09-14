@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
-
 import image from '../../public/whoWeAre/image.png'
 
 export default function WhoWeAre(): JSX.Element {

@@ -8,7 +8,6 @@ import background2 from '../public/shapes/2.png'
 import people from '../public/landing/people.png'
 import LaunchButton from '../components/contactUs/LaunchButton'
 import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
-
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
 import FAQ from '../components/faq/FAQ'
 import Event from '../components/carousel/event/Event'

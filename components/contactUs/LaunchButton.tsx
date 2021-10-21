@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import React, { useState } from 'react'
 import Content from './Content'
 
 export default function LaunchButton(): JSX.Element {
@@ -8,10 +6,6 @@ export default function LaunchButton(): JSX.Element {
   const toggleVisibility = function () {
     setVisibility(!visibility)
   }
-
-  useEffect(() => {
-    Aos.init({ duration: 1000 })
-  }, [])
 
   return (
     <div>

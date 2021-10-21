@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import HeaderImage from '../components/common/HeaderImage'
 import Event from '../components/carousel/event/Event'
 import EventCarousel from '../components/carousel/event/EventCarousel'
-import background from '../public/shapes/1.png'
-import calendar from '../public/events/eventCalendar.png'
+import calendar from '../public/events/eventCalendar.svg'
 import { useGetEvents } from '../queries/useGetEvent'
 import { useGetLatestEvents } from '../queries/useGetEvent'
 
@@ -65,25 +65,25 @@ export default function Events(): JSX.Element {
         <title>Events</title>
       </Head>
       <div className="justify-items-center ">
-        <h1 className="title-font sm:text-4xl text-3xl font-medium text-white w-85% absolute ml-auto mr-auto mt-8% left-0 right-0 p-0 md:py-14 z-20">
+        <HeaderImage
+          height="h-200 sm:h-300 md:h-400 xl:h-500"
+          position="absolute top-14"
+        />
+        <h1 className="title-font sm:text-4xl text-3xl font-medium text-white relative top-20 left-6 sm2:left-10 sm:left-12 z-20 flex md:hidden" data-aos="fade-right">
           EVENTS
         </h1>
-        <Image
-          className="transition-all ease-out duration-500"
-          src={background}
-          alt="SLIIT FCSC"
-          quality={90}
-          layout="responsive"
-          placeholder="blur"
-          height="500"
-        />
-
-        <div className="flex flex-col-reverse md:flex-row pb-0 md:pb-6 place-content-center items-center">
+        <div className="flex flex-col-reverse md:flex-row pb-0 md:pb-6 mt-44 md:mt-0 place-content-center items-center relative top-0 z-20">
           <div className="flex flex-col w-full md:w-1/2 place-content-center p-14 px-10 md:px-14">
-            <h1 className="font-bold text-2xl text-center md:text-left">
+            <h1 className="title-font sm:text-4xl text-3xl font-medium text-white mt-24 xl:mt-32 mb-64 xl:mb-96 hidden md:flex" data-aos="fade-down">
+              EVENTS
+            </h1>
+            <h1
+              className="font-bold text-2xl text-center md:text-left"
+              data-aos="fade-right"
+            >
               What Are Events
             </h1>
-            <p className="mt-2 text-center md:text-left">
+            <p className="mt-2 text-center md:text-left" data-aos="fade-right">
               <span className="text-3xl font-semibold">L</span>orem ipsum dolor
               sit amet, consectetur adipiscing elit, sed modtur adipiscing elit,
               sed modo consequat. Duis nulla pariatur. Eident, sunt intur
@@ -98,14 +98,13 @@ export default function Events(): JSX.Element {
               consequat. Duis nulla pariatur. Eident
             </p>
           </div>
-          <div className="w-3/4 md:w-4/12">
+          <div className="w-3/4 md:w-4/12" data-aos="fade-left">
             <Image
               className=""
               src={calendar}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
-              placeholder="blur"
             />
           </div>
         </div>

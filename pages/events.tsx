@@ -66,7 +66,6 @@ export default function Events(): JSX.Element {
       </Head>
       <div className="justify-items-center ">
         <HeaderImage
-          height="h-200 sm:h-300 md:h-400 xl:h-500"
           position="absolute top-14"
         />
         <h1 className="title-font sm:text-4xl text-3xl font-medium text-white relative top-20 left-6 sm2:left-10 sm:left-12 z-20 flex md:hidden" data-aos="fade-right">
@@ -74,11 +73,11 @@ export default function Events(): JSX.Element {
         </h1>
         <div className="flex flex-col-reverse md:flex-row pb-0 md:pb-6 mt-44 md:mt-0 place-content-center items-center relative top-0 z-20">
           <div className="flex flex-col w-full md:w-1/2 place-content-center p-14 px-10 md:px-14">
-            <h1 className="title-font sm:text-4xl text-3xl font-medium text-white mt-24 xl:mt-32 mb-64 xl:mb-96 hidden md:flex" data-aos="fade-down">
+            <h1 className="title-font sm:text-4xl text-3xl font-medium text-white mt-24 xl:mt-40 mb-64 xl:mb-96 hidden md:flex" data-aos="fade-down">
               EVENTS
             </h1>
             <h1
-              className="font-bold text-2xl text-center md:text-left"
+              className="font-bold text-2xl text-center md:text-left mt-0 lg:mt-16"
               data-aos="fade-right"
             >
               What Are Events

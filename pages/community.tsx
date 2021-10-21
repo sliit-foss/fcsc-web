@@ -32,7 +32,7 @@ export default function Community(): JSX.Element {
           Faculty of Computing <br />
           Students Community
         </h1>
-        <HeaderImage height="h-200 sm:h-300 md:h-400 xl:h-700" />
+        <HeaderImage />
         <div
           className="lg:absolute lg:top-48 lg:left-1/2
     md:absolute md:top-96 md:left-96 relative ml-10 mb-8 w-3/4 md:w-4/12"

@@ -3,6 +3,7 @@ import { AiOutlineArrowDown } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import background2 from '../public/shapes/2.svg'
 import people from '../public/landing/people.svg'
+import HeaderImage from '../components/common/HeaderImage'
 import LaunchButton from '../components/contactUs/LaunchButton'
 import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
@@ -48,7 +49,7 @@ export default function LandingPage(): JSX.Element {
 
   return (
     <div className="justify-items-center ">
-      <div className="w-40% absolute ml-5% mr-10% mt-16 xl:mt-4% left-0 right-0 p-0 md:py-14 z-20">
+      <div className="w-40% absolute ml-5% mr-10% mt-16 xl:mt-5% left-0 right-0 p-0 md:py-14 z-20">
         <div className="sm:mb-3 md:mb-3 flex flex-row z-0" data-aos="fade-down">
           <FaFacebook
             className="mb-3 mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
@@ -90,14 +91,7 @@ export default function LandingPage(): JSX.Element {
           </div>
         </a>
       </div>
-      <div
-        className="w-full h-500 md:h-700 absolute top-0"
-        style={{
-          background:
-            'url("/shapes/1.svg#svgView(preserveAspectRatio(none))") center center no-repeat',
-          backgroundSize: '100vw 100%',
-        }}
-      ></div>
+      <HeaderImage position="absolute top-14"/>
       <div className="absolute" style={{ top: '300vh' }}>
         <Image
           className="transition-all ease-out duration-500"

@@ -1,9 +1,7 @@
-import { ChangeEvent, FormEvent, useState, useEffect } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 import { MdDelete, MdEmail, MdAddAPhoto } from 'react-icons/md'
 import { AiOutlineClose, AiTwotoneEdit } from 'react-icons/ai'
 import { HiUserGroup } from 'react-icons/hi'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import Button from '../../components/common/buttons/Button'
 import LoadingOverlay from '../../components/common/LoadingOverlay'
 import LoadingIndicator from '../../components/Admin/Layout/LoadingIndicator'
@@ -12,9 +10,6 @@ import { NoticeEndpoints } from '../../pages/api/notice'
 import Swal from 'sweetalert2'
 
 const AdminUsers = (): JSX.Element => {
-  useEffect(() => {
-    Aos.init({ offset: 0, duration: 1000 })
-  }, [])
   const { data: notices, isSuccess } = useGetNotices()
   const [showLoading, setShowLoading] = useState(false)
   const [showModal, setShowModal] = useState(false)

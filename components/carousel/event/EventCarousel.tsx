@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import CarouselIndicatorBar from '../CarouselIndicatorBar'
 
 interface EventCarouselProps {
@@ -11,10 +9,6 @@ interface EventCarouselProps {
 }
 
 export default function EventCarousel(props: EventCarouselProps): JSX.Element {
-  useEffect(() => {
-    Aos.init({ duration: 1000 })
-  }, [])
-
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0)
 
   const onEventChange = function (currentIndex: number) {

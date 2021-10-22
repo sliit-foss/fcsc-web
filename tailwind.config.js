@@ -11,6 +11,7 @@ module.exports = {
       inter: ['Inter', 'sans-serif'],
     },
     screens: {
+      sm0: '120px',
       sm1: '340px',
       sm2: '460px',
       sm: '640px',
@@ -61,6 +62,11 @@ module.exports = {
         full: '100%',
       },
       height: {
+        200: '200px',
+        300: '300px',
+        400: '400px',
+        500: '500px',
+        600: '600px',
         '35vh': '35vh',
         '45vh': '45vh',
         '84vh-32': 'calc(84vh - 32px)',

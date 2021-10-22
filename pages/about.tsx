@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import { TiArrowSortedDown } from 'react-icons/ti'
-import background from '../public/shapes/1.png'
-import image from '../public/aboutUs/aboutUs.png'
+import HeaderImage from '../components/common/HeaderImage'
+import image from '../public/aboutUs/aboutUs.svg'
 import photo from '../public/aboutUs/photo.png'
 
 const board = [
@@ -99,10 +97,6 @@ const board = [
   },
 ]
 export default function AboutUs(): JSX.Element {
-  useEffect(() => {
-    Aos.init({ duration: 1000 })
-  }, [])
-
   const currentTime = new Date()
   const currentYear = currentTime.getFullYear()
   const years: Array<string> = []
@@ -124,27 +118,24 @@ export default function AboutUs(): JSX.Element {
         <title>About</title>
       </Head>
       <div className="justify-items-center">
-        <h1
-          className="title-font sm:text-4xl text-3xl font-medium text-white w-88% absolute ml-auto mr-auto mt-8% left-0 right-0 p-0 md:py-14 z-20"
-        >
+        <HeaderImage
+          position="absolute top-14"
+        />
+        <h1 className="title-font sm:text-4xl text-3xl font-medium text-white relative top-20 left-6 sm2:left-10 sm:left-12 z-20 flex md:hidden" data-aos="fade-right">
           ABOUT US
         </h1>
-        <Image
-          className="transition-all ease-out duration-500"
-          src={background}
-          alt="SLIIT FCSC"
-          quality={90}
-          layout="responsive"
-          placeholder="blur"
-          height="500"
-        />
-
-        <div className="flex flex-col-reverse md:flex-row pb-0 md:pb-6 place-content-center items-center">
+        <div className="flex flex-col-reverse md:flex-row pb-0 md:pb-6 mt-44 md:mt-0 place-content-center items-center relative top-0 z-20">
           <div className="flex flex-col w-full md:w-1/2 place-content-center p-14 px-10 md:px-14">
-            <h1 className="font-bold text-2xl text-center md:text-left">
+            <h1 className="title-font sm:text-4xl text-3xl font-medium text-white mt-24 xl:mt-40 mb-64 xl:mb-96 hidden md:flex" data-aos="fade-down">
+              ABOUT US
+            </h1>
+            <h1
+              className="font-bold text-2xl text-center md:text-left mt-0 lg:mt-16"
+              data-aos="fade-right"
+            >
               Who We Are
             </h1>
-            <p className="mt-2 text-center md:text-left">
+            <p className="mt-2 text-center md:text-left" data-aos="fade-right">
               <span className="text-3xl font-semibold">L</span>orem ipsum dolor
               sit amet, consectetur adipiscing elit, sed modtur adipiscing elit,
               sed modo consequat. Duis nulla pariatur. Eident, sunt intur
@@ -159,14 +150,13 @@ export default function AboutUs(): JSX.Element {
               consequat. Duis nulla pariatur. Eident
             </p>
           </div>
-          <div className="w-3/4 md:w-4/12">
+          <div className="w-3/4 md:w-4/12" data-aos="fade-left">
             <Image
               className=""
               src={image}
               alt="SLIIT FCSC"
               quality={90}
               layout="intrinsic"
-              placeholder="blur"
             />
           </div>
         </div>

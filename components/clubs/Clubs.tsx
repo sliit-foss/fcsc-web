@@ -1,6 +1,3 @@
-import { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import ClubLogo from './ClubLogo'
 import foss from '../../public/clubs/foss.png'
 import ms from '../../public/clubs/ms.png'
@@ -10,10 +7,6 @@ import cs2 from '../../public/clubs/cs2.png'
 import sesc from '../../public/clubs/sesc.png'
 
 export default function Clubs(): JSX.Element {
-  useEffect(() => {
-    Aos.init({ duration: 1000 })
-  }, [])
-
   return (
     <div className="flex justify-center mt-5 lg:mt-12">
       <div className="flex flex-col w-10/12 px-5 mb-16 justify-between">

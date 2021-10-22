@@ -1,13 +1,6 @@
-import { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import { MdPermContactCalendar } from 'react-icons/md'
 
 export default function NoticeCalendar(): JSX.Element {
-  useEffect(() => {
-    Aos.init({ offset: 0, duration: 1000 })
-  }, [])
-  
   return (
     <div
       className="w-full md:w-11/12 flex flex-row justify-center md:justify-end"

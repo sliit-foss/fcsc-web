@@ -6,7 +6,7 @@ const Loginpage = (): JSX.Element => {
       <div
         className="flex p-3 lg:p-0 min-h-95vh"
         style={{
-          background: 'url(/shapes/1.png) no-repeat center center ',
+          background: 'url(/shapes/1.svg) no-repeat center center ',
           backgroundSize: 'cover',
         }}
       >

@@ -11,7 +11,7 @@ const queryClient = new QueryClient()
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
-    Aos.init({ duration: 1000 })
+    Aos.init({ offset: 0, duration: 1000 })
   }, [])
 
   return (

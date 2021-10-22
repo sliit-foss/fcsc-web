@@ -129,6 +129,7 @@ export default function Content(props: ContentProps): JSX.Element {
                     id="name"
                     name="name"
                     placeholder="Name"
+                    required
                     className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light  text-base outline-none text-gray-700 py-1 px-3 mb-5 md:mb-0 mr-0 md:mr-5 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
                   />
                   <input
@@ -136,6 +137,7 @@ export default function Content(props: ContentProps): JSX.Element {
                     id="email"
                     name="email"
                     placeholder="Email"
+                    required
                     className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light text-base outline-none text-gray-700 py-1 px-3 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -145,6 +147,7 @@ export default function Content(props: ContentProps): JSX.Element {
                     id="subject"
                     name="subject"
                     placeholder="Subject"
+                    required
                     className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light text-base outline-none text-gray-700 py-1 px-3 shadow-lg leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -153,6 +156,7 @@ export default function Content(props: ContentProps): JSX.Element {
                     id="body"
                     name="body"
                     placeholder="Message"
+                    required
                     className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light h-52 text-base outline-none text-gray-700 py-1 pt-2 px-3 resize-none leading-6 shadow-lg transition-colors duration-200 ease-in-out"
                   />
                 </div>

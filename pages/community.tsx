@@ -135,7 +135,7 @@ export default function Community(): JSX.Element {
 
         <div className="grid grid-rows-1 pl-4 mx-10 lg:mx-32 pb-8">
           <div className="grid-cols-1 w-full">
-            <ol className="list-decimal font-bold" data-aos="fade-left">
+            <ol className="list-decimal font-bold mb-2" data-aos="fade-left">
               <li>Wiramaya</li>
             </ol>
 
@@ -161,9 +161,9 @@ export default function Community(): JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 mt-4 px-10 pb-8">
+          <div className="grid grid-cols-1 mt-4 px-5 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full" data-aos="fade-right">
+              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
                 <Image
                   src={viramayaPic01}
                   alt="SLIIT FCSC"
@@ -190,7 +190,7 @@ export default function Community(): JSX.Element {
         <div className="grid grid-rows-1 pl-4 mx-10 lg:mx-32 pb-8">
           <div className="grid-cols-1 w-full">
             <ol
-              className="list-decimal font-bold"
+              className="list-decimal font-bold mb-2"
               start={2}
               data-aos="fade-left"
             >
@@ -210,9 +210,9 @@ export default function Community(): JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
+          <div className="grid grid-cols-1 mt-4 px-5 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full" data-aos="fade-right">
+              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
                 <Image
                   src={bl1}
                   alt="SLIIT FCSC"
@@ -237,7 +237,7 @@ export default function Community(): JSX.Element {
         <div className="grid grid-rows-1 mx-16 lg:mx-36 pb-8">
           <div className="grid-cols-1 w-full">
             <ol
-              className="list-decimal font-bold"
+              className="list-decimal font-bold mb-2"
               start={3}
               data-aos="fade-left"
             >
@@ -258,9 +258,9 @@ export default function Community(): JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
+          <div className="grid grid-cols-1 mt-4 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full" data-aos="fade-right">
+              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
                 <Image
                   src={miniHack1}
                   alt="SLIIT FCSC"
@@ -285,7 +285,7 @@ export default function Community(): JSX.Element {
         <div className="grid grid-rows-1 mx-16 lg:mx-36 pb-8">
           <div className="grid-cols-1 w-full ">
             <ol
-              className="list-decimal font-bold"
+              className="list-decimal font-bold mb-2"
               start={4}
               data-aos="fade-left"
             >
@@ -302,9 +302,9 @@ export default function Community(): JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
+          <div className="grid grid-cols-1 mt-4 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full" data-aos="fade-right">
+              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
                 <Image
                   src={pirithC1}
                   alt="SLIIT FCSC"
@@ -331,7 +331,7 @@ export default function Community(): JSX.Element {
         <div className="grid grid-rows-1 mx-16 lg:mx-36 pb-8">
           <div className="grid-cols-1 w-full">
             <ol
-              className="list-decimal font-bold"
+              className="list-decimal font-bold mb-2"
               start={5}
               data-aos="fade-left"
             >
@@ -363,7 +363,7 @@ export default function Community(): JSX.Element {
         <div className="grid grid-rows-1 mx-16 lg:mx-36 pb-8">
           <div className="grid-cols-1 w-full">
             <ol
-              className="list-decimal font-bold"
+              className="list-decimal font-bold mb-2"
               start={6}
               data-aos="fade-right"
             >
@@ -399,7 +399,7 @@ export default function Community(): JSX.Element {
         <div className="grid grid-rows-1 mx-16 lg:mx-36 pb-8">
           <div className="grid-cols-1 w-full">
             <ol
-              className="list-decimal font-bold"
+              className="list-decimal font-bold mb-2"
               start={7}
               data-aos="fade-left"
             >
@@ -424,9 +424,9 @@ export default function Community(): JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
+          <div className="grid grid-cols-1 mt-4 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full" data-aos="fade-right">
+              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
                 <Image
                   src={wh01}
                   alt="SLIIT FCSC"
@@ -452,7 +452,7 @@ export default function Community(): JSX.Element {
         <div className="grid grid-rows-1 mx-16 lg:mx-36 pb-8">
           <div className="grid-cols-1 w-full">
             <ol
-              className="list-decimal font-bold"
+              className="list-decimal font-bold mb-2"
               start={8}
               data-aos="fade-left"
             >
@@ -473,9 +473,9 @@ export default function Community(): JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 mt-4 pl-10 pr-10 pb-8">
+          <div className="grid grid-cols-1 mt-4 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full" data-aos="fade-right">
+              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
                 <Image
                   src={bash01}
                   alt="SLIIT FCSC"
@@ -500,7 +500,7 @@ export default function Community(): JSX.Element {
         <div className="grid grid-rows-1 mx-16 lg:mx-36 pb-8 mb-12">
           <div className="grid-cols-1 w-full">
             <ol
-              className="list-decimal font-bold"
+              className="list-decimal font-bold mb-2"
               start={9}
               data-aos="fade-left"
             >

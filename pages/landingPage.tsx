@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { AiOutlineArrowDown } from 'react-icons/ai'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import background2 from '../public/shapes/2.svg'
 import people from '../public/landing/people.svg'
 import HeaderImage from '../components/common/HeaderImage'

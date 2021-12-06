@@ -158,37 +158,48 @@ const AdminUsers = (): JSX.Element => {
   }
 
   const deleteNotice = (noticeId: string) => {
-    setShowLoading(true)
-    NoticeEndpoints.deleteNotice(noticeId)
-      .then(() => {
-        setShowLoading(false)
-        let timerInterval: any
-        Swal.fire({
-          heightAuto: false,
-          icon: 'success',
-          title: `<div class="text-2xl">Notice removed sucessfully!</div>`,
-          showConfirmButton: false,
-          timer: 1500,
-          willClose: () => {
-            clearInterval(timerInterval)
-          },
-        }).then(() => {
-          if (process.browser) {
-            window.location.reload()
-          }
-        })
-      })
-      .catch((e) => {
-        const error = JSON.parse(e).data.error
-        setShowLoading(false)
-        Swal.fire({
-          icon: 'error',
-          heightAuto: false,
-          title: `<div class="text-2xl">${error}</div>`,
-          showConfirmButton: false,
-          timer: 1500,
-        })
-      })
+    Swal.fire({
+      title: 'Are you sure?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#1c1364',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setShowLoading(true)
+        NoticeEndpoints.deleteNotice(noticeId)
+          .then(() => {
+            setShowLoading(false)
+            let timerInterval: any
+            Swal.fire({
+              heightAuto: false,
+              icon: 'success',
+              title: `<div class="text-2xl">Notice removed sucessfully!</div>`,
+              showConfirmButton: false,
+              timer: 1500,
+              willClose: () => {
+                clearInterval(timerInterval)
+              },
+            }).then(() => {
+              if (process.browser) {
+                window.location.reload()
+              }
+            })
+          })
+          .catch((e) => {
+            const error = JSON.parse(e).data.error
+            setShowLoading(false)
+            Swal.fire({
+              icon: 'error',
+              heightAuto: false,
+              title: `<div class="text-2xl">${error}</div>`,
+              showConfirmButton: false,
+              timer: 1500,
+            })
+          })
+      }
+    })
   }
 
   return (
@@ -337,7 +348,7 @@ const AdminUsers = (): JSX.Element => {
           <form
             method="post"
             onSubmit={handleSubmit}
-            className="absolute z-50 top-1/2 left-1/2 md:left-6/10 transform -translate-x-1/2 -translate-y-1/2 bg-white w-72 md:w-96 mx-auto md:mx-0 rounded-lg p-4 px-6 pointer-events-auto"
+            className="absolute max-h-100vh z-50 top-1/2 left-1/2 md:left-6/10 transform -translate-x-1/2 -translate-y-1/2 bg-white w-72 md:w-96 mx-auto md:mx-0 rounded-lg p-4 px-6 pointer-events-auto overflow-y-scroll hide-scroll"
           >
             <div className="inline-flex items-center justify-end w-full mb-4">
               <div onClick={toggleModal}>

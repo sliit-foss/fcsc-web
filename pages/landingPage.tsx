@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import { AiOutlineArrowDown } from 'react-icons/ai'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import background2 from '../public/shapes/2.svg'
 import people from '../public/landing/people.svg'
 import HeaderImage from '../components/common/HeaderImage'
 import LaunchButton from '../components/contactUs/LaunchButton'
-import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
 import FAQ from '../components/faq/FAQ'
 import Event from '../components/carousel/event/Event'
@@ -51,22 +50,24 @@ export default function LandingPage(): JSX.Element {
     <div className="justify-items-center ">
       <div className="w-40% absolute ml-5% mr-10% mt-16 xl:mt-5% left-0 right-0 p-0 md:py-14 z-20">
         <div className="sm:mb-3 md:mb-3 flex flex-row z-0" data-aos="fade-down">
-          <FaFacebook
-            className="mb-3 mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
-            size="22"
-          />
-          <FaInstagram
-            className="mb-3  mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
-            size="22"
-          />
-          <FaLinkedin
-            className="mb-3  mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
-            size="22"
-          />
-          <FaTwitter
-            className="mb-3  mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
-            size="22"
-          />
+          <a href="https://www.facebook.com/sliit.fcsc/">
+            <FaFacebook
+              className="mb-3 mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
+              size="22"
+            />
+          </a>
+          <a href="https://www.instagram.com/sliit.fcsc/?hl=en">
+            <FaInstagram
+              className="mb-3  mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
+              size="22"
+            />
+          </a>
+          <a href="https://www.linkedin.com/company/fcsc-sliit/">
+            <FaLinkedin
+              className="mb-3  mr-3 fill-current-color text-white hover:text-fcsc-orange transition ease-in duration-200"
+              size="22"
+            />
+          </a>
         </div>
         <h1
           className="title-font lg:text-4xl  text-xl font-medium text-white z-0"
@@ -91,7 +92,7 @@ export default function LandingPage(): JSX.Element {
           </div>
         </a>
       </div>
-      <HeaderImage height='h-500 xl:h-600' position="absolute top-14"/>
+      <HeaderImage height="h-500 xl:h-600" position="absolute top-14" />
       <div className="absolute" style={{ top: '300vh' }}>
         <Image
           className="transition-all ease-out duration-500"
@@ -120,9 +121,6 @@ export default function LandingPage(): JSX.Element {
         data-aos="fade-up"
       >
         LATEST NOTICES
-      </div>
-      <div className="">
-        <NoticeCalendar />
       </div>
       <NoticeCarousel noticeData={noticeImages} />
       <div className="w-full flex justify-center" id="faq">

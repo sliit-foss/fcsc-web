@@ -5,7 +5,6 @@ import HeaderImage from '../components/common/HeaderImage'
 import noticeboard from '../public/notices/noticeboard.svg'
 import Announcements from '../components/announcements/Announcements'
 import { QAProps } from '../components/common/QA/QAComponent'
-import NoticeCalendar from '../components/common/buttons/NoticeCalendar'
 import { useGetNotices } from '../queries/useGetNotice'
 import { getFilteredNotices } from '../utils/noticeFilter'
 
@@ -74,7 +73,6 @@ export default function Notices(): JSX.Element {
             />
           </div>
         </div>
-        <NoticeCalendar />
         <NoticeCarousel noticeData={noticeImages} />
         {isSuccess && noticeList ? (
           <>

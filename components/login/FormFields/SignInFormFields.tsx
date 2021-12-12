@@ -38,7 +38,6 @@ const SignInFormFields = ({ onSubmit, handleCheck }: props): JSX.Element => {
           />
           <p className="text-xs text-blue">Remember</p>
         </div>
-        <a className="text-xs text-blue cursor-pointer">Forgot Password</a>
       </div>
     </form>
   )

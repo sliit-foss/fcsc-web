@@ -109,7 +109,7 @@ const LoginForm = ({
     <>
       <LoadingOverlay show={showLoading} />
       <div className="flex flex-col order-1 lg:order-none items-center lg:w-6/12 lg:justify-center lg:transform lg:scale-90">
-        <h2 className="font-inter font-extrabold text-fcsc-blue text-3xl lg:text-2xl mb-2">
+        <h2 className="font-inter font-extrabold text-fcsc-blue text-3xl mb-2">
           {login ? 'LOGIN' : 'Sign Up'}
         </h2>
         <p className="font-inter text-textBlackSecondary font-medium mb-6 text-sm">

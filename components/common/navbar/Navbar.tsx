@@ -23,7 +23,7 @@ function Navbar(): JSX.Element {
 
   const logOut = () => {
     window.localStorage.clear()
-    router.push({
+    router.replace({
       pathname: '/',
     })
   }

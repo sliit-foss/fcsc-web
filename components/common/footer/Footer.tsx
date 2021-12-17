@@ -8,7 +8,6 @@ import {
   FaInstagram,
   FaLinkedin,
   FaRegEnvelope,
-  FaTwitter,
 } from 'react-icons/fa'
 
 const Footer = (): JSX.Element => {
@@ -65,26 +64,20 @@ const Footer = (): JSX.Element => {
               <div className="pl-10 pr-10 text-white mb-3 ">
                 <h4 className="text-xl font-bold mb-3">Follow Us</h4>
                 <div className="sm:mb-3 md:mb-3 flex flex-row">
-                  <a href="">
+                  <a href="https://www.facebook.com/sliit.fcsc/">
                     <FaFacebook
                       className="colorIcon mb-3 mr-3 fill-current-color hover:text-fcsc-orange transition ease-in duration-200"
                       size="22"
                     />
                   </a>
-                  <a href="">
+                  <a href="https://www.instagram.com/sliit.fcsc/?hl=en">
                     <FaInstagram
                       className="colorIcon mb-3  mr-3 fill-current-color hover:text-fcsc-orange transition ease-in duration-200"
                       size="22"
                     />
                   </a>
-                  <a href="">
+                  <a href="https://www.linkedin.com/company/fcsc-sliit/">
                     <FaLinkedin
-                      className="colorIcon mb-3  mr-3 fill-current-color hover:text-fcsc-orange transition ease-in duration-200"
-                      size="22"
-                    />
-                  </a>
-                  <a href="">
-                    <FaTwitter
                       className="colorIcon mb-3  mr-3 fill-current-color hover:text-fcsc-orange transition ease-in duration-200"
                       size="22"
                     />

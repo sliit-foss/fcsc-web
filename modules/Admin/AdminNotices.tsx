@@ -89,6 +89,9 @@ const AdminUsers = (): JSX.Element => {
           let errorMessage = 'Failed to add notice'
           if (error) {
             switch (true) {
+              case error.includes('duplicate key'):
+                errorMessage = 'There already is a notice with this title'
+                break
               case error.includes('Path `title` is required.'):
                 errorMessage = 'Please enter a notice title'
                 break

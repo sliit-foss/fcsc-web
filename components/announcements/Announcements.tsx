@@ -1,6 +1,3 @@
-import { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import { GiSpeaker } from 'react-icons/gi'
 import QAComponent, { QAProps } from '../common/QA/QAComponent'
 
@@ -10,10 +7,6 @@ interface AnnouncementProps {
 }
 
 export default function Announcements(props: AnnouncementProps): JSX.Element {
-  useEffect(() => {
-    Aos.init({ offset: 0, duration: 1000 })
-  }, [])
-
   return (
     <section className="flex flex-col md:flex-row justify-center items-center">
       <div

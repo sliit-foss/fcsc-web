@@ -1,9 +1,7 @@
-import { ChangeEvent, FormEvent, useState, useEffect } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 import { MdDelete, MdEmail, MdAddAPhoto } from 'react-icons/md'
 import { AiOutlineClose, AiTwotoneEdit } from 'react-icons/ai'
 import { HiUserGroup } from 'react-icons/hi'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import Button from '../../components/common/buttons/Button'
 import LoadingOverlay from '../../components/common/LoadingOverlay'
 import LoadingIndicator from '../../components/Admin/Layout/LoadingIndicator'
@@ -12,9 +10,6 @@ import { NoticeEndpoints } from '../../pages/api/notice'
 import Swal from 'sweetalert2'
 
 const AdminUsers = (): JSX.Element => {
-  useEffect(() => {
-    Aos.init({ offset: 0, duration: 1000 })
-  }, [])
   const { data: notices, isSuccess } = useGetNotices()
   const [showLoading, setShowLoading] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -94,6 +89,9 @@ const AdminUsers = (): JSX.Element => {
           let errorMessage = 'Failed to add notice'
           if (error) {
             switch (true) {
+              case error.includes('duplicate key'):
+                errorMessage = 'There already is a notice with this title'
+                break
               case error.includes('Path `title` is required.'):
                 errorMessage = 'Please enter a notice title'
                 break
@@ -163,37 +161,48 @@ const AdminUsers = (): JSX.Element => {
   }
 
   const deleteNotice = (noticeId: string) => {
-    setShowLoading(true)
-    NoticeEndpoints.deleteNotice(noticeId)
-      .then(() => {
-        setShowLoading(false)
-        let timerInterval: any
-        Swal.fire({
-          heightAuto: false,
-          icon: 'success',
-          title: `<div class="text-2xl">Notice removed sucessfully!</div>`,
-          showConfirmButton: false,
-          timer: 1500,
-          willClose: () => {
-            clearInterval(timerInterval)
-          },
-        }).then(() => {
-          if (process.browser) {
-            window.location.reload()
-          }
-        })
-      })
-      .catch((e) => {
-        const error = JSON.parse(e).data.error
-        setShowLoading(false)
-        Swal.fire({
-          icon: 'error',
-          heightAuto: false,
-          title: `<div class="text-2xl">${error}</div>`,
-          showConfirmButton: false,
-          timer: 1500,
-        })
-      })
+    Swal.fire({
+      title: 'Are you sure?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#1c1364',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setShowLoading(true)
+        NoticeEndpoints.deleteNotice(noticeId)
+          .then(() => {
+            setShowLoading(false)
+            let timerInterval: any
+            Swal.fire({
+              heightAuto: false,
+              icon: 'success',
+              title: `<div class="text-2xl">Notice removed sucessfully!</div>`,
+              showConfirmButton: false,
+              timer: 1500,
+              willClose: () => {
+                clearInterval(timerInterval)
+              },
+            }).then(() => {
+              if (process.browser) {
+                window.location.reload()
+              }
+            })
+          })
+          .catch((e) => {
+            const error = JSON.parse(e).data.error
+            setShowLoading(false)
+            Swal.fire({
+              icon: 'error',
+              heightAuto: false,
+              title: `<div class="text-2xl">${error}</div>`,
+              showConfirmButton: false,
+              timer: 1500,
+            })
+          })
+      }
+    })
   }
 
   return (
@@ -342,7 +351,7 @@ const AdminUsers = (): JSX.Element => {
           <form
             method="post"
             onSubmit={handleSubmit}
-            className="absolute z-50 top-1/2 left-1/2 md:left-6/10 transform -translate-x-1/2 -translate-y-1/2 bg-white w-72 md:w-96 mx-auto md:mx-0 rounded-lg p-4 px-6 pointer-events-auto"
+            className="absolute max-h-100vh z-50 top-1/2 left-1/2 md:left-6/10 transform -translate-x-1/2 -translate-y-1/2 bg-white w-72 md:w-96 mx-auto md:mx-0 rounded-lg p-4 px-6 pointer-events-auto overflow-y-scroll hide-scroll"
           >
             <div className="inline-flex items-center justify-end w-full mb-4">
               <div onClick={toggleModal}>

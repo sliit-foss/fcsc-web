@@ -8,7 +8,6 @@ import {
   FaInstagram,
   FaLinkedin,
   FaRegEnvelope,
-  FaTwitter,
 } from 'react-icons/fa'
 
 const Footer = (): JSX.Element => {
@@ -41,17 +40,17 @@ const Footer = (): JSX.Element => {
         <div className="lg:flex lg:flex-row bg-fcsc-blue_light lg:h-60">
           <div className="sm:w-full lg:w-1/3 ">
             <div className="h-24 flex flex-row items-center">
-              <div className="bg-white w-56 ml-10 h-16 flex flex-row justify-around items-center rounded-lg text-white">
-                <a>
+              <div className="bg-white w-56 ml-10 h-16 flex flex-row justify-around items-center rounded-lg text-white shadow-lg hover:shadow-xl transition-all ease-out duration-500">
+                <a className="mt-1 ml-1">
                   <Image
-                    className="justify-self-center mt-1"
+                    className=""
                     src={fcscLogo}
-                    alt="fossLogo"
+                    alt="fcscLogo"
                     width="100"
                     height="40"
                   />
                 </a>
-                <a>
+                <a className="mr-1">
                   <Image
                     className="justify-self-center"
                     src={fossLogo}
@@ -65,26 +64,20 @@ const Footer = (): JSX.Element => {
               <div className="pl-10 pr-10 text-white mb-3 ">
                 <h4 className="text-xl font-bold mb-3">Follow Us</h4>
                 <div className="sm:mb-3 md:mb-3 flex flex-row">
-                  <a href="">
+                  <a href="https://www.facebook.com/sliit.fcsc/">
                     <FaFacebook
                       className="colorIcon mb-3 mr-3 fill-current-color hover:text-fcsc-orange transition ease-in duration-200"
                       size="22"
                     />
                   </a>
-                  <a href="">
+                  <a href="https://www.instagram.com/sliit.fcsc/?hl=en">
                     <FaInstagram
                       className="colorIcon mb-3  mr-3 fill-current-color hover:text-fcsc-orange transition ease-in duration-200"
                       size="22"
                     />
                   </a>
-                  <a href="">
+                  <a href="https://www.linkedin.com/company/fcsc-sliit/">
                     <FaLinkedin
-                      className="colorIcon mb-3  mr-3 fill-current-color hover:text-fcsc-orange transition ease-in duration-200"
-                      size="22"
-                    />
-                  </a>
-                  <a href="">
-                    <FaTwitter
                       className="colorIcon mb-3  mr-3 fill-current-color hover:text-fcsc-orange transition ease-in duration-200"
                       size="22"
                     />
@@ -161,9 +154,9 @@ const Footer = (): JSX.Element => {
                       type="email"
                       placeholder="Email Address"
                       required
-                      className="p-2 pl-3 mt-5 w-3/4 rounded-lg block text-black shadow-md"
+                      className="p-2 pl-3 mt-5 w-3/4 rounded-lg block text-black shadow-md focus:outline-none"
                     />
-                    <button className="w-11 h-11  bg-fcsc-orange mt-5 shadow-md hover:bg-fcsc-blue_light duration-150 transition ease-in font-medium rounded-lg block relative -left-10">
+                    <button className="w-11 h-11 bg-fcsc-orange mt-5 shadow-md hover:bg-fcsc-blue_light duration-150 transition ease-in font-medium rounded-lg focus:outline-none block relative -left-10">
                       <FaRegEnvelope
                         className="transform -rotate-12  relative top-0 left-0 right-0 bottom-0 m-auto"
                         size="25"

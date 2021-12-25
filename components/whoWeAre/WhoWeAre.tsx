@@ -1,15 +1,7 @@
-import { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import Image from 'next/image'
-
 import image from '../../public/whoWeAre/image.png'
 
 export default function WhoWeAre(): JSX.Element {
-  useEffect(() => {
-    Aos.init({ offset: 0, duration: 1000 })
-  }, [])
-
   return (
     <div className="flex justify-center mt-24">
       <div className="flex flex-col lg:flex-row w-11/12 md:w-10/12 px-5 mb-24 justify-between">

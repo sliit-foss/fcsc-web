@@ -22,12 +22,8 @@ function Navbar(): JSX.Element {
   }
 
   const logOut = () => {
-    window.localStorage.setItem('RememberMe', 'false')
-    window.localStorage.setItem('LoggedIn', 'false')
-    window.localStorage.setItem('Token', '')
-    window.localStorage.setItem('Role', '')
-    window.localStorage.setItem('MenuOptionCache', '')
-    router.push({
+    window.localStorage.clear()
+    router.replace({
       pathname: '/',
     })
   }
@@ -96,7 +92,7 @@ function Navbar(): JSX.Element {
           ))}
         </div>
         <div
-          className="block lg:hidden z-20 cursor-pointer transition ease-in  mr-3  md:mr-3 lg:mr-0"
+          className="block lg:hidden z-10 cursor-pointer transition ease-in  mr-3  md:mr-3 lg:mr-0"
           onClick={toggleNav}
         >
           {!isOpen ? (

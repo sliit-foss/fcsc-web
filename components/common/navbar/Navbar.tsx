@@ -34,7 +34,7 @@ function Navbar(): JSX.Element {
     { text: 'Event', href: '/events' },
     { text: 'Notice', href: '/notices' },
     { text: 'About', href: '/about' },
-    { text: 'Login', href: '/login' },
+    // { text: 'Login', href: '/login' },
   ]
 
   if (loginStatus) {

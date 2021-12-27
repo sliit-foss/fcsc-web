@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import { AiOutlineArrowDown } from 'react-icons/ai'
+// import { AiOutlineArrowDown } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import background2 from '../public/shapes/2.svg'
 import people from '../public/landing/people.svg'
 import HeaderImage from '../components/common/HeaderImage'
 import LaunchButton from '../components/contactUs/LaunchButton'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
-import FAQ from '../components/faq/FAQ'
+// import FAQ from '../components/faq/FAQ'
 import Event from '../components/carousel/event/Event'
 import EventCarousel from '../components/carousel/event/EventCarousel'
 import WhoWeAre from '../components/whoWeAre/WhoWeAre'
@@ -81,14 +81,14 @@ export default function LandingPage(): JSX.Element {
         </p>
         <a href="#faq">
           <div data-aos="fade-up">
-            <div
+            {/* <div
               className="bg-fcsc-orange px-5 py-1 w-2 w-24 lg:w-32 my-5 justify-center rounded-md shadow-lg
           hover:shadow-xl transform hover:scale-105 text-white text-md md:text-lg font-semibold cursor-pointer
           transition ease-in duration-200 flex flex-row items-center z-0"
             >
               FAQs
               <AiOutlineArrowDown size={22} className="ml-1 animate-bounce" />
-            </div>
+            </div> */}
           </div>
         </a>
       </div>
@@ -123,11 +123,11 @@ export default function LandingPage(): JSX.Element {
         LATEST NOTICES
       </div>
       <NoticeCarousel noticeData={noticeImages} />
-      <div className="w-full flex justify-center" id="faq">
+      {/* <div className="w-full flex justify-center" id="faq">
         <div className="w-10/12 md:px-4">
           <FAQ />
         </div>
-      </div>
+      </div> */}
       {isSuccessLatest && latestEvents ? (
         latestEvents.length != 0 ? (
           <EventCarousel title="LATEST EVENTS" eventData={latestEventsList} />

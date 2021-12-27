@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useState, useEffect } from 'react'
 import { MdDelete, MdEmail, MdAddAPhoto } from 'react-icons/md'
 import { AiOutlineClose, AiTwotoneEdit } from 'react-icons/ai'
 import { HiUserGroup } from 'react-icons/hi'
@@ -7,6 +7,7 @@ import LoadingOverlay from '../../components/common/LoadingOverlay'
 import LoadingIndicator from '../../components/Admin/Layout/LoadingIndicator'
 import { useGetNotices } from '../../queries/useGetNotice'
 import { NoticeEndpoints } from '../../pages/api/notice'
+import { disableAos } from '../../utils/utils'
 import Swal from 'sweetalert2'
 
 const AdminUsers = (): JSX.Element => {
@@ -21,6 +22,10 @@ const AdminUsers = (): JSX.Element => {
     category: '',
     photo: '',
   })
+
+  useEffect(() => {
+    disableAos('noticeRecord', 2000)
+  }, [])
 
   const toggleModal = () => {
     setShowModal((prev) => !prev)
@@ -267,7 +272,7 @@ const AdminUsers = (): JSX.Element => {
                   return (
                     <div
                       key={i}
-                      className="grid grid-rows-1 grid-cols-1 sm:grid-cols-4 md:grid-cols-10 gap-2 sm:gap-4 rounded-sm shadow-lg p-4 md:px-8 justify-center items-center"
+                      className="grid grid-rows-1 grid-cols-1 sm:grid-cols-4 md:grid-cols-10 gap-2 sm:gap-4 rounded-sm shadow-lg p-4 md:px-8 justify-center items-center noticeRecord"
                       data-aos={i % 2 == 1 ? 'fade-right' : 'fade-left'}
                     >
                       <p className="sm:col-span-3 md:col-span-2 font-semibold text-xl md:text-base text-gray-700">

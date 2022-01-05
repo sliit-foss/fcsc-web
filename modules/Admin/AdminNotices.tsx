@@ -1,5 +1,5 @@
-import { ChangeEvent, FormEvent, useState, useEffect } from 'react'
-import { MdDelete, MdEmail, MdAddAPhoto } from 'react-icons/md'
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
+import { MdAddAPhoto, MdDelete, MdEmail } from 'react-icons/md'
 import { AiOutlineClose, AiTwotoneEdit } from 'react-icons/ai'
 import { HiUserGroup } from 'react-icons/hi'
 import Button from '../../components/common/buttons/Button'
@@ -20,7 +20,7 @@ const AdminUsers = (): JSX.Element => {
     title: '',
     body: '',
     category: '',
-    photo: '',
+    photo: ''
   })
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const AdminUsers = (): JSX.Element => {
   const handleInputChange = (e: ChangeEvent<any>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     })
   }
 

@@ -170,12 +170,12 @@ export default function Content(props: ContentProps): JSX.Element {
               >
                 Send
               </button>
-              <button
+              {/* <button
                 className="text-white bg-fcsc-orange border-0 py-2 px-14 focus:outline-none shadow-md hover:shadow-lg hover:bg-fcsc-orange_light rounded text-lg transition ease-in duration-200"
                 onClick={props.toggleFunction}
               >
                 Cancel
-              </button>
+              </button> */}
             </div>
           </form>
         </section>

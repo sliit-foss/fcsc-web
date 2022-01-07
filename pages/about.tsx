@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { TiArrowSortedDown } from 'react-icons/ti'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import HeaderImage from '../components/common/HeaderImage'
 import image from '../public/aboutUs/aboutUs.svg'
 import photo from '../public/aboutUs/photo.png'
@@ -202,7 +203,7 @@ export default function AboutUs(): JSX.Element {
           {board.map((member) => (
             <div
               key={member.socialLinks.fb}
-              className="m-10 w-full md:w-4/12 lg:w-1/4 aspect-w-1.25 aspect-h-1 md:aspect-w-3 md:aspect-h-1 lg:aspect-w-4 lg:aspect-h-1 relative rounded-3xl shadow-md flex justify-center items-center"
+              className="relative group m-10 w-full md:w-4/12 lg:w-1/4 aspect-w-1.25 aspect-h-1 md:aspect-w-3 md:aspect-h-1 lg:aspect-w-4 lg:aspect-h-1 relative rounded-3xl shadow-md flex justify-center items-center"
               data-aos="fade-up"
             >
               <Image
@@ -214,6 +215,39 @@ export default function AboutUs(): JSX.Element {
                 objectFit="cover"
                 placeholder="blur"
               />
+              <div className="absolute bottom-0 h-0 w-full group-hover:h-full transition-all ease-out duration-500 flex flex-col items-center justify-center bg-gradient-to-t from-fcsc-orange to-fcsc-orange_light rounded-xl md:group-hover:p-4">
+                <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-white group-hover:text-opacity-100 text-opacity-0 text-center mb-4">
+                  <div
+                    className="sm:mb-3 md:mb-3 flex flex-row z-0"
+                    data-aos="fade-down"
+                  >
+                    <a href={member.socialLinks.fb}>
+                      <FaFacebook
+                        className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                        size="30"
+                      />
+                    </a>
+                    <a href={member.socialLinks.insta}>
+                      <FaInstagram
+                        className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                        size="30"
+                      />
+                    </a>
+                    <a href={member.socialLinks.linkedln}>
+                      <FaLinkedin
+                        className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                        size="30"
+                      />
+                    </a>
+                    <a href={member.socialLinks.twitter}>
+                      <FaTwitter
+                        className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                        size="30"
+                      />
+                    </a>
+                  </div>
+                </h2>
+              </div>
             </div>
           ))}
         </div>

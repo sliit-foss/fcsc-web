@@ -9,8 +9,8 @@ import photo from '../public/aboutUs/photo.png'
 
 const board = [
   {
-    name: 'name',
-    post: 'post',
+    name: 'Pasan',
+    post: 'President',
     image: 'www.abc.com',
     socialLinks: {
       fb: 'fbLink',
@@ -217,34 +217,39 @@ export default function AboutUs(): JSX.Element {
               />
               <div className="absolute bottom-0 h-0 w-full group-hover:h-full transition-all ease-out duration-500 flex flex-col items-center justify-center bg-gradient-to-t from-fcsc-orange to-fcsc-orange_light rounded-xl md:group-hover:p-4">
                 <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-white group-hover:text-opacity-100 text-opacity-0 text-center mb-4">
-                  <div
-                    className="sm:mb-3 md:mb-3 flex flex-row z-0"
-                    data-aos="fade-down"
-                  >
-                    <a href={member.socialLinks.fb}>
-                      <FaFacebook
-                        className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                        size="30"
-                      />
-                    </a>
-                    <a href={member.socialLinks.insta}>
-                      <FaInstagram
-                        className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                        size="30"
-                      />
-                    </a>
-                    <a href={member.socialLinks.linkedln}>
-                      <FaLinkedin
-                        className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                        size="30"
-                      />
-                    </a>
-                    <a href={member.socialLinks.twitter}>
-                      <FaTwitter
-                        className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                        size="30"
-                      />
-                    </a>
+                  <div className="flex flex-col w-full relative -top-6">
+                    <h1 className="text-white font-bold text-2xl">
+                      {member.post}
+                    </h1>
+                    <div
+                      className="sm:mb-3 md:mb-3 flex flex-row z-0"
+                      data-aos="fade-down"
+                    >
+                      <a href={member.socialLinks.fb}>
+                        <FaFacebook
+                          className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                          size="30"
+                        />
+                      </a>
+                      <a href={member.socialLinks.insta}>
+                        <FaInstagram
+                          className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                          size="30"
+                        />
+                      </a>
+                      <a href={member.socialLinks.linkedln}>
+                        <FaLinkedin
+                          className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                          size="30"
+                        />
+                      </a>
+                      <a href={member.socialLinks.twitter}>
+                        <FaTwitter
+                          className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                          size="30"
+                        />
+                      </a>
+                    </div>
                   </div>
                 </h2>
               </div>

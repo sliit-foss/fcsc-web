@@ -320,9 +320,12 @@ export default function AboutUs(): JSX.Element {
                   objectFit="cover"
                   placeholder="blur"
                 />
-                <div className="absolute bottom-0 h-0 w-full group-hover:h-full transition-all ease-out duration-500 flex flex-col items-center justify-center bg-gradient-to-t from-fcsc-orange to-fcsc-orange_light rounded-xl md:group-hover:p-4">
+                <div className="absolute bottom-0 h-0 w-full group-hover:h-full opacity-0 group-hover:opacity-100 transition-all ease-out duration-500 flex flex-col items-center justify-center bg-gradient-to-t from-fcsc-orange to-fcsc-orange_light rounded-xl md:group-hover:p-4">
                   <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-white group-hover:text-opacity-100 text-opacity-0 text-center mb-4">
-                    <div className="flex flex-col w-full relative -top-6">
+                    <div className="flex flex-col w-full relative">
+                      <h1 className="text-white font-bold text-3xl">
+                        {member.name}
+                      </h1>
                       <h1 className="text-white font-bold text-2xl mb-3">
                         {member.post}
                       </h1>

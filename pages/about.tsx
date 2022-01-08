@@ -5,13 +5,26 @@ import { TiArrowSortedDown } from 'react-icons/ti'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import HeaderImage from '../components/common/HeaderImage'
 import image from '../public/aboutUs/aboutUs.svg'
-import photo from '../public/aboutUs/photo.png'
-
+import President from '../public/whoWeAre/2021/President - Pasan Nethsara.jpeg'
+import VicePresident from '../public/whoWeAre/2021/DSC_0951.jpg'
+import Secretary from '../public/whoWeAre/2021/Secretary - Kaveesha Gimhana.jpeg'
+import AsstSecretary from '../public/whoWeAre/2021/DSC_0041.jpg'
+import Treasurer from '../public/whoWeAre/2021/Treasurer - Chathura Bhagya.jpg'
+import AsstTreasurer from '../public/whoWeAre/2021/Assistant Treasurer - Ranul Deelaka.jpeg'
+import Editor from '../public/whoWeAre/2021/Editor - Udara Jayasekara.jpg'
+import ComMem01 from '../public/whoWeAre/2021/Committee Member - Dulitha Sachinthana.jpg'
+import ComMem02 from '../public/whoWeAre/2021/Committee Member - Chalana Sandaruwan.jpg'
+import ComMem03 from '../public/whoWeAre/2021/Committee Member - Kolitha Dasanayaka.jpeg'
+import ComMem04 from '../public/whoWeAre/2021/Committee Member - Saveendra Perera.jpg'
+import ComMem05 from '../public/whoWeAre/2021/Committee Member - Amila Perera.jpg'
+import ComMem06 from '../public/whoWeAre/2021/Committee Member - Ruwin Rathnayake.jpeg'
+import ComMem07 from '../public/whoWeAre/2021/Committee Member - Nuwantha Perera.jpg'
+import ComMem08 from '../public/whoWeAre/2021/Committee Member - Nuwantha Perera.jpg'
 const board = [
   {
-    name: 'name',
-    post: 'post',
-    image: 'www.abc.com',
+    name: 'Pasan Nethsara',
+    post: 'President',
+    image: President,
     socialLinks: {
       fb: 'fbLink',
       twitter: 'twitterLink',
@@ -20,9 +33,9 @@ const board = [
     },
   },
   {
-    name: 'name',
-    post: 'post',
-    image: 'www.abc.com',
+    name: 'Ranula Gihara',
+    post: 'Vice President',
+    image: VicePresident,
     socialLinks: {
       fb: 'fbLink',
       twitter: 'twitterLink',
@@ -31,9 +44,9 @@ const board = [
     },
   },
   {
-    name: 'name',
-    post: 'post',
-    image: 'www.abc.com',
+    name: 'Kaveesha Gimhana',
+    post: 'Secretary',
+    image: Secretary,
     socialLinks: {
       fb: 'fbLink',
       twitter: 'twitterLink',
@@ -42,9 +55,9 @@ const board = [
     },
   },
   {
-    name: 'name',
-    post: 'post',
-    image: 'www.abc.com',
+    name: 'Isuri Devlini',
+    post: 'Asst.Secretary',
+    image: AsstSecretary,
     socialLinks: {
       fb: 'fbLink',
       twitter: 'twitterLink',
@@ -53,9 +66,9 @@ const board = [
     },
   },
   {
-    name: 'name',
-    post: 'post',
-    image: 'www.abc.com',
+    name: 'Chathura Bhagya',
+    post: 'Treasurer',
+    image: Treasurer,
     socialLinks: {
       fb: 'fbLink',
       twitter: 'twitterLink',
@@ -64,9 +77,9 @@ const board = [
     },
   },
   {
-    name: 'name',
-    post: 'post',
-    image: 'www.abc.com',
+    name: 'Ranul Deelaka',
+    post: 'Asst.Treasurer',
+    image: AsstTreasurer,
     socialLinks: {
       fb: 'fbLink',
       twitter: 'twitterLink',
@@ -75,9 +88,9 @@ const board = [
     },
   },
   {
-    name: 'name',
-    post: 'post',
-    image: 'www.abc.com',
+    name: 'Udara Jayasekara',
+    post: 'Editor',
+    image: Editor,
     socialLinks: {
       fb: 'fbLink',
       twitter: 'twitterLink',
@@ -86,9 +99,86 @@ const board = [
     },
   },
   {
-    name: 'name',
-    post: 'post',
-    image: 'www.abc.com',
+    name: 'Dulitha Sachinthana',
+    post: 'Committee Member',
+    image: ComMem01,
+    socialLinks: {
+      fb: 'fbLink',
+      twitter: 'twitterLink',
+      insta: 'instaLink',
+      linkedln: 'linkedlnLink',
+    },
+  },
+  {
+    name: 'Chalana Sandaruwan',
+    post: 'Committee Member',
+    image: ComMem02,
+    socialLinks: {
+      fb: 'fbLink',
+      twitter: 'twitterLink',
+      insta: 'instaLink',
+      linkedln: 'linkedlnLink',
+    },
+  },
+  {
+    name: 'Kolitha Dasanayaka',
+    post: 'Committee Member',
+    image: ComMem03,
+    socialLinks: {
+      fb: 'fbLink',
+      twitter: 'twitterLink',
+      insta: 'instaLink',
+      linkedln: 'linkedlnLink',
+    },
+  },
+  {
+    name: 'Shaveendra Perera',
+    post: 'Committee Member',
+    image: ComMem04,
+    socialLinks: {
+      fb: 'fbLink',
+      twitter: 'twitterLink',
+      insta: 'instaLink',
+      linkedln: 'linkedlnLink',
+    },
+  },
+  {
+    name: 'Amila Perera',
+    post: 'Committee Member',
+    image: ComMem05,
+    socialLinks: {
+      fb: 'fbLink',
+      twitter: 'twitterLink',
+      insta: 'instaLink',
+      linkedln: 'linkedlnLink',
+    },
+  },
+  {
+    name: 'Ruwin Rathnayake',
+    post: 'Committee Member',
+    image: ComMem06,
+    socialLinks: {
+      fb: 'fbLink',
+      twitter: 'twitterLink',
+      insta: 'instaLink',
+      linkedln: 'linkedlnLink',
+    },
+  },
+  {
+    name: 'Nuwantha perera',
+    post: 'Committee Member',
+    image: ComMem07,
+    socialLinks: {
+      fb: 'fbLink',
+      twitter: 'twitterLink',
+      insta: 'instaLink',
+      linkedln: 'linkedlnLink',
+    },
+  },
+  {
+    name: 'Prabodha Athhanayake',
+    post: 'Committee Member',
+    image: ComMem08,
     socialLinks: {
       fb: 'fbLink',
       twitter: 'twitterLink',
@@ -203,11 +293,11 @@ export default function AboutUs(): JSX.Element {
           {board.map((member) => (
             <div
               key={member.socialLinks.fb}
-              className="relative group m-10 w-full md:w-4/12 lg:w-1/4 aspect-w-1.25 aspect-h-1 md:aspect-w-3 md:aspect-h-1 lg:aspect-w-4 lg:aspect-h-1 relative rounded-3xl shadow-md flex justify-center items-center"
+              className="relative group m-10 w-full md:w-4/12 lg:w-1/4 aspect-w-1.25 aspect-h-1 md:aspect-w-3 md:aspect-h-1 lg:aspect-w-4 lg:aspect-h-1 rounded-3xl shadow-md flex justify-center items-center"
               data-aos="fade-up"
             >
               <Image
-                src={photo}
+                src={member.image}
                 alt="SLIIT FCSC"
                 className="rounded-3xl hover:opacity-80 transition-all ease-out duration-500"
                 quality={90}
@@ -217,34 +307,39 @@ export default function AboutUs(): JSX.Element {
               />
               <div className="absolute bottom-0 h-0 w-full group-hover:h-full transition-all ease-out duration-500 flex flex-col items-center justify-center bg-gradient-to-t from-fcsc-orange to-fcsc-orange_light rounded-xl md:group-hover:p-4">
                 <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-white group-hover:text-opacity-100 text-opacity-0 text-center mb-4">
-                  <div
-                    className="sm:mb-3 md:mb-3 flex flex-row z-0"
-                    data-aos="fade-down"
-                  >
-                    <a href={member.socialLinks.fb}>
-                      <FaFacebook
-                        className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                        size="30"
-                      />
-                    </a>
-                    <a href={member.socialLinks.insta}>
-                      <FaInstagram
-                        className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                        size="30"
-                      />
-                    </a>
-                    <a href={member.socialLinks.linkedln}>
-                      <FaLinkedin
-                        className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                        size="30"
-                      />
-                    </a>
-                    <a href={member.socialLinks.twitter}>
-                      <FaTwitter
-                        className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                        size="30"
-                      />
-                    </a>
+                  <div className="flex flex-col w-full relative -top-6">
+                    <h1 className="text-white font-bold text-2xl mb-3">
+                      {member.post}
+                    </h1>
+                    <div
+                      className="sm:mb-3 md:mb-3 flex flex-row z-0 justify-center"
+                      data-aos="fade-down"
+                    >
+                      <a href={member.socialLinks.fb}>
+                        <FaFacebook
+                          className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                          size="30"
+                        />
+                      </a>
+                      <a href={member.socialLinks.insta}>
+                        <FaInstagram
+                          className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                          size="30"
+                        />
+                      </a>
+                      <a href={member.socialLinks.linkedln}>
+                        <FaLinkedin
+                          className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                          size="30"
+                        />
+                      </a>
+                      <a href={member.socialLinks.twitter}>
+                        <FaTwitter
+                          className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                          size="30"
+                        />
+                      </a>
+                    </div>
                   </div>
                 </h2>
               </div>

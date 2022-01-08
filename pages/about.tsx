@@ -20,182 +20,192 @@ import ComMem05 from '../public/whoWeAre/2021/Committee Member - Amila Perera.jp
 import ComMem06 from '../public/whoWeAre/2021/Committee Member - Ruwin Rathnayake.jpeg'
 import ComMem07 from '../public/whoWeAre/2021/Committee Member - Nuwantha Perera.jpg'
 import ComMem08 from '../public/whoWeAre/2021/Committee Member - Nuwantha Perera.jpg'
-const board = [
-  {
-    name: 'Pasan Nethsara',
-    post: 'President',
-    image: President,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+
+type boardData = {
+  [key: string]: Array<any>
+}
+
+const board: boardData = {
+  '2021': [
+    {
+      name: 'Pasan Nethsara',
+      post: 'President',
+      image: President,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Ranula Gihara',
-    post: 'Vice President',
-    image: VicePresident,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Ranula Gihara',
+      post: 'Vice President',
+      image: VicePresident,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Kaveesha Gimhana',
-    post: 'Secretary',
-    image: Secretary,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Kaveesha Gimhana',
+      post: 'Secretary',
+      image: Secretary,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Isuri Devlini',
-    post: 'Asst.Secretary',
-    image: AsstSecretary,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Isuri Devlini',
+      post: 'Asst.Secretary',
+      image: AsstSecretary,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Chathura Bhagya',
-    post: 'Treasurer',
-    image: Treasurer,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Chathura Bhagya',
+      post: 'Treasurer',
+      image: Treasurer,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Ranul Deelaka',
-    post: 'Asst.Treasurer',
-    image: AsstTreasurer,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Ranul Deelaka',
+      post: 'Asst.Treasurer',
+      image: AsstTreasurer,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Udara Jayasekara',
-    post: 'Editor',
-    image: Editor,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Udara Jayasekara',
+      post: 'Editor',
+      image: Editor,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Dulitha Sachinthana',
-    post: 'Committee Member',
-    image: ComMem01,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Dulitha Sachinthana',
+      post: 'Committee Member',
+      image: ComMem01,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Chalana Sandaruwan',
-    post: 'Committee Member',
-    image: ComMem02,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Chalana Sandaruwan',
+      post: 'Committee Member',
+      image: ComMem02,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Kolitha Dasanayaka',
-    post: 'Committee Member',
-    image: ComMem03,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Kolitha Dasanayaka',
+      post: 'Committee Member',
+      image: ComMem03,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Shaveendra Perera',
-    post: 'Committee Member',
-    image: ComMem04,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Shaveendra Perera',
+      post: 'Committee Member',
+      image: ComMem04,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Amila Perera',
-    post: 'Committee Member',
-    image: ComMem05,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Amila Perera',
+      post: 'Committee Member',
+      image: ComMem05,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Ruwin Rathnayake',
-    post: 'Committee Member',
-    image: ComMem06,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Ruwin Rathnayake',
+      post: 'Committee Member',
+      image: ComMem06,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Nuwantha perera',
-    post: 'Committee Member',
-    image: ComMem07,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Nuwantha perera',
+      post: 'Committee Member',
+      image: ComMem07,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-  {
-    name: 'Prabodha Athhanayake',
-    post: 'Committee Member',
-    image: ComMem08,
-    socialLinks: {
-      fb: 'fbLink',
-      twitter: 'twitterLink',
-      insta: 'instaLink',
-      linkedln: 'linkedlnLink',
+    {
+      name: 'Prabodha Athhanayake',
+      post: 'Committee Member',
+      image: ComMem08,
+      socialLinks: {
+        fb: 'fbLink',
+        twitter: 'twitterLink',
+        insta: 'instaLink',
+        linkedln: 'linkedlnLink',
+      },
     },
-  },
-]
+  ],
+}
 export default function AboutUs(): JSX.Element {
   const currentTime = new Date()
   const currentYear = currentTime.getFullYear()
   const years: Array<string> = []
   for (let year = 2016; year <= currentYear; year++) {
+    if (!board[year.toString()]) {
+      board[year.toString()] = []
+    }
     years.push(year.toString())
   }
 
-  const [selectedYear, setSelectedYear] = useState(years[years.length - 1])
+  const [selectedYear, setSelectedYear] = useState<string>('2021')
 
   const toggleYear = () => (e: any) => {
     if (e.target.value != 'Select Year') {
@@ -283,68 +293,94 @@ export default function AboutUs(): JSX.Element {
             >
               <option>Select Year</option>
               {years.map((year) => {
-                return <option key={year}>{year}</option>
+                return (
+                  <option key={year} selected={year == selectedYear}>
+                    {year}
+                  </option>
+                )
               })}
             </select>
           </div>
         </div>
 
         <div className="flex flex-wrap px-6 justify-center items-center mb-16">
-          {board.map((member) => (
-            <div
-              key={member.socialLinks.fb}
-              className="relative group m-10 w-full md:w-4/12 lg:w-1/4 aspect-w-1.25 aspect-h-1 md:aspect-w-3 md:aspect-h-1 lg:aspect-w-4 lg:aspect-h-1 rounded-3xl shadow-md flex justify-center items-center"
-              data-aos="fade-up"
-            >
-              <Image
-                src={member.image}
-                alt="SLIIT FCSC"
-                className="rounded-3xl hover:opacity-80 transition-all ease-out duration-500"
-                quality={90}
-                layout="fill"
-                objectFit="cover"
-                placeholder="blur"
-              />
-              <div className="absolute bottom-0 h-0 w-full group-hover:h-full transition-all ease-out duration-500 flex flex-col items-center justify-center bg-gradient-to-t from-fcsc-orange to-fcsc-orange_light rounded-xl md:group-hover:p-4">
-                <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-white group-hover:text-opacity-100 text-opacity-0 text-center mb-4">
-                  <div className="flex flex-col w-full relative -top-6">
-                    <h1 className="text-white font-bold text-2xl mb-3">
-                      {member.post}
-                    </h1>
-                    <div
-                      className="sm:mb-3 md:mb-3 flex flex-row z-0 justify-center"
-                      data-aos="fade-down"
-                    >
-                      <a href={member.socialLinks.fb}>
-                        <FaFacebook
-                          className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                          size="30"
-                        />
-                      </a>
-                      <a href={member.socialLinks.insta}>
-                        <FaInstagram
-                          className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                          size="30"
-                        />
-                      </a>
-                      <a href={member.socialLinks.linkedln}>
-                        <FaLinkedin
-                          className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                          size="30"
-                        />
-                      </a>
-                      <a href={member.socialLinks.twitter}>
-                        <FaTwitter
-                          className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                          size="30"
-                        />
-                      </a>
+          {board[selectedYear].length > 0 ? (
+            board[selectedYear].map((member) => (
+              <div
+                key={member.socialLinks.fb}
+                className="relative group m-10 w-full md:w-4/12 lg:w-1/4 aspect-w-1.25 aspect-h-1 md:aspect-w-3 md:aspect-h-1 lg:aspect-w-4 lg:aspect-h-1 rounded-3xl shadow-md flex justify-center items-center"
+                data-aos="fade-up"
+              >
+                <Image
+                  src={member.image}
+                  alt="SLIIT FCSC"
+                  className="rounded-3xl hover:opacity-80 transition-all ease-out duration-500"
+                  quality={90}
+                  layout="fill"
+                  objectFit="cover"
+                  placeholder="blur"
+                />
+                <div className="absolute bottom-0 h-0 w-full group-hover:h-full transition-all ease-out duration-500 flex flex-col items-center justify-center bg-gradient-to-t from-fcsc-orange to-fcsc-orange_light rounded-xl md:group-hover:p-4">
+                  <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-white group-hover:text-opacity-100 text-opacity-0 text-center mb-4">
+                    <div className="flex flex-col w-full relative -top-6">
+                      <h1 className="text-white font-bold text-2xl mb-3">
+                        {member.post}
+                      </h1>
+                      <div
+                        className="sm:mb-3 md:mb-3 flex flex-row z-0 justify-center"
+                        data-aos="fade-down"
+                      >
+                        <a
+                          href={member.socialLinks.fb}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FaFacebook
+                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                            size="30"
+                          />
+                        </a>
+                        <a
+                          href={member.socialLinks.insta}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FaInstagram
+                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                            size="30"
+                          />
+                        </a>
+                        <a
+                          href={member.socialLinks.linkedln}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FaLinkedin
+                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                            size="30"
+                          />
+                        </a>
+                        <a
+                          href={member.socialLinks.twitter}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FaTwitter
+                            className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
+                            size="30"
+                          />
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                </h2>
+                  </h2>
+                </div>
               </div>
+            ))
+          ) : (
+            <div className="font-semibold text-2xl my-3">
+              Data for the year {selectedYear} has not been uploaded yet
             </div>
-          ))}
+          )}
         </div>
       </div>
     </div>

@@ -93,7 +93,7 @@ export default function LandingPage(): JSX.Element {
         </a>
       </div>
       <HeaderImage height="h-500 xl:h-600" position="absolute top-14" />
-      <div className="absolute" style={{ top: '300vh' }}>
+      <div className="absolute" style={{ top: '200vh' }}>
         <Image
           className="transition-all ease-out duration-500"
           src={background2}

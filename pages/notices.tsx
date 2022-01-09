@@ -20,9 +20,13 @@ export default function Notices(): JSX.Element {
       return notice.category == 'Latest'
     })
 
+    latestNotices = latestNotices.slice(0, 5)
+
     olderNotices = noticeList.filter((notice) => {
       return notice.category == 'Older'
     })
+
+    olderNotices = olderNotices.slice(0, 5)
   }
 
   return (
@@ -44,7 +48,7 @@ export default function Notices(): JSX.Element {
               className="title-font sm:text-4xl text-3xl font-medium text-white mt-24 xl:mt-40 mb-64 xl:mb-96 hidden md:flex"
               data-aos="fade-down"
             >
-              NOTICE
+              NOTICES
             </h1>
             <h1
               className="font-bold text-2xl text-center md:text-left mt-0 lg:mt-16"

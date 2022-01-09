@@ -9,11 +9,57 @@ import {
   FaLinkedin,
   FaRegEnvelope,
 } from 'react-icons/fa'
+import { SubscriptionEndpoints } from '../../../pages/api/subscription'
+import Swal from 'sweetalert2'
 
 const Footer = (): JSX.Element => {
+  const onSubscribe = (e: any) => {
+    e.preventDefault()
+    const payload = {
+      email: e.target.email.value,
+    }
+    SubscriptionEndpoints.subscribe(payload)
+      .then(() => {
+        let timerInterval: any
+        Swal.fire({
+          heightAuto: false,
+          icon: 'success',
+          title: `<div class="text-2xl">Subscribed to FCSC!</div>`,
+          showConfirmButton: false,
+          timer: 1500,
+          willClose: () => {
+            clearInterval(timerInterval)
+          },
+        }).then(() => {
+          e.target.email.value = ''
+        })
+      })
+      .catch((e) => {
+        const error = JSON.parse(e).data.error
+        let errorMessage = 'Failed to add notice'
+        if (error) {
+          switch (true) {
+            case error.includes('duplicate key'):
+              errorMessage = 'You have already subscribed to this service'
+              break
+            default:
+              errorMessage = error
+              break
+          }
+        }
+        Swal.fire({
+          icon: 'error',
+          heightAuto: false,
+          title: `<div class="text-2xl">${errorMessage}</div>`,
+          showConfirmButton: false,
+          timer: 1500,
+        })
+      })
+  }
+
   return (
     <div className="relative">
-       <Wave
+      <Wave
         className="opacity-40 absolute bottom-0 h-1/2 pointer-events-none"
         fill="#1c1364"
         paused={false}
@@ -36,7 +82,6 @@ const Footer = (): JSX.Element => {
         }}
       />
       <div className="lg:flex lg:flex-col bg-fcsc-blue_light">
-   
         <div className="lg:flex lg:flex-row bg-fcsc-blue_light lg:h-60">
           <div className="sm:w-full lg:w-1/3 ">
             <div className="h-24 flex flex-row items-center">
@@ -110,14 +155,14 @@ const Footer = (): JSX.Element => {
                     <li className="pt-1 pb-1">
                       <Link href="/events">
                         <a className="hover:text-fcsc-orange transition ease-in duration-200">
-                          Event
+                          Events
                         </a>
                       </Link>
                     </li>
                     <li className="pt-1 pb-1">
                       <Link href="/notices">
                         <a className="hover:text-fcsc-orange transition ease-in duration-200">
-                          Notice
+                          Notices
                         </a>
                       </Link>
                     </li>
@@ -149,20 +194,28 @@ const Footer = (): JSX.Element => {
                     Don’t forget to subscribe to our news letters, enter your
                     e-mail here.
                   </p>
-                  <div className="flex flex-row item-center mb-4 sm:mb-3">
+                  <form
+                    className="flex flex-row item-center mb-4 sm:mb-3"
+                    onSubmit={onSubscribe}
+                  >
                     <input
+                      id="email"
+                      name="email"
                       type="email"
                       placeholder="Email Address"
                       required
                       className="p-2 pl-3 mt-5 w-3/4 rounded-lg block text-black shadow-md focus:outline-none"
                     />
-                    <button className="w-11 h-11 bg-fcsc-orange mt-5 shadow-md hover:bg-fcsc-blue_light duration-150 transition ease-in font-medium rounded-lg focus:outline-none block relative -left-10">
+                    <button
+                      type="submit"
+                      className="w-11 h-11 bg-fcsc-orange mt-5 shadow-md hover:bg-fcsc-blue_light duration-150 transition ease-in font-medium rounded-lg focus:outline-none block relative -left-10"
+                    >
                       <FaRegEnvelope
                         className="transform -rotate-12  relative top-0 left-0 right-0 bottom-0 m-auto"
                         size="25"
                       />
                     </button>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>

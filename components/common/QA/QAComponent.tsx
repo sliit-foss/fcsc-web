@@ -4,6 +4,7 @@ import { TiArrowSortedDown } from 'react-icons/ti'
 export interface QAProps {
   title: string
   body: string
+  createdAt: string
 }
 
 export default function QAComponent(props: QAProps): JSX.Element {
@@ -23,9 +24,19 @@ export default function QAComponent(props: QAProps): JSX.Element {
         onClick={toggleVisibility}
       >
         <div className="flex flex-row items-center justify-between content-between">
+          <div>
           <div className="text-lg font-semibold group-hover:text-fcsc-orange">
             {props.title}
           </div>
+          <div className="text-xs font-normal group-hover:text-fcsc-orange mt-2">
+            {new Date(
+              new Date(props.createdAt).getTime() +
+                new Date().getTimezoneOffset() * -60 * 1000
+            ).toLocaleString()}
+          </div>
+          </div>
+          
+
           <TiArrowSortedDown
             size={25}
             className={

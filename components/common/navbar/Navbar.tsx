@@ -30,11 +30,11 @@ function Navbar(): JSX.Element {
 
   const navs = [
     { text: 'Home', href: '/' },
-    { text: 'Community', href: '/community' },
-    { text: 'Event', href: '/events' },
-    { text: 'Notice', href: '/notices' },
     { text: 'About', href: '/about' },
-    // { text: 'Login', href: '/login' },
+    { text: 'Community', href: '/community' },
+    { text: 'Events', href: '/events' },
+    { text: 'Notices', href: '/notices' },
+    { text: 'Login', href: '/login' },
   ]
 
   if (loginStatus) {
@@ -164,7 +164,7 @@ function Navbar(): JSX.Element {
                   onClick={() => setIsOpen(false)}
                 >
                   <Link href="/events">
-                    <a>Event</a>
+                    <a>Events</a>
                   </Link>
                 </li>
                 <li
@@ -172,7 +172,7 @@ function Navbar(): JSX.Element {
                   onClick={() => setIsOpen(false)}
                 >
                   <Link href="/notices">
-                    <a>Notice</a>
+                    <a>Notices</a>
                   </Link>
                 </li>
                 <li

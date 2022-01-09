@@ -12,7 +12,7 @@ export const getFilteredNotices = (isSuccess, noticeList) => {
     })
 
     noticeImages = noticeImages.map((notice, index) => {
-      return <Notice key={index.toString()} image={notice.photo}></Notice>
+      return <Notice key={index.toString()} image={notice.photo} description={notice.body} createdAt={notice.createdAt}></Notice>
     })
 
     return noticeImages

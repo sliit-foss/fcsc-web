@@ -1,6 +1,8 @@
 import { ImCalendar } from 'react-icons/im'
+import Button from '../../common/buttons/Button'
 
 interface EventProps {
+  id: string
   key: string
   image: string
   title: string
@@ -34,13 +36,21 @@ export default function Event(props: EventProps): JSX.Element {
             </h1>
           </div>
           <p className="my-10 text-center xl:text-left">{props.description}</p>
-          <div className="flex flex-col xl:flex-row items-center place-content-center xl:place-content-between">
+          <div className="flex flex-col xl:flex-row items-center place-content-center xl:place-content-between mb-5">
             <h1 className="font-semibold text-lg text-center xl:text-left">
               BY SLIIT FCSC COMMUNITY
             </h1>
             <h1 className="font-semibold text-lg text-center xl:text-left">
               FCSC
             </h1>
+          </div>
+          <div className='flex justify-center xl:justify-start'>
+          <Button
+                value="To RSVP"
+                onClick={() => {
+                  window.open(`https://rsvp.sliitfoss.org/events/${props.id}/?name=${props.title}`, '_blank')?.focus()                  
+                }}
+            />
           </div>
         </div>
       </div>

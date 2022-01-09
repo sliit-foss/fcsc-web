@@ -1,6 +1,8 @@
 interface EventProps {
   key: string
   image: string
+  description: string
+  createdAt: string
 }
 
 export default function Notice(props: EventProps): JSX.Element {
@@ -13,6 +15,24 @@ export default function Notice(props: EventProps): JSX.Element {
             alt="Notice Image"
             className="w-full h-45vh object-cover rounded-3xl group-hover:opacity-80 transition-all ease-out duration-500"
           ></img>
+          <div className="w-full absolute bottom-0 z-40 font-semibold text-white text-2xl rounded-b-3xl py-4 text-center bg-gray-900 opacity-70">
+            <div>{props.description}</div>
+            <div className="text-xs font-normal group-hover:text-fcsc-orange mt-1">
+              {new Date(
+                new Date(props.createdAt).getTime() +
+                  new Date().getTimezoneOffset() * -60 * 1000
+              ).toLocaleString()}
+            </div>
+          </div>
+          <div className="w-full absolute bottom-0 z-40 font-semibold text-white text-2xl rounded-b-3xl py-4 text-center">
+            <div>{props.description}</div>
+            <div className="text-xs font-normal group-hover:text-fcsc-orange mt-1">
+              {new Date(
+                new Date(props.createdAt).getTime() +
+                  new Date().getTimezoneOffset() * -60 * 1000
+              ).toLocaleString()}
+            </div>
+          </div>
         </div>
       </div>
     </a>

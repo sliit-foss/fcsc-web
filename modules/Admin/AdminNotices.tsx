@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import { MdAddAPhoto, MdDelete, MdEmail } from 'react-icons/md'
-import { AiOutlineClose, AiTwotoneEdit } from 'react-icons/ai'
+import { AiOutlineClose, AiTwotoneEdit, AiFillCalendar } from 'react-icons/ai'
 import { HiUserGroup } from 'react-icons/hi'
 import Button from '../../components/common/buttons/Button'
 import LoadingOverlay from '../../components/common/LoadingOverlay'
@@ -20,7 +20,8 @@ const AdminUsers = (): JSX.Element => {
     title: '',
     body: '',
     category: '',
-    photo: ''
+    photo: '',
+    createdAt: '',
   })
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const AdminUsers = (): JSX.Element => {
   const handleInputChange = (e: ChangeEvent<any>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value 
     })
   }
 
@@ -142,8 +143,8 @@ const AdminUsers = (): JSX.Element => {
             }
           })
         })
-        .catch((e) => {
-          const error = JSON.parse(e).data.error
+        .catch((e) => {         
+          const error = JSON.parse(e).data.error || JSON.parse(e).data
           setShowLoading(false)
           Swal.fire({
             icon: 'error',
@@ -162,6 +163,7 @@ const AdminUsers = (): JSX.Element => {
       body: '',
       category: '',
       photo: '',
+      createdAt : ''
     })
   }
 
@@ -196,7 +198,7 @@ const AdminUsers = (): JSX.Element => {
             })
           })
           .catch((e) => {
-            const error = JSON.parse(e).data.error
+            const error = JSON.parse(e).data.error || JSON.parse(e).data
             setShowLoading(false)
             Swal.fire({
               icon: 'error',
@@ -246,17 +248,18 @@ const AdminUsers = (): JSX.Element => {
               />
             </div>
             <div
-              className="hidden md:grid md:grid-rows-1 md:grid-cols-10 md:gap-4 bg-gradient-to-l from-fcsc-blue to-fcsc-blue_light font-medium text-lg text-white p-4 md:px-8 rounded-t-xl shadow-lg mb-3"
+              className="hidden md:grid md:grid-rows-1 md:grid-cols-11 md:gap-4 bg-gradient-to-l from-fcsc-blue to-fcsc-blue_light font-medium text-lg text-white p-4 md:px-8 rounded-t-xl shadow-lg mb-3"
               data-aos="fade-right"
             >
               <h3 className="md:col-span-2">Title</h3>
               <h3 className="md:col-span-3">Body</h3>
-              <h3 className="md:col-span-3">Category</h3>
+              <h3 className="md:col-span-2">Category</h3>
+              <h3 className="md:col-span-2">Issue Date</h3>
               <div className="md:col-span-1" />
             </div>
             {notices.length != 0 ? (
               <div className="flex flex-col space-y-2 md:max-h-65vh pb-4 md:overflow-y-scroll scrollbar-hide">
-                {notices.map(({ _id, title, body, category, photo }, i) => {
+                {notices.map(({ _id, title, body, category, photo, createdAt }, i) => {
                   const editAction = () => {
                     setEditingNoticeId(_id)
                     setFormData({
@@ -264,6 +267,7 @@ const AdminUsers = (): JSX.Element => {
                       body: body,
                       category: category,
                       photo: photo,
+                      createdAt: createdAt,
                     })
                     toggleModal()
                     setModalAction('Edit')
@@ -272,13 +276,13 @@ const AdminUsers = (): JSX.Element => {
                   return (
                     <div
                       key={i}
-                      className="grid grid-rows-1 grid-cols-1 sm:grid-cols-4 md:grid-cols-10 gap-2 sm:gap-4 rounded-sm shadow-lg p-4 md:px-8 justify-center items-center noticeRecord"
+                      className="grid grid-rows-1 grid-cols-1 sm:grid-cols-4 md:grid-cols-11 gap-2 sm:gap-4 rounded-sm shadow-lg p-4 md:px-8 justify-center items-center noticeRecord"
                       data-aos={i % 2 == 1 ? 'fade-right' : 'fade-left'}
                     >
-                      <p className="sm:col-span-3 md:col-span-2 font-semibold text-xl md:text-base text-gray-700">
+                      <p className="sm:col-span-2 font-semibold text-xl md:text-base text-gray-700">
                         {title}
                       </p>
-                      <div className="sm:col-span-3 md:col-span-3 flex flex-row justify-start items-center">
+                      <div className="sm:col-span-3 flex flex-row justify-start items-center">
                         <div className="w-27 md:w-0 md:h-0 mr-4 md:mr-0">
                           <MdEmail
                             className="text-gray-700 hover:text-fcsc-blue_light transition ease-in duration-200 md:w-0 md:h-0 "
@@ -293,7 +297,7 @@ const AdminUsers = (): JSX.Element => {
                         </p>
                       </div>
 
-                      <div className="sm:col-span-2 md:col-span-3 flex flex-row justify-start items-end">
+                      <div className="sm:col-span-2 flex flex-row justify-start items-end">
                         <HiUserGroup
                           className="text-gray-700 hover:text-fcsc-blue_light transition ease-in duration-200 md:w-0 md:h-0 mr-4 md:mr-0"
                           size={26}
@@ -302,6 +306,17 @@ const AdminUsers = (): JSX.Element => {
                           {category}
                         </p>
                       </div>
+
+                      <div className="sm:col-span-2 flex flex-row justify-start items-end">
+                        <AiFillCalendar
+                          className="text-gray-700 hover:text-fcsc-blue_light transition ease-in duration-200 md:w-0 md:h-0 mr-4 md:mr-0"
+                          size={26}
+                        />
+                        <p className="font-medium text-md md:text-base text-gray-700">
+                          { new Date((new Date(createdAt).getTime() + new Date().getTimezoneOffset() * -60 * 1000 )).toLocaleString()}
+                        </p>
+                      </div>
+
                       <button
                         className="col-span-1 lg:col-span-1 hidden lg:flex items-center justify-center outline-none"
                         onClick={editAction}
@@ -438,6 +453,23 @@ const AdminUsers = (): JSX.Element => {
               <option value="Latest">Latest</option>
               <option value="Older">Older</option>
             </select>
+          <input
+            className="rounded-md shadow-ds2 border-0 placeholder-gray-400 w-full py-2 px-3 mb-6"
+            placeholder="Notice Issue Date"
+            value={new Date(
+              formData.createdAt == ''
+                ? new Date(Date.now())
+                : new Date(formData.createdAt).getTime() +
+                  new Date().getTimezoneOffset() * -60 * 1000
+            )
+              .toISOString()
+              .slice(0, 19)}
+            onChange={handleInputChange}
+            name="createdAt"
+            id="createdAt"
+            type="datetime-local"
+            required
+          />
             <Button value={modalAction} width="w-full" type="submit" />
             <div className="h-4"></div>
           </form>

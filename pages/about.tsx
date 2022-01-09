@@ -308,7 +308,7 @@ export default function AboutUs(): JSX.Element {
             board[selectedYear].map((member) => (
               <div
                 key={member.socialLinks.fb}
-                className="relative group m-10 w-full md:w-4/12 lg:w-1/4 aspect-w-1.25 aspect-h-1 md:aspect-w-3 md:aspect-h-1 lg:aspect-w-4 lg:aspect-h-1 rounded-3xl shadow-md flex justify-center items-center"
+                className="relative group m-10 w-90vw h-70vw md:w-30vw md:h-30vw xl:w-20vw xl:h-20vw  rounded-3xl shadow-md flex justify-center items-center"
                 data-aos="fade-up"
               >
                 <Image
@@ -321,16 +321,16 @@ export default function AboutUs(): JSX.Element {
                   placeholder="blur"
                 />
                 <div className="absolute bottom-0 h-0 w-full group-hover:h-full opacity-0 group-hover:opacity-100 transition-all ease-out duration-500 flex flex-col items-center justify-center bg-gradient-to-t from-fcsc-orange to-fcsc-orange_light rounded-xl md:group-hover:p-4">
-                  <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-white group-hover:text-opacity-100 text-opacity-0 text-center mb-4">
+                  <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-white group-hover:text-opacity-100 text-opacity-0 text-center">
                     <div className="flex flex-col w-full relative">
-                      <h1 className="text-white font-bold text-3xl">
+                      <h1 className="text-white font-bold text-2xl 2xl:text-3xl">
                         {member.name}
                       </h1>
-                      <h1 className="text-white font-bold text-2xl mb-3">
+                      <h1 className="text-white font-bold text-xl 2xl:text-2xl mb-3">
                         {member.post}
                       </h1>
                       <div
-                        className="sm:mb-3 md:mb-3 flex flex-row z-0 justify-center"
+                        className="flex flex-row justify-center"
                         data-aos="fade-down"
                       >
                         <a
@@ -339,8 +339,7 @@ export default function AboutUs(): JSX.Element {
                           rel="noreferrer"
                         >
                           <FaFacebook
-                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                            size="30"
+                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7"
                           />
                         </a>
                         <a
@@ -349,8 +348,7 @@ export default function AboutUs(): JSX.Element {
                           rel="noreferrer"
                         >
                           <FaInstagram
-                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                            size="30"
+                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7"
                           />
                         </a>
                         <a
@@ -359,8 +357,7 @@ export default function AboutUs(): JSX.Element {
                           rel="noreferrer"
                         >
                           <FaLinkedin
-                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                            size="30"
+                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7"
                           />
                         </a>
                         <a
@@ -369,8 +366,7 @@ export default function AboutUs(): JSX.Element {
                           rel="noreferrer"
                         >
                           <FaTwitter
-                            className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200"
-                            size="30"
+                            className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7"
                           />
                         </a>
                       </div>
@@ -380,7 +376,7 @@ export default function AboutUs(): JSX.Element {
               </div>
             ))
           ) : (
-            <div className="font-semibold text-2xl my-3">
+            <div className="font-semibold text-2xl my-3 text-center">
               Data for the year {selectedYear} has not been uploaded yet
             </div>
           )}

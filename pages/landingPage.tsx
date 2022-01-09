@@ -26,6 +26,7 @@ export default function LandingPage(): JSX.Element {
     latestEventsList = latestEvents.map((event, index) => (
       <Event
         key={index.toString()}
+        id={event._id}
         image={event.headerImage}
         title={event.name}
         subtitle={event.name}
@@ -42,9 +43,11 @@ export default function LandingPage(): JSX.Element {
         description={event.description}
       />
     ))
+    latestEventsList = latestEventsList.slice(0, 5)
   }
 
-  const noticeImages = getFilteredNotices(isSuccess, noticeList)
+  let noticeImages = getFilteredNotices(isSuccess, noticeList)
+  noticeImages = noticeImages.slice(0, 5)
 
   return (
     <div className="justify-items-center ">

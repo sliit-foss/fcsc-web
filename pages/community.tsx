@@ -52,7 +52,7 @@ export default function Community(): JSX.Element {
         >
           <div className="grid-cols-1 lg:w-1/2 md:w-1/2">
             <p className="mt-2 text-center md:text-left">
-              The faculty of computing student’s community was established under
+              The Faculty of Computing student’s community was established under
               the Faculty of Computing of SLIIT and consists of Computing
               undergraduates. Since there is a growing competition in the Sri
               Lankan job market in relation to this field of knowledge, we focus

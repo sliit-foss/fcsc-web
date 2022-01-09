@@ -16,8 +16,7 @@ export default function Announcements(props: AnnouncementProps): JSX.Element {
         <div className="flex flex-col md:flex-row pb-4 md:pb-0 items-center text-2xl font-semibold md:text-left text-center mb-10 bg-gray-100 rounded-lg shadow-noOffset_lighter">
           <GiSpeaker size={70} className="mx-5" />
           <div>
-            <span className="underline">{props.title.split(' ')[0]}</span>
-            <span>{' ' + props.title.split(' ')[1]}</span>
+            <span>{props.title}</span>
           </div>
         </div>
         <div
@@ -32,8 +31,9 @@ export default function Announcements(props: AnnouncementProps): JSX.Element {
                   data-aos={index % 2 == 1 ? 'fade-left' : 'fade-right'}
                 >
                   <QAComponent
-                    title={announcement.title}
+                    title={announcement.title}                    
                     body={announcement.body}
+                    createdAt={announcement.createdAt}
                   />
                 </div>
               )

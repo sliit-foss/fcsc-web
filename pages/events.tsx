@@ -4,43 +4,19 @@ import HeaderImage from '../components/common/HeaderImage'
 import Event from '../components/carousel/event/Event'
 import EventCarousel from '../components/carousel/event/EventCarousel'
 import calendar from '../public/events/eventCalendar.svg'
-import { useGetEvents } from '../queries/useGetEvent'
 import { useGetLatestEvents } from '../queries/useGetEvent'
 
 export default function Events(): JSX.Element {
-  const { data: allEvents = [], isSuccess: isSuccessAll = false } =
-    useGetEvents()
   const { data: latestEvents = [], isSuccess: isSuccessLatest = false } =
     useGetLatestEvents()
 
-  let allEventsList: Array<JSX.Element> = []
   let latestEventsList: Array<JSX.Element> = []
-  if (isSuccessAll && allEvents) {
-    allEventsList = allEvents.map((event, index) => (
-      <Event
-        key={index.toString()}
-        image={event.headerImage}
-        title={event.name}
-        subtitle={event.name}
-        date={new Date(event ? event.startTime : 0)
-          .toLocaleString('en-US', {
-            month: 'short',
-            day: '2-digit',
-            year: 'numeric',
-            hour: 'numeric',
-            minute: 'numeric',
-            hour12: true,
-          })
-          .replaceAll(',', ' ')}
-        description={event.description}
-      />
-    ))
-  }
 
   if (isSuccessLatest && latestEvents) {
     latestEventsList = latestEvents.map((event, index) => (
       <Event
         key={index.toString()}
+        id={event._id}
         image={event.headerImage}
         title={event.name}
         subtitle={event.name}
@@ -119,14 +95,13 @@ export default function Events(): JSX.Element {
             />
           </div>
         </div>
-        {isSuccessLatest && latestEvents && isSuccessAll && allEvents ? (
+        {isSuccessLatest && latestEvents ? (
           latestEvents.length != 0 ? (
             <>
               <EventCarousel
                 title="LATEST EVENTS"
                 eventData={latestEventsList}
               />
-              <EventCarousel title="ALL EVENTS" eventData={allEventsList} />
             </>
           ) : (
             <div></div>

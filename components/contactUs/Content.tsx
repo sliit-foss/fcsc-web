@@ -85,7 +85,7 @@ export default function Content(props: ContentProps): JSX.Element {
               <div className="text-3xl font-bold md:text-left text-center mb-5 ">
                 Contact Us
               </div>
-              <div className="text-base font-bold md:text-left text-center mb-5 ">
+              <div className="text-base font-bold md:text-left text-center mb-3 md:mb-5 ">
                 Fill up the form and our Team will get back to you within 24
                 hours.
               </div>
@@ -94,27 +94,27 @@ export default function Content(props: ContentProps): JSX.Element {
               <div className="w-full md:w-1/2">
                 <div className="w-full rounded-lg flex flex-row  ">
                   <div className="flex flex-col w-full md:mr-16 ">
-                    <div className="group bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200  flex flex-col my-6 py-6  rounded-lg shadow-lg ">
+                    <div className="group bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200  flex flex-col my-4 md:my-6 mb-2 md:mb-6 py-4 md:py-6 rounded-lg shadow-lg ">
                       <ImLocation2
                         size={30}
-                        className="w-full my-3 mt-2 fill-current text-fcsc-orange group-hover:text-black transition ease-in duration-200"
+                        className="hidden md:flex w-full my-3 mt-2 fill-current text-fcsc-orange group-hover:text-black transition ease-in duration-200"
                       />
-                      <h2 className="text-base font-bold text-center">
+                      <h2 className="text-sm md:text-base font-bold text-center">
                         Our Address
                       </h2>
-                      <h2 className="text-base font-medium text-center">
+                      <h2 className="text-sm md:text-base font-medium text-center">
                         SLIIT Malabe
                       </h2>
                     </div>
-                    <div className="group bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200 flex flex-col my-6 py-6  rounded-lg shadow-lg">
+                    <div className="group bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200 flex flex-col my-4 md:my-6 py-4 md:py-6  rounded-lg shadow-lg">
                       <MdEmail
                         size={30}
-                        className="w-full my-3 mt-2 fill-current text-fcsc-orange group-hover:text-black transition ease-in duration-200"
+                        className="hidden md:flex w-full my-3 mt-2 fill-current text-fcsc-orange group-hover:text-black transition ease-in duration-200"
                       />
-                      <h2 className="text-base font-bold text-center">
+                      <h2 className="text-sm md:text-base font-bold text-center">
                         Email Us
                       </h2>
-                      <p className="text-base font-medium text-center truncate">
+                      <p className="text-sm md:text-base font-medium text-center truncate">
                         students.foc@sliit.lk
                       </p>
                     </div>
@@ -130,7 +130,7 @@ export default function Content(props: ContentProps): JSX.Element {
                     name="name"
                     placeholder="Name"
                     required
-                    className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light  text-base outline-none text-gray-700 py-1 px-3 mb-5 md:mb-0 mr-0 md:mr-5 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
+                    className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light  text-base outline-none text-gray-700 py-0 md:py-1 px-3 mb-5 md:mb-0 mr-0 md:mr-5 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
                   />
                   <input
                     type="email"
@@ -138,7 +138,7 @@ export default function Content(props: ContentProps): JSX.Element {
                     name="email"
                     placeholder="Email"
                     required
-                    className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light text-base outline-none text-gray-700 py-1 px-3 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
+                    className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light text-base outline-none text-gray-700 py-0 md:py-1 px-3 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
                   />
                 </div>
                 <div className="relative mb-6">
@@ -148,7 +148,7 @@ export default function Content(props: ContentProps): JSX.Element {
                     name="subject"
                     placeholder="Subject"
                     required
-                    className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light text-base outline-none text-gray-700 py-1 px-3 shadow-lg leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light text-base outline-none text-gray-700 py-0 md:py-1 px-3 shadow-lg leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
                 <div className="relative mb-0">
@@ -157,7 +157,7 @@ export default function Content(props: ContentProps): JSX.Element {
                     name="body"
                     placeholder="Message"
                     required
-                    className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light h-52 text-base outline-none text-gray-700 py-1 pt-2 px-3 resize-none leading-6 shadow-lg transition-colors duration-200 ease-in-out"
+                    className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light h-20 md:h-52 text-base outline-none text-gray-700 py-0 md:py-1 pt-2 px-3 resize-none leading-6 shadow-lg transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
@@ -170,12 +170,6 @@ export default function Content(props: ContentProps): JSX.Element {
               >
                 Send
               </button>
-              {/* <button
-                className="text-white bg-fcsc-orange border-0 py-2 px-14 focus:outline-none shadow-md hover:shadow-lg hover:bg-fcsc-orange_light rounded text-lg transition ease-in duration-200"
-                onClick={props.toggleFunction}
-              >
-                Cancel
-              </button> */}
             </div>
           </form>
         </section>

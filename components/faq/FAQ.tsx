@@ -7,21 +7,22 @@ export default function FAQ(): JSX.Element {
     {
       title: 'Lorem ipsum dolor sit amet',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat.',
+      createdAt: '',
     },
     {
       title: 'Nunc maximus, magna at ultricies elementum',
-
       body: 'Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.',
+      createdAt: '',
     },
     {
       title: 'Curabitur laoreet, mauris vel blandit fringilla',
-
       body: 'Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncusnunc, ac sagittis leo elit vel lorem.',
+      createdAt: '',
     },
     {
       title: 'risus turpis vulputate quam, vitae convallis.',
-
       body: 'current version is 1.2.1',
+      createdAt: '',
     },
   ]
 

@@ -48,7 +48,7 @@ export default function FAQ(): JSX.Element {
                 key={item.title + item.body}
                 data-aos={index % 2 == 1 ? 'fade-left' : 'fade-right'}
               >
-                <QAComponent title={item.title} body={item.body} />
+                <QAComponent title={item.title} body={item.body} createdAt={item.createdAt} />
               </div>
             )
           })}

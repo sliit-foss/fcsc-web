@@ -5,6 +5,10 @@ on:
     branches:
       - main
   workflow_call:
+    inputs:
+      node-version:
+        type: string
+        default: '15.x'
     secrets:
       FIREBASE_TOKEN:
         required: true
@@ -17,7 +21,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
         with:
-          node-version: '15.x'
+          node-version: ${{ inputs.node-version }}
       - run: yarn
       - run: yarn next build && yarn next export
       - uses: w9jds/firebase-action@master

@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
       - run: yarn
-      - run: yarn next build && yarn next export
+      - run: yarn build && yarn next export
       - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting

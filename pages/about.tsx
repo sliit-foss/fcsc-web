@@ -260,8 +260,8 @@ export default function AboutUs(): JSX.Element {
               the successful completion of the degree, as well as organizing
               events for the Student Community to grow academically as well as
               to get in touch with their creative senses, to promote a stress
-              free and memorable University experience. The following are some
-              of the main events organized by our Student Community,
+              free and memorable University experience. The following are our Board 
+              Members who enabled these dreams to sprout into fruition. 
             </p>
           </div>
           <div className="w-3/4 md:w-4/12" data-aos="fade-left">

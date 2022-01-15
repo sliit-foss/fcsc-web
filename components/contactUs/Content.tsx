@@ -86,8 +86,7 @@ export default function Content(props: ContentProps): JSX.Element {
                 Contact Us
               </div>
               <div className="text-base font-bold md:text-left text-center mb-3 md:mb-5 ">
-                Fill up the form and our Team will get back to you within 24
-                hours.
+                Fill up the form and we will get back to you as soon as possible.
               </div>
             </div>
             <div className="container flex flex-col md:flex-row">
@@ -115,7 +114,7 @@ export default function Content(props: ContentProps): JSX.Element {
                         Email Us
                       </h2>
                       <p className="text-sm md:text-base font-medium text-center truncate">
-                        students.foc@sliit.lk
+                        <a href="mailto:students.foc@sliit.lk">students.foc@sliit.lk</a>
                       </p>
                     </div>
                   </div>

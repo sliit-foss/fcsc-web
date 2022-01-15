@@ -340,7 +340,7 @@ export default function Community(): JSX.Element {
 
             <p data-aos="fade-left">
               This is an informational interview series which is organized by
-              FCSC by collaborating with Sri Lanka's popular and successful
+              FCSC by collaborating with Sri Lanka&apos;s popular and successful
               personalities. We believe that the students are in need of
               motivation at times like these in order to face the challenges
               during a pandemic like this. These sessions will be opened to all
@@ -465,7 +465,7 @@ export default function Community(): JSX.Element {
               This is a project that is organized in order to enhance the
               relationship between students at SLIIT. Sportsmanship is vital for
               human beings and most importantly it is important to all the
-              students as they're entering a world of competition. At this event
+              students as they&apos;re entering a world of competition. At this event
               the students will get a lot of exposure to the competitiveness and
               the value of teamwork for their future endeavors. Building strong
               teamworking individuals and competitive students is the main

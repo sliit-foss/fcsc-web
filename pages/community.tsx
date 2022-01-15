@@ -52,9 +52,9 @@ export default function Community(): JSX.Element {
         >
           <div className="grid-cols-1 lg:w-1/2 md:w-1/2">
             <p className="mt-2 text-center md:text-left">
-              The Faculty of Computing student’s community was established under
+              The Faculty of Computing Students&apos; Community was established under
               the Faculty of Computing of SLIIT and consists of Computing
-              undergraduates. Since there is a growing competition in the Sri
+              Undergraduates. Since there is a growing competition in the Sri
               Lankan job market in relation to this field of knowledge, we focus
               on nurturing the hard and soft skills which would improve their
               employability after the successful completion of the degree, as
@@ -96,7 +96,7 @@ export default function Community(): JSX.Element {
               data-aos="fade-left"
             >
               <p className="font-bold text-left my-6 lg:-mt-3.5 lg:mb-0">
-                Objectives of Faculty of Computing Students’ Community:
+                Objectives of Faculty of Computing Students&apos; Community:
               </p>
               <ul className="list-disc sm:pt-5 lg:pl-6 md:pl-5">
                 <li>
@@ -105,18 +105,18 @@ export default function Community(): JSX.Element {
                 </li>
                 <li>
                   To provide opportunities for students to be aware of latest
-                  trends and industry expectations of by organizing events where
+                  trends and industry expectations by organizing events where
                   industry experts participate.
                 </li>
                 <li>
                   To encourage and provide support to student communities within
-                  the Faculty of Computing to organize events which meet the
-                  aims and objectives of the Faculty of Computing Student Body.
+                  the Faculty of Computing to organize events which alin with the aims
+                  and objectives of the Faculty of Computing Student Body.
                 </li>
                 <li>
                   To impart the necessary soft skills to the student in the
                   Faculty of Computing which are required to successfully face
-                  the competitive atmosphere in today’s job market.
+                  the competitive atmosphere in today&apos;s job market.
                 </li>
                 <li>To promote and organize cultural and social activities.</li>
               </ul>
@@ -128,7 +128,7 @@ export default function Community(): JSX.Element {
           <div className="grid-cols-1 w-full">
             <p className="text-left">
               The following are some of the Main events organized by Faculty of
-              Computing Students’ Community,
+              Computing Students&apos; Community,
             </p>
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function Community(): JSX.Element {
             <p data-aos="fade-left">
               <b>Wiramaya</b> is arguably the most prominent event organized by
               the Student Community of SLIIT. This event is organized by the
-              Faculty of Computing Students’ Community (FCSC) of SLIIT and pays
+              Faculty of Computing Students&apos; Community (FCSC) of SLIIT and pays
               homage to the Classical aspect of Sri Lankan music. The Faculty of
               Computing Student community, being the largest student body of the
               university, puts together an event of alluring musical
@@ -199,11 +199,11 @@ export default function Community(): JSX.Element {
 
             <p data-aos="fade-left">
               An open Blood donation organized by the Faculty of Computing
-              Students’ Community in collaboration with the Sri Lanka blood
-              bank. The true meaning of sharing and contribution will be
+              Students&apos; Community in collaboration with the Sri Lanka Blood
+              Bank. The true meaning of sharing and contribution will be
               portrayed, and students will be joining for this program despite
               what their year is. This service project is one of the signature
-              events organized by the Faculty of Computing Students’ Community
+              events organized by the Faculty of Computing Students&apos; Community
               where thousands of lives are benefited from this. This is
               organized at the SLIIT Auditorium and Students from all faculties
               join to donate blood.
@@ -340,7 +340,7 @@ export default function Community(): JSX.Element {
 
             <p data-aos="fade-left">
               This is an informational interview series which is organized by
-              FCSC by collaborating with Sri Lanka’s popular and successful
+              FCSC by collaborating with Sri Lanka&apos;s popular and successful
               personalities. We believe that the students are in need of
               motivation at times like these in order to face the challenges
               during a pandemic like this. These sessions will be opened to all
@@ -465,7 +465,7 @@ export default function Community(): JSX.Element {
               This is a project that is organized in order to enhance the
               relationship between students at SLIIT. Sportsmanship is vital for
               human beings and most importantly it is important to all the
-              students as they’re entering a world of competition. At this event
+              students as they&apos;re entering a world of competition. At this event
               the students will get a lot of exposure to the competitiveness and
               the value of teamwork for their future endeavors. Building strong
               teamworking individuals and competitive students is the main
@@ -516,7 +516,7 @@ export default function Community(): JSX.Element {
               an understanding and an idea regarding the industry and will be
               motivated to work towards their goals. The Faculty of Computing
               Student Community has understood the vitality of these projects
-              and organized the sessions for betterment of these students’
+              and organized the sessions for betterment of these students&apos;
               future activities. Since the ongoing pandemic this project has
               moved to a virtual platform and is being conducted successfully.
             </p>

@@ -79,8 +79,7 @@ export default function LandingPage(): JSX.Element {
           Faculty of Computing Students Community
         </h1>
         <p className="my-5 text-white text-left text-sm" data-aos="fade-up">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed modtur
-          adipiscing elit.
+          The Faculty of Computing Student Community also known as the FCSC is the largest student body of the Faculty of Computing.
         </p>
         <a href="#faq">
           <div data-aos="fade-up">

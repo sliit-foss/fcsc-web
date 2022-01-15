@@ -52,7 +52,7 @@ export default function Community(): JSX.Element {
         >
           <div className="grid-cols-1 lg:w-1/2 md:w-1/2">
             <p className="mt-2 text-center md:text-left">
-              The Faculty of Computing Students' Community was established under
+              The Faculty of Computing Students&apos; Community was established under
               the Faculty of Computing of SLIIT and consists of Computing
               Undergraduates. Since there is a growing competition in the Sri
               Lankan job market in relation to this field of knowledge, we focus
@@ -96,7 +96,7 @@ export default function Community(): JSX.Element {
               data-aos="fade-left"
             >
               <p className="font-bold text-left my-6 lg:-mt-3.5 lg:mb-0">
-                Objectives of Faculty of Computing Students' Community:
+                Objectives of Faculty of Computing Students&apos; Community:
               </p>
               <ul className="list-disc sm:pt-5 lg:pl-6 md:pl-5">
                 <li>
@@ -116,7 +116,7 @@ export default function Community(): JSX.Element {
                 <li>
                   To impart the necessary soft skills to the student in the
                   Faculty of Computing which are required to successfully face
-                  the competitive atmosphere in today's job market.
+                  the competitive atmosphere in today&apos;s job market.
                 </li>
                 <li>To promote and organize cultural and social activities.</li>
               </ul>
@@ -128,7 +128,7 @@ export default function Community(): JSX.Element {
           <div className="grid-cols-1 w-full">
             <p className="text-left">
               The following are some of the Main events organized by Faculty of
-              Computing Students' Community,
+              Computing Students&apos; Community,
             </p>
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function Community(): JSX.Element {
             <p data-aos="fade-left">
               <b>Wiramaya</b> is arguably the most prominent event organized by
               the Student Community of SLIIT. This event is organized by the
-              Faculty of Computing Students' Community (FCSC) of SLIIT and pays
+              Faculty of Computing Students&apos; Community (FCSC) of SLIIT and pays
               homage to the Classical aspect of Sri Lankan music. The Faculty of
               Computing Student community, being the largest student body of the
               university, puts together an event of alluring musical
@@ -199,11 +199,11 @@ export default function Community(): JSX.Element {
 
             <p data-aos="fade-left">
               An open Blood donation organized by the Faculty of Computing
-              Students' Community in collaboration with the Sri Lanka Blood
+              Students&apos; Community in collaboration with the Sri Lanka Blood
               Bank. The true meaning of sharing and contribution will be
               portrayed, and students will be joining for this program despite
               what their year is. This service project is one of the signature
-              events organized by the Faculty of Computing Students' Community
+              events organized by the Faculty of Computing Students&apos; Community
               where thousands of lives are benefited from this. This is
               organized at the SLIIT Auditorium and Students from all faculties
               join to donate blood.
@@ -516,7 +516,7 @@ export default function Community(): JSX.Element {
               an understanding and an idea regarding the industry and will be
               motivated to work towards their goals. The Faculty of Computing
               Student Community has understood the vitality of these projects
-              and organized the sessions for betterment of these students'
+              and organized the sessions for betterment of these students&apos;
               future activities. Since the ongoing pandemic this project has
               moved to a virtual platform and is being conducted successfully.
             </p>

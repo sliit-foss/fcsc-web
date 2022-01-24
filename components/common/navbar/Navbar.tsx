@@ -155,6 +155,14 @@ function Navbar(): JSX.Element {
                   className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
                   onClick={() => setIsOpen(false)}
                 >
+                  <Link href="/about">
+                    <a>About</a>
+                  </Link>
+                </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
                   <Link href="/community">
                     <a>Community</a>
                   </Link>
@@ -173,14 +181,6 @@ function Navbar(): JSX.Element {
                 >
                   <Link href="/notices">
                     <a>Notices</a>
-                  </Link>
-                </li>
-                <li
-                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Link href="/about">
-                    <a>About</a>
                   </Link>
                 </li>
                 {loginStatus ? (

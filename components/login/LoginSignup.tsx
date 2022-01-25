@@ -32,7 +32,7 @@ const LoginSignup = (): JSX.Element => {
 
   const lineBreakClass = 'hidden lg:block lg:w-3.5 lg:h-full'
   const layoutClass = 'flex flex-col lg:flex lg:flex-row'
-  const titleClass = `text-fcsc-blue text-3xl font-extrabold font-inter text-center mb-4`
+  const titleClass = `text-fcsc-blue text-3xl font-extrabold text-center mb-4`
   const titleWrapper = 'flex justify-center items-center lg:grid lg:grid-cols-2'
 
   const loginTitle = (

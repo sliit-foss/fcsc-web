@@ -19,7 +19,7 @@ import ComMem04 from '../public/whoWeAre/2021/Committee Member - Saveendra Perer
 import ComMem05 from '../public/whoWeAre/2021/Committee Member - Amila Perera.jpg'
 import ComMem06 from '../public/whoWeAre/2021/Committee Member - Ruwin Rathnayake.jpeg'
 import ComMem07 from '../public/whoWeAre/2021/Committee Member - Nuwantha Perera.jpg'
-import ComMem08 from '../public/whoWeAre/2021/Committee Member - Nuwantha Perera.jpg'
+import ComMem08 from '../public/whoWeAre/2021/DSC_0036.jpg'
 
 type boardData = {
   [key: string]: Array<any>

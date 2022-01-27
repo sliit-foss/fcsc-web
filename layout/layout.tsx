@@ -11,7 +11,7 @@ export default function Layout({ children }: any): JSX.Element {
           content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"
         />
       </Head>
-      <main className="overflow-x-hidden">
+      <main className="overflow-x-hidden font-['Roboto']">
         <Navbar />
         {children}
         <Footer />

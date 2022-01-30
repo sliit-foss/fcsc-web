@@ -30,24 +30,24 @@ export default function Clubs(): JSX.Element {
         </div>
         <div className="w-full flex flex-row justify-center mt-5">
           <div className="flex  justify-center mt-6">
-            <div data-aos="fade-up">
+            <a href="https://sliitfoss.org" target="_blank" rel="noreferrer" data-aos="fade-up">
               <ClubLogo image={foss} />
-            </div>
-            <div data-aos="fade-up">
+            </a>
+            <a href="https://www.facebook.com/msclubsliit/" target="_blank" rel="noreferrer" data-aos="fade-up">
               <ClubLogo image={ms} />
-            </div>
-            <div data-aos="fade-down">
+            </a>
+            <a href="https://www.facebook.com/sliit.fcmu/" target="_blank" rel="noreferrer" data-aos="fade-down">
               <ClubLogo image={fcscMedia} />
-            </div>
-            <div data-aos="fade-up">
+            </a>
+            <a href="https://www.facebook.com/sliitmcc/" target="_blank" rel="noreferrer" data-aos="fade-up">
               <ClubLogo image={mozilla} />
-            </div>
-            <div data-aos="fade-down">
+            </a>
+            <a href="https://www.facebook.com/sliit.cscs/" target="_blank" rel="noreferrer" data-aos="fade-down">
               <ClubLogo image={cs2} />
-            </div>
-            <div data-aos="fade-up">
+            </a>
+            <a href="https://www.facebook.com/sliitsecommunity/" target="_blank" rel="noreferrer" data-aos="fade-up">
               <ClubLogo image={sesc} />
-            </div>
+            </a>
           </div>
         </div>
       </div>

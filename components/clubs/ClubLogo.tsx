@@ -6,7 +6,7 @@ interface logoProps {
 
 export default function ClubLogo(props: logoProps): JSX.Element {
   return (
-  
+    <div className="w-13vw h-13vw md:w-10vw md:h-10vw">
       <Image
         className="hover:opacity-80 transition-all ease-out duration-500"
         src={props.image}
@@ -15,6 +15,6 @@ export default function ClubLogo(props: logoProps): JSX.Element {
         layout="intrinsic"
         placeholder="blur"
       />
- 
+    </div>
   )
 }

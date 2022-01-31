@@ -19,7 +19,7 @@ import ComMem04 from '../public/whoWeAre/2021/Committee Member - Saveendra Perer
 import ComMem05 from '../public/whoWeAre/2021/Committee Member - Amila Perera.jpg'
 import ComMem06 from '../public/whoWeAre/2021/Committee Member - Ruwin Rathnayake.jpeg'
 import ComMem07 from '../public/whoWeAre/2021/Committee Member - Nuwantha Perera.jpg'
-import ComMem08 from '../public/whoWeAre/2021/Committee Member - Nuwantha Perera.jpg'
+import ComMem08 from '../public/whoWeAre/2021/DSC_0036.jpg'
 
 type boardData = {
   [key: string]: Array<any>
@@ -32,10 +32,10 @@ const board: boardData = {
       post: 'President',
       image: President,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -43,10 +43,10 @@ const board: boardData = {
       post: 'Vice President',
       image: VicePresident,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -54,10 +54,10 @@ const board: boardData = {
       post: 'Secretary',
       image: Secretary,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -65,10 +65,10 @@ const board: boardData = {
       post: 'Asst.Secretary',
       image: AsstSecretary,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -76,10 +76,10 @@ const board: boardData = {
       post: 'Treasurer',
       image: Treasurer,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -87,10 +87,10 @@ const board: boardData = {
       post: 'Asst.Treasurer',
       image: AsstTreasurer,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -98,10 +98,10 @@ const board: boardData = {
       post: 'Editor',
       image: Editor,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -109,10 +109,10 @@ const board: boardData = {
       post: 'Committee Member',
       image: ComMem01,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -120,10 +120,10 @@ const board: boardData = {
       post: 'Committee Member',
       image: ComMem02,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -131,10 +131,10 @@ const board: boardData = {
       post: 'Committee Member',
       image: ComMem03,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -142,10 +142,10 @@ const board: boardData = {
       post: 'Committee Member',
       image: ComMem04,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -153,10 +153,10 @@ const board: boardData = {
       post: 'Committee Member',
       image: ComMem05,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -164,10 +164,10 @@ const board: boardData = {
       post: 'Committee Member',
       image: ComMem06,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -175,10 +175,10 @@ const board: boardData = {
       post: 'Committee Member',
       image: ComMem07,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
     {
@@ -186,10 +186,10 @@ const board: boardData = {
       post: 'Committee Member',
       image: ComMem08,
       socialLinks: {
-        fb: 'fbLink',
-        twitter: 'twitterLink',
-        insta: 'instaLink',
-        linkedln: 'linkedlnLink',
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
       },
     },
   ],
@@ -260,8 +260,9 @@ export default function AboutUs(): JSX.Element {
               the successful completion of the degree, as well as organizing
               events for the Student Community to grow academically as well as
               to get in touch with their creative senses, to promote a stress
-              free and memorable University experience. The following are our Board 
-              Members who enabled these dreams to sprout into fruition. 
+
+              free and memorable University experience. The following are our
+              Board Members who enabled these dreams to sprout into fruition.
             </p>
           </div>
           <div className="w-3/4 md:w-4/12" data-aos="fade-left">
@@ -333,42 +334,50 @@ export default function AboutUs(): JSX.Element {
                         className="flex flex-row justify-center"
                         data-aos="fade-down"
                       >
-                        <a
-                          href={member.socialLinks.fb}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <FaFacebook
-                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7"
-                          />
-                        </a>
-                        <a
-                          href={member.socialLinks.insta}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <FaInstagram
-                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7"
-                          />
-                        </a>
-                        <a
-                          href={member.socialLinks.linkedln}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <FaLinkedin
-                            className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7"
-                          />
-                        </a>
-                        <a
-                          href={member.socialLinks.twitter}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <FaTwitter
-                            className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7"
-                          />
-                        </a>
+                        {member.socialLinks.fb ? (
+                          <a
+                            href={member.socialLinks.fb}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <FaFacebook className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7" />
+                          </a>
+                        ) : (
+                          <div></div>
+                        )}
+                        {member.socialLinks.insta ? (
+                          <a
+                            href={member.socialLinks.insta}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <FaInstagram className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7" />
+                          </a>
+                        ) : (
+                          <div></div>
+                        )}
+                        {member.socialLinks.linkedln ? (
+                          <a
+                            href={member.socialLinks.linkedln}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <FaLinkedin className="mb-3 mr-6 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7" />
+                          </a>
+                        ) : (
+                          <div></div>
+                        )}
+                        {member.socialLinks.twitter ? (
+                          <a
+                            href={member.socialLinks.twitter}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <FaTwitter className="mb-3 mr-3 fill-current-color text-white hover:text-gray-600 transition ease-in duration-200 w-6 h-6 2xl:w-7 2xl:h-7" />
+                          </a>
+                        ) : (
+                          <div></div>
+                        )}
                       </div>
                     </div>
                   </h2>

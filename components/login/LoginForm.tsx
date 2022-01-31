@@ -109,10 +109,10 @@ const LoginForm = ({
     <>
       <LoadingOverlay show={showLoading} />
       <div className="flex flex-col order-1 lg:order-none items-center lg:w-6/12 lg:justify-center lg:transform lg:scale-90">
-        <h2 className="font-inter font-extrabold text-fcsc-blue text-3xl mb-2">
+        <h2 className="font-extrabold text-fcsc-blue text-3xl mb-2">
           {login ? 'LOGIN' : 'Sign Up'}
         </h2>
-        <p className="font-inter text-textBlackSecondary font-medium mb-6 text-sm">
+        <p className="text-textBlackSecondary font-medium mb-6 text-sm">
           {login ? 'Login' : 'Sign up'} to access the best things!
         </p>
         <p
@@ -132,7 +132,7 @@ const LoginForm = ({
           <SignUpFormFields onSubmit={onSignUpSubmitAction} />
         )}
         <button
-          className="w-full lg:w-4/5 bg-fcsc-orange filter hover:brightness-110 shadow-md hover:shadow-lg rounded-lg outline-none font-inter text-sm leading-6 text-white font-semibold h-10 mt-4 mb-12 transition ease-in duration-150"
+          className="w-full lg:w-4/5 bg-fcsc-orange filter hover:brightness-110 shadow-md hover:shadow-lg rounded-lg outline-none text-sm leading-6 text-white font-semibold h-10 mt-4 mb-12 transition ease-in duration-150"
           form={login ? 'loginForm' : 'signUpForm'}
         >
           {login ? 'Login' : 'Sign Up'}

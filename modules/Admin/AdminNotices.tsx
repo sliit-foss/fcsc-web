@@ -353,7 +353,7 @@ const AdminUsers = (): JSX.Element => {
               </div>
             ) : (
               <div
-                className="font-inter font-semibold text-xl lg:text-2xl text-center mt-25vh lg:mt-30vh mb-20 px-8 text-gray-800"
+                className="font-semibold text-xl lg:text-2xl text-center mt-25vh lg:mt-30vh mb-20 px-8 text-gray-800"
                 data-aos="fade-left"
               >
                 There are no notices at the moment.

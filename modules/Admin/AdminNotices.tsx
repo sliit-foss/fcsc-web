@@ -91,7 +91,7 @@ const AdminUsers = (): JSX.Element => {
           })
         })
         .catch((e) => {
-          const error = JSON.parse(e).data.error
+          const error = e.response.data.message
           let errorMessage = 'Failed to add notice'
           if (error) {
             switch (true) {
@@ -144,12 +144,11 @@ const AdminUsers = (): JSX.Element => {
           })
         })
         .catch((e) => {         
-          const error = JSON.parse(e).data.error || JSON.parse(e).data
           setShowLoading(false)
           Swal.fire({
             icon: 'error',
             heightAuto: false,
-            title: `<div class="text-2xl">${error}</div>`,
+            title: `<div class="text-2xl">${e.response.data.message}</div>`,
             showConfirmButton: false,
             timer: 1500,
           })
@@ -198,12 +197,11 @@ const AdminUsers = (): JSX.Element => {
             })
           })
           .catch((e) => {
-            const error = JSON.parse(e).data.error || JSON.parse(e).data
             setShowLoading(false)
             Swal.fire({
               icon: 'error',
               heightAuto: false,
-              title: `<div class="text-2xl">${error}</div>`,
+              title: `<div class="text-2xl">${e.response.data.message}</div>`,
               showConfirmButton: false,
               timer: 1500,
             })

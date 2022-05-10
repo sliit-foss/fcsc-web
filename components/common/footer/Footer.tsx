@@ -35,7 +35,7 @@ const Footer = (): JSX.Element => {
         })
       })
       .catch((e) => {
-        const error = JSON.parse(e).data.error
+        const error = e.response.data.message
         let errorMessage = 'Failed to add notice'
         if (error) {
           switch (true) {

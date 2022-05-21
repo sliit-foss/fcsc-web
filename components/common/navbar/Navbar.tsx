@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { mobileNavVariants, navElementsVariants } from '../../../animations'
 import { HiMenuAlt2 } from 'react-icons/hi'
 import { RiCloseFill } from 'react-icons/ri'
+import LaunchButton from '../../../components/contactUs/LaunchButton'
 
 function Navbar(): JSX.Element {
   const router = useRouter()
@@ -28,12 +29,19 @@ function Navbar(): JSX.Element {
     })
   }
 
+  const onNavItemClick = (navText: string) => {
+    if (navText == 'Contact' && typeof window !== 'undefined') {
+      (document.getElementById('contact-launch-button') as HTMLElement).click()
+    }
+  }
+
   const navs = [
     { text: 'Home', href: '/' },
     { text: 'About', href: '/about' },
     { text: 'Community', href: '/community' },
     { text: 'Events', href: '/events' },
     { text: 'Notices', href: '/notices' },
+    { text: 'Contact', href: '/contact' },
     { text: 'Login', href: '/login' },
   ]
 
@@ -43,9 +51,9 @@ function Navbar(): JSX.Element {
 
   return (
     <header className="sticky top-0 flex flex-row w-full h-14 justify-between items-center shadow-noOffset z-30 bg-white">
-      <div className="w-28 h-12 flex flex-row items-center ml-9 z-10 bg-white">
+      <a className="w-28 h-12 flex flex-row items-center ml-9 z-10 bg-white" href='/'>
         <Image src={fcscLogo} alt="FCSC Logo" className="w-max" />
-      </div>
+      </a>
       <div className="flex flex-row justify-end  items-center w-4/6 h-14 bg-white">
         <div className="flex flex-row mr-2">
           {navs.map((nav, key) => (
@@ -76,16 +84,17 @@ function Navbar(): JSX.Element {
                   Logout
                 </div>
               ) : (
-                <Link href={nav.href}>
-                  <a
-                    className={`h-full flex items-center justify-center ${
+                <Link href={nav.text != 'Contact' ? nav.href : router.pathname}>
+                  <div
+                    className={`h-full flex items-center justify-center cursor-pointer ${
                       router.pathname == nav.href
                         ? 'text-white'
                         : 'text-fcsc-blue'
                     }`}
+                    onClick={()=>onNavItemClick(nav.text)}
                   >
                     {nav.text}
-                  </a>
+                  </div>
                 </Link>
               )}
             </div>
@@ -183,6 +192,12 @@ function Navbar(): JSX.Element {
                     <a>Notices</a>
                   </Link>
                 </li>
+                <li
+                  className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="cursor-pointer" onClick={()=>onNavItemClick('Contact')}>Contact</div>
+                </li>
                 {loginStatus ? (
                   <li
                     className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
@@ -220,6 +235,9 @@ function Navbar(): JSX.Element {
             ''
           )}
         </AnimatePresence>
+        <div className='pointer-events-none opacity-0 fixed top-0 left-0'>
+          <LaunchButton />
+        </div>
       </div>
     </header>
   )

@@ -18,10 +18,23 @@ import Head from 'next/head'
 import React from 'react'
 
 export default function Community(): JSX.Element {
+
+  const pageDescription = `The Faculty of Computing Students' Community was established under
+  the Faculty of Computing of SLIIT and consists of Computing
+  Undergraduates. Since there is a growing competition in the Sri
+  Lankan job market in relation to this field of knowledge, we focus
+  on nurturing the hard and soft skills which would improve their
+  employability after the successful completion of the degree, as
+  well as organizing events for the Student Community to grow
+  academically as well as to get in touch with their creative
+  senses, to promote a stress free and memorable University
+  experience.`
+
   return (
     <>
       <Head>
-        <title>Community</title>
+        <title>Community | FCSC</title>
+        <meta name="description" content={pageDescription} />
       </Head>
       <div className="justify-items-center">
         <h1
@@ -52,16 +65,7 @@ export default function Community(): JSX.Element {
         >
           <div className="grid-cols-1 lg:w-1/2 md:w-1/2">
             <p className="mt-2 text-center md:text-left">
-              The Faculty of Computing Students&apos; Community was established under
-              the Faculty of Computing of SLIIT and consists of Computing
-              Undergraduates. Since there is a growing competition in the Sri
-              Lankan job market in relation to this field of knowledge, we focus
-              on nurturing the hard and soft skills which would improve their
-              employability after the successful completion of the degree, as
-              well as organizing events for the Student Community to grow
-              academically as well as to get in touch with their creative
-              senses, to promote a stress free and memorable University
-              experience.
+              {pageDescription}
             </p>
           </div>
         </div>

@@ -40,9 +40,6 @@ export default function Event(props: EventProps): JSX.Element {
             <h1 className="font-semibold text-lg text-center xl:text-left">
               BY SLIIT FCSC COMMUNITY
             </h1>
-            <h1 className="font-semibold text-lg text-center xl:text-left">
-              FCSC
-            </h1>
           </div>
           <div className='flex justify-center xl:justify-start'>
           <Button

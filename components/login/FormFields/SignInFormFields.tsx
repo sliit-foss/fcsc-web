@@ -36,7 +36,7 @@ const SignInFormFields = ({ onSubmit, handleCheck }: props): JSX.Element => {
             type="checkbox"
             onChange={handleCheck}
           />
-          <p className="text-xs text-blue">Remember</p>
+          <p className="text-xs text-blue">Remember Me</p>
         </div>
       </div>
     </form>

@@ -65,11 +65,36 @@ const AdminUsers = (): JSX.Element => {
     }
   }
 
+  const getCurrentLocalDateTime = () => {
+    return new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().substring(0, 19)
+  }
+
+  const convertUtcToLocalDateTime = (utcDateTime: string) => {
+    const utc = new Date(utcDateTime)
+    const local = new Date(utc.getTime() - utc.getTimezoneOffset() * 60000)
+    return local.toISOString().substring(0, 19)
+  }
+
+  const parseDate = (date: string) => {
+    return `${date.split('T')[0]} ${toTwelweHour(date.split('T')[1].split('.')[0])}`
+  }
+
+  const toTwelweHour = (time: string) => {
+    const hour = time.split(':')[0]
+    const minute = time.split(':')[1]
+    const ampm = parseInt(hour) >= 12 ? 'PM' : 'AM'
+    const convertedHour = parseInt(hour) % 12
+    return `${String(convertedHour).padStart(2, '0')}:${minute} ${ampm}`
+  }
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setShowLoading(true)
+    if (!formData.createdAt) formData.createdAt = getCurrentLocalDateTime()
+    const payload = JSON.parse(JSON.stringify(formData))
+    payload.createdAt = new Date(payload.createdAt).toUTCString()
     if (modalAction == 'Add') {
-      NoticeEndpoints.addNotice(formData)
+      NoticeEndpoints.addNotice(payload)
         .then(() => {
           setShowLoading(false)
           toggleModal()
@@ -122,7 +147,7 @@ const AdminUsers = (): JSX.Element => {
           })
         })
     } else {
-      NoticeEndpoints.editNotice(editingNoticeId, formData)
+      NoticeEndpoints.editNotice(editingNoticeId, payload)
         .then(() => {
           setShowLoading(false)
           toggleModal()
@@ -215,7 +240,6 @@ const AdminUsers = (): JSX.Element => {
       <LoadingOverlay show={showLoading} />
       <section
         className="p-4 sm:p-5 md:h-full min-h-84vh"
-        onClick={showModal ? toggleModal : () => null}
       >
         <div
           className={`bg-black fixed w-full h-full top-0 left-0 z-20 transition ease-in duration-200 pointer-events-none ${
@@ -265,7 +289,7 @@ const AdminUsers = (): JSX.Element => {
                       body: body,
                       category: category,
                       photo: photo,
-                      createdAt: createdAt,
+                      createdAt: convertUtcToLocalDateTime(createdAt),
                     })
                     toggleModal()
                     setModalAction('Edit')
@@ -311,7 +335,7 @@ const AdminUsers = (): JSX.Element => {
                           size={26}
                         />
                         <p className="font-medium text-md md:text-base text-gray-700">
-                          { new Date((new Date(createdAt).getTime() + new Date().getTimezoneOffset() * -60 * 1000 )).toLocaleString()}
+                          { parseDate(convertUtcToLocalDateTime(createdAt)) }
                         </p>
                       </div>
 
@@ -454,14 +478,7 @@ const AdminUsers = (): JSX.Element => {
           <input
             className="rounded-md shadow-ds2 border-0 placeholder-gray-400 w-full py-2 px-3 mb-6"
             placeholder="Notice Issue Date"
-            value={new Date(
-              formData.createdAt == ''
-                ? new Date(Date.now())
-                : new Date(formData.createdAt).getTime() +
-                  new Date().getTimezoneOffset() * -60 * 1000
-            )
-              .toISOString()
-              .slice(0, 19)}
+            value= {formData.createdAt ||  getCurrentLocalDateTime()}
             onChange={handleInputChange}
             name="createdAt"
             id="createdAt"

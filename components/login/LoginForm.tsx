@@ -51,7 +51,6 @@ const LoginForm = ({
         })
       })
       .catch((e) => {
-        console.log(e)
         setShowLoading(false)
         Swal.fire({
           icon: 'error',
@@ -91,7 +90,6 @@ const LoginForm = ({
         })
       })
       .catch((error) => {
-        console.error(error)
         setShowLoading(false)
         Swal.fire({
           icon: 'error',

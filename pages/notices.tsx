@@ -29,10 +29,20 @@ export default function Notices(): JSX.Element {
     olderNotices = olderNotices.slice(0, 5)
   }
 
+  const pageDescription = `Being the Faculty
+  of Computings main and governing student committee, the committee
+  dedicates itself to providing the students with the necessary
+  direction they need to carry out their academic and non-academic
+  activities without much hassle or confusion. Their guidance
+  includes the sharing of notices which extends to all aspects of
+  studentship like semester registrations, exam procedures to name a
+  few.`
+
   return (
     <div>
       <Head>
-        <title>Notices</title>
+        <title>Notices | FCSC</title>
+        <meta name="description" content={pageDescription} />
       </Head>
       <div className="justify-items-center">
         <HeaderImage position="absolute top-14" />
@@ -54,17 +64,10 @@ export default function Notices(): JSX.Element {
               className="font-bold text-2xl text-center md:text-left mt-0 lg:mt-16"
               data-aos="fade-right"
             >
-              What Are Notices
+              FCSC Notices
             </h1>
             <p className="mt-2 text-center md:text-left" data-aos="fade-right">
-              <span className="text-3xl font-semibold">B</span>eing the Faculty
-              of Computings main and governing student committee, the committee
-              dedicates itself to providing the students with the necessary
-              direction they need to carry out their academic and non-academic
-              activities without much hassle or confusion. Their guidance
-              includes the sharing of notices which extends to all aspects of
-              studentship like semester registrations, exam procedures to name a
-              few.
+              <span className="text-3xl font-semibold">B</span>{pageDescription.slice(1)}
             </p>
           </div>
           <div className="w-3/4 md:w-4/12" data-aos="fade-left">

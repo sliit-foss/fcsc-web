@@ -35,10 +35,32 @@ export default function Events(): JSX.Element {
     ))
   }
 
+  const pageDescription = `Since its
+  inception, SLIIT has always been offering adequate importance to
+  both academics and extracurricular activities. FCSC being a prime
+  potent force within the university has contributed immensely in
+  realizing the aforesaid objective. Accordingly, throughout its
+  legacy, FCSC has brought an array of events into light forging a
+  firm platform for the student community to unlock their potentials
+  and unleash them effectively. <b>Virayama</b> the premier
+  classical musical extravaganza annually held in the university is
+  yet another event proudly presented by the FCSC in its calendar of
+  events that spans a wide range of events. Furthermore, in spite of
+  the difficulties caused by the global pandemic, FCSC resiliently
+  organized a variety of virtual events to enrich students with both
+  productive and positive experiences no less than before. The
+  ultimate motive behind them has always been to infuse an equal
+  blend and balance between studies and civic life of students and
+  help them groom into wholesome personalities by successfully
+  managing the friction of exams, peer pressure, deadlines, and
+  tight timelines. Thus over the years it is evident how they have
+  enabled improving both social and life skills of the students.`
+
   return (
     <div>
       <Head>
-        <title>Events</title>
+        <title>Events | FCSC</title>
+        <meta name="description" content={pageDescription} />
       </Head>
       <div className="justify-items-center ">
         <HeaderImage position="absolute top-14" />
@@ -60,29 +82,10 @@ export default function Events(): JSX.Element {
               className="font-bold text-2xl text-center md:text-left mt-0 lg:mt-16"
               data-aos="fade-right"
             >
-              What Are Events
+              FCSC Events
             </h1>
             <p className="mt-2 text-center md:text-left" data-aos="fade-right">
-              <span className="text-3xl font-semibold">S</span>ince its
-              inception, SLIIT has always been offering adequate importance to
-              both academics and extracurricular activities. FCSC being a prime
-              potent force within the university has contributed immensely in
-              realizing the aforesaid objective. Accordingly, throughout its
-              legacy, FCSC has brought an array of events into light forging a
-              firm platform for the student community to unlock their potentials
-              and unleash them effectively. <b>Virayama</b> the premier
-              classical musical extravaganza annually held in the university is
-              yet another event proudly presented by the FCSC in its calendar of
-              events that spans a wide range of events. Furthermore, in spite of
-              the difficulties caused by the global pandemic, FCSC resiliently
-              organized a variety of virtual events to enrich students with both
-              productive and positive experiences no less than before. The
-              ultimate motive behind them has always been to infuse an equal
-              blend and balance between studies and civic life of students and
-              help them groom into wholesome personalities by successfully
-              managing the friction of exams, peer pressure, deadlines, and
-              tight timelines. Thus over the years it is evident how they have
-              enabled improving both social and life skills of the students.
+              <span className="text-3xl font-semibold">S</span>{pageDescription.slice(1)}
             </p>
           </div>
           <div className="w-3/4 md:w-4/12" data-aos="fade-left">

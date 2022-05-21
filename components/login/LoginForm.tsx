@@ -50,7 +50,7 @@ const LoginForm = ({
           })
         })
       })
-      .catch((e) => {
+      .catch(() => {
         setShowLoading(false)
         Swal.fire({
           icon: 'error',
@@ -89,7 +89,7 @@ const LoginForm = ({
           loginToggleHandler()
         })
       })
-      .catch((error) => {
+      .catch(() => {
         setShowLoading(false)
         Swal.fire({
           icon: 'error',

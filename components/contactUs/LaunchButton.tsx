@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Content from './Content'
 
-export default function LaunchButton({}): JSX.Element {
+export default function LaunchButton(): JSX.Element {
   const [visibility, setVisibility] = useState(false)
   const toggleVisibility = function () {
     setVisibility(!visibility)

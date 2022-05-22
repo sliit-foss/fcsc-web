@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fcsc-web.web.app
+
+# Sitemaps
+Sitemap: https://fcsc-web.web.app/sitemap.xml

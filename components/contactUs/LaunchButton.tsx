@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Content from './Content'
 
 export default function LaunchButton(): JSX.Element {
@@ -6,6 +6,10 @@ export default function LaunchButton(): JSX.Element {
   const toggleVisibility = function () {
     setVisibility(!visibility)
   }
+
+  useEffect(() => {
+    document.getElementById('contact-launch-button')?.addEventListener('click', toggleVisibility)
+  },[])
 
   return (
     <div>
@@ -25,6 +29,7 @@ export default function LaunchButton(): JSX.Element {
       <div data-aos="fade-up">
         <div className="transform hover:scale-105 shadow-lg hover:shadow-xl transition ease-in duration-200">
           <div
+            id="contact-launch-button"
             className="bg-fcsc-orange px-10 py-3 mt-8 mb-36 rounded-lg transform hover:scale-105 text-white cursor-pointer w-full transition ease-in duration-200"
             onClick={toggleVisibility}
           >

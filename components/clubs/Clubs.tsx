@@ -21,7 +21,7 @@ export default function Clubs(): JSX.Element {
             <div className="flex justify-center" data-aos="fade-left">
               <p className="w-full md:w-10/12 lg: lg:w-5/12 text-center text-gray-700">
                 A very big thank you to all our partners for their continued
-                partnership. If you&apos;re interested in being showcased
+                partnership. If you are interested in being showcased
                 throughout, contact SLIIT FCSC to discuss sponsorship
                 opportunities.
               </p>

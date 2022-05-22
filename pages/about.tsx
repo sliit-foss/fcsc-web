@@ -213,10 +213,17 @@ export default function AboutUs(): JSX.Element {
     }
   }
 
+  const pageDescription = `The Faculty of
+  Computing Student Community also known as the FCSC is the largest
+  student body of the Faculty of Computing. The Faculty of Computing
+  Student Community was established under the Faculty of Computing
+  and consists of Computing undergraduates.`
+
   return (
     <div>
       <Head>
-        <title>About</title>
+        <title>About | FCSC</title>
+        <meta name="description" content={pageDescription} />
       </Head>
       <div className="justify-items-center">
         <HeaderImage position="absolute top-14" />
@@ -244,11 +251,7 @@ export default function AboutUs(): JSX.Element {
               className="mt-2 text-center md:text-left lg:text-justify"
               data-aos="fade-right"
             >
-              <span className="text-3xl font-semibold">T</span>he Faculty of
-              Computing Student Community also known as the FCSC is the largest
-              student body of the Faculty of Computing. The Faculty of Computing
-              Student Community was established under the Faculty of Computing
-              and consists of Computing undergraduates.
+              <span className="text-3xl font-semibold">T</span>{pageDescription.slice(1)}
             </p>
             <p
               className="mt-2 text-center md:text-left lg:text-justify"

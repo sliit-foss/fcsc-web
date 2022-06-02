@@ -37,14 +37,14 @@ export default function Community(): JSX.Element {
         <meta name="description" content={pageDescription} />
       </Head>
       <div className="justify-items-center">
-        <h1
+        <div
           className="w-1/4 lg:w-3/4 title-font text-xl sm:text-2xl lg:text-4xl md:text-3xl md:ml-10 font-medium text-white absolute sm0:ml-6 mr-auto left-0 sm:left-6 md:left-0 lg:left-20 right-0 p-0 md:py-14 z-20"
           style={{ marginTop: '8%', width: '77%' }}
           data-aos="fade-down"
         >
           Faculty of Computing <br />
           Students Community
-        </h1>
+        </div>
         <HeaderImage />
         <div
           className="lg:absolute lg:top-48 lg:left-1/2

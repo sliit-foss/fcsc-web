@@ -227,26 +227,26 @@ export default function AboutUs(): JSX.Element {
       </Head>
       <div className="justify-items-center">
         <HeaderImage position="absolute top-14" />
-        <h1
+        <div
           className="title-font sm:text-4xl text-3xl font-medium text-white relative top-20 left-6 sm2:left-10 sm:left-12 z-20 flex md:hidden"
           data-aos="fade-right"
         >
           ABOUT US
-        </h1>
+        </div>
         <div className="flex flex-col-reverse md:flex-row pb-0 md:pb-6 mt-44 md:mt-0 place-content-center items-center relative top-0 z-20">
           <div className="flex flex-col w-full md:w-1/2 place-content-center p-14 px-10 md:px-14">
-            <h1
+            <div
               className="title-font sm:text-4xl text-3xl font-medium text-white mt-24 xl:mt-40 mb-64 xl:mb-96 hidden md:flex"
               data-aos="fade-down"
             >
               ABOUT US
-            </h1>
-            <h1
+            </div>
+            <div
               className="font-bold text-2xl text-center md:text-left mt-0 lg:mt-16"
               data-aos="fade-right"
             >
               Who We Are
-            </h1>
+            </div>
             <p
               className="mt-2 text-center md:text-left lg:text-justify"
               data-aos="fade-right"
@@ -327,12 +327,12 @@ export default function AboutUs(): JSX.Element {
                 <div className="absolute bottom-0 h-0 w-full group-hover:h-full opacity-0 group-hover:opacity-100 transition-all ease-out duration-500 flex flex-col items-center justify-center bg-gradient-to-t from-fcsc-orange to-fcsc-orange_light rounded-xl md:group-hover:p-4">
                   <h2 className="text-base sm:text-2xl md:text-3xl font-bold text-white group-hover:text-opacity-100 text-opacity-0 text-center">
                     <div className="flex flex-col w-full relative">
-                      <h1 className="text-white font-bold text-2xl 2xl:text-3xl">
+                      <div className="text-white font-bold text-2xl 2xl:text-3xl">
                         {member.name}
-                      </h1>
-                      <h1 className="text-white font-bold text-xl 2xl:text-2xl mb-3">
+                      </div>
+                      <div className="text-white font-bold text-xl 2xl:text-2xl mb-3">
                         {member.post}
-                      </h1>
+                      </div>
                       <div
                         className="flex flex-row justify-center"
                         data-aos="fade-down"

@@ -42,7 +42,7 @@ export default function Events(): JSX.Element {
   realizing the aforesaid objective. Accordingly, throughout its
   legacy, FCSC has brought an array of events into light forging a
   firm platform for the student community to unlock their potentials
-  and unleash them effectively. <b>Virayama</b> the premier
+  and unleash them effectively. Virayama the premier
   classical musical extravaganza annually held in the university is
   yet another event proudly presented by the FCSC in its calendar of
   events that spans a wide range of events. Furthermore, in spite of
@@ -64,26 +64,26 @@ export default function Events(): JSX.Element {
       </Head>
       <div className="justify-items-center ">
         <HeaderImage position="absolute top-14" />
-        <h1
+        <div
           className="title-font sm:text-4xl text-3xl font-medium text-white relative top-20 left-6 sm2:left-10 sm:left-12 z-20 flex md:hidden"
           data-aos="fade-right"
         >
           EVENTS
-        </h1>
+        </div>
         <div className="flex flex-col-reverse md:flex-row pb-0 md:pb-6 mt-44 md:mt-0 place-content-center items-center relative top-0 z-20">
           <div className="flex flex-col w-full md:w-1/2 place-content-center p-14 px-10 md:px-14">
-            <h1
+            <div
               className="title-font sm:text-4xl text-3xl font-medium text-white mt-24 xl:mt-40 mb-64 xl:mb-96 hidden md:flex"
               data-aos="fade-down"
             >
               EVENTS
-            </h1>
-            <h1
+            </div>
+            <div
               className="font-bold text-2xl text-center md:text-left mt-0 lg:mt-16"
               data-aos="fade-right"
             >
               FCSC Events
-            </h1>
+            </div>
             <p className="mt-2 text-center md:text-left" data-aos="fade-right">
               <span className="text-3xl font-semibold">S</span>{pageDescription.slice(1)}
             </p>

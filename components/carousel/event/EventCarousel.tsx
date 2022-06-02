@@ -19,9 +19,9 @@ export default function EventCarousel(props: EventCarouselProps): JSX.Element {
       data-aos="fade-up"
       className="flex px-5 py-14 md:py-24 items-center justify-center flex-col"
     >
-      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10">
+      <div className="text-3xl sm:text-4xl font-bold text-center mb-10">
         {props.title}
-      </h1>
+      </div>
       <Carousel
         className="shadow-xl hover:shadow-2xl rounded-3xl transition ease-in duration-200 w-11/12 md:w-10/12 bg-white"
         showThumbs={false}

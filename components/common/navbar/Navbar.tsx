@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import fcscLogo from '../../../public/logo/fcsc.png'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { mobileNavVariants, navElementsVariants } from '../../../animations'
 import { HiMenuAlt2 } from 'react-icons/hi'
@@ -13,6 +13,11 @@ function Navbar(): JSX.Element {
   const router = useRouter()
 
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const launchButton = document.getElementById('contact-launch-button') as HTMLElement
+    launchButton.style.display = 'none'
+  })
 
   let loginStatus = false
   if (process.browser) {
@@ -30,8 +35,9 @@ function Navbar(): JSX.Element {
   }
 
   const onNavItemClick = (navText: string) => {
-    if (navText == 'Contact' && typeof window !== 'undefined') {
-      (document.getElementById('contact-launch-button') as HTMLElement).click()
+    if (navText == 'Contact Us' && typeof window !== 'undefined') {
+      const launchButton = document.getElementById('contact-launch-button') as HTMLElement
+      launchButton.click()
     }
   }
 
@@ -41,7 +47,7 @@ function Navbar(): JSX.Element {
     { text: 'Community', href: '/community' },
     { text: 'Events', href: '/events' },
     { text: 'Notices', href: '/notices' },
-    { text: 'Contact', href: '/contact' },
+    { text: 'Contact Us', href: '/contact' },
     { text: 'Login', href: '/login' },
   ]
 
@@ -84,7 +90,7 @@ function Navbar(): JSX.Element {
                   Logout
                 </div>
               ) : (
-                <Link href={nav.text != 'Contact' ? nav.href : router.pathname}>
+                <Link href={nav.text != 'Contact Us' ? nav.href : router.pathname}>
                   <div
                     className={`h-full flex items-center justify-center cursor-pointer ${
                       router.pathname == nav.href
@@ -196,7 +202,7 @@ function Navbar(): JSX.Element {
                   className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
                   onClick={() => setIsOpen(false)}
                 >
-                  <div className="cursor-pointer" onClick={()=>onNavItemClick('Contact')}>Contact</div>
+                  <div className="cursor-pointer" onClick={()=>onNavItemClick('Contact Us')}>Contact Us</div>
                 </li>
                 {loginStatus ? (
                   <li
@@ -235,7 +241,7 @@ function Navbar(): JSX.Element {
             ''
           )}
         </AnimatePresence>
-        <div className='pointer-events-none opacity-0 fixed top-0 left-0'>
+        <div className={`${router.pathname === '/' ? 'hidden pointer-events-none' : ''}`}>
           <LaunchButton />
         </div>
       </div>

@@ -37,7 +37,7 @@ const LoginSignup = (): JSX.Element => {
 
   const loginTitle = (
     <div className={titleWrapper}>
-      <h1 className={titleClass}>FCSC WEB PORTAL</h1>
+      <div className={titleClass}>FCSC WEB PORTAL</div>
       <div></div>
     </div>
   )
@@ -45,7 +45,7 @@ const LoginSignup = (): JSX.Element => {
   const signupTitle = (
     <div className={titleWrapper}>
       <div></div>
-      <h1 className={titleClass}>FCSC WEB PORTAL</h1>
+      <div className={titleClass}>FCSC WEB PORTAL</div>
     </div>
   )
 

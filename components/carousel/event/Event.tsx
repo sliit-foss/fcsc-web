@@ -23,23 +23,23 @@ export default function Event(props: EventProps): JSX.Element {
           ></img>
         </div>
         <div className="p-10 pb-0 px-0 xl:px-10 w-full justify-items-center xl:justify-items-start">
-          <h1 className="font-semibold text-3xl text-center xl:text-left px-0">
+          <div className="font-semibold text-3xl text-center xl:text-left px-0">
             {props.title}
-          </h1>
-          <h1 className="my-5 mb-5 xl:mb-3 font-semibold text-xl text-center xl:text-left">
+          </div>
+          <div className="my-5 mb-5 xl:mb-3 font-semibold text-xl text-center xl:text-left">
             {props.subtitle}
-          </h1>
+          </div>
           <div className="flex flex-row items-center place-content-center xl:place-content-start">
             <ImCalendar />
-            <h1 className="ml-2 font-semibold text-lg text-center xl:text-left">
+            <div className="ml-2 font-semibold text-lg text-center xl:text-left">
               {props.date}
-            </h1>
+            </div>
           </div>
           <p className="my-10 text-center xl:text-left">{props.description}</p>
           <div className="flex flex-col xl:flex-row items-center place-content-center xl:place-content-between mb-5">
-            <h1 className="font-semibold text-lg text-center xl:text-left">
+            <div className="font-semibold text-lg text-center xl:text-left">
               BY SLIIT FCSC COMMUNITY
-            </h1>
+            </div>
           </div>
           <div className='flex justify-center xl:justify-start'>
           <Button

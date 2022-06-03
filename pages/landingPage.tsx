@@ -72,12 +72,12 @@ export default function LandingPage(): JSX.Element {
             />
           </a>
         </div>
-        <h1
+        <div
           className="title-font lg:text-4xl  text-xl font-medium text-white z-0"
           data-aos="fade-down"
         >
           Faculty of Computing Students Community
-        </h1>
+        </div>
         <p className="my-5 text-white text-left text-sm" data-aos="fade-up">
           The Faculty of Computing Student Community also known as the FCSC is the largest student body of the Faculty of Computing.
         </p>

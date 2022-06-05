@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import fcscLogo from '../../../public/logo/fcsc.png'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { mobileNavVariants, navElementsVariants } from '../../../animations'
 import { HiMenuAlt2 } from 'react-icons/hi'
@@ -13,6 +13,11 @@ function Navbar(): JSX.Element {
   const router = useRouter()
 
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const launchButton = document.getElementById('contact-launch-button') as HTMLElement
+    launchButton.style.display = 'none'
+  })
 
   let loginStatus = false
   if (process.browser) {

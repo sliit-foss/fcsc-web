@@ -20,6 +20,13 @@ import ComMem05 from '../public/whoWeAre/2021/Committee Member - Amila Perera.jp
 import ComMem06 from '../public/whoWeAre/2021/Committee Member - Ruwin Rathnayake.jpeg'
 import ComMem07 from '../public/whoWeAre/2021/Committee Member - Nuwantha Perera.jpg'
 import ComMem08 from '../public/whoWeAre/2021/DSC_0036.jpg'
+import President22 from '../public/whoWeAre/2022/President _Ranul.png'
+import VicePresident22 from '../public/whoWeAre/2022/VicePresident_IsuriArachchige.jpg'
+import Secretary22 from '../public/whoWeAre/2022/Secretary_Anujitha Fernando.jpg'
+import AsstSecretary22 from '../public/whoWeAre/2022/Assistant Secretary_Vihan Udawela.jpg'
+import Treasurer22 from '../public/whoWeAre/2022/Treasurer_Prabodha Aththanayake.jpeg'
+import AsstTreasurer22 from '../public/whoWeAre/2022/AssistantTreasurer_Kavindu Lakshan.jpg'
+import Editor22 from '../public/whoWeAre/2022/Editor _ Amila Perera.jpg'
 
 type boardData = {
   [key: string]: Array<any>
@@ -193,6 +200,85 @@ const board: boardData = {
       },
     },
   ],
+  '2022': [
+    {
+      name: 'Ranul Deelaka',
+      post: 'President',
+      image: President22,
+      socialLinks: {
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
+      },
+    },
+    {
+      name: 'Isuri Devlini',
+      post: 'Vice President',
+      image: VicePresident22,
+      socialLinks: {
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
+      },
+    },
+    {
+      name: 'Anujitha Fernando',
+      post: 'Secretary',
+      image: Secretary22,
+      socialLinks: {
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
+      },
+    },
+    {
+      name: 'Vihan Udawela',
+      post: 'Asst.Secretary',
+      image: AsstSecretary22,
+      socialLinks: {
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
+      },
+    },
+    {
+      name: 'Prabodha Athhanayake',
+      post: 'Treasurer',
+      image: Treasurer22,
+      socialLinks: {
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
+      },
+    },
+    {
+      name: 'Kavindu Lakshan',
+      post: 'Asst.Treasurer',
+      image: AsstTreasurer22,
+      socialLinks: {
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
+      },
+    },
+    {
+      name: 'Amila Perera',
+      post: 'Editor',
+      image: Editor22,
+      socialLinks: {
+        fb: '',
+        twitter: '',
+        insta: '',
+        linkedln: '',
+      },
+    },
+  ],
 }
 export default function AboutUs(): JSX.Element {
   const currentTime = new Date()
@@ -205,7 +291,7 @@ export default function AboutUs(): JSX.Element {
     years.push(year.toString())
   }
 
-  const [selectedYear, setSelectedYear] = useState<string>('2021')
+  const [selectedYear, setSelectedYear] = useState<string>('2022')
 
   const toggleYear = () => (e: any) => {
     if (e.target.value != 'Select Year') {

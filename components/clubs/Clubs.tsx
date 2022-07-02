@@ -39,9 +39,6 @@ export default function Clubs(): JSX.Element {
             <a href="https://www.facebook.com/sliit.fcmu/" target="_blank" rel="noreferrer" data-aos="fade-down">
               <ClubLogo image={fcscMedia} />
             </a>
-            <a href="https://www.facebook.com/sliitmcc/" target="_blank" rel="noreferrer" data-aos="fade-up">
-              <ClubLogo image={mozilla} />
-            </a>
             <a href="https://www.facebook.com/sliit.cscs/" target="_blank" rel="noreferrer" data-aos="fade-down">
               <ClubLogo image={cs2} />
             </a>

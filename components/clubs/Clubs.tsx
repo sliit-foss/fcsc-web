@@ -2,7 +2,6 @@ import ClubLogo from './ClubLogo'
 import foss from '../../public/clubs/foss.png'
 import ms from '../../public/clubs/ms.png'
 import fcscMedia from '../../public/clubs/fcscMedia.png'
-import mozilla from '../../public/clubs/mozilla.png'
 import cs2 from '../../public/clubs/cs2.png'
 import sesc from '../../public/clubs/sesc.png'
 

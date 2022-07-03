@@ -4,7 +4,6 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import background2 from '../public/shapes/2.svg'
 import people from '../public/landing/people.svg'
 import HeaderImage from '../components/common/HeaderImage'
-import LaunchButton from '../components/contactUs/LaunchButton'
 import NoticeCarousel from '../components/carousel/notice/NoticeCarousel'
 // import FAQ from '../components/faq/FAQ'
 import Event from '../components/carousel/event/Event'
@@ -49,6 +48,11 @@ export default function LandingPage(): JSX.Element {
   let noticeImages = getFilteredNotices(isSuccess, noticeList)
   noticeImages = noticeImages.slice(0, 5)
 
+  const openContact = () => {
+    const btn = document.getElementById('contact-launch-button') as HTMLElement
+    btn.click()
+  }
+
   return (
     <div className="justify-items-center ">
       <div className="w-40% absolute ml-5% mr-10% mt-16 xl:mt-5% left-0 right-0 p-0 md:py-14 z-20">
@@ -79,7 +83,8 @@ export default function LandingPage(): JSX.Element {
           Faculty of Computing Students Community
         </div>
         <p className="my-5 text-white text-left text-sm" data-aos="fade-up">
-          The Faculty of Computing Student Community also known as the FCSC is the largest student body of the Faculty of Computing.
+          The Faculty of Computing Student Community also known as the FCSC is
+          the largest student body of the Faculty of Computing.
         </p>
         <a href="#faq">
           <div data-aos="fade-up">
@@ -147,7 +152,17 @@ export default function LandingPage(): JSX.Element {
       <WhoWeAre />
       <Clubs />
       <div className="flex justify-center">
-        <LaunchButton />
+        <div data-aos="fade-up">
+          <div className="transform hover:scale-105 shadow-lg hover:shadow-xl transition ease-in duration-200">
+            <div
+              id="contact-launch-button"
+              className="bg-fcsc-orange px-10 py-3 mt-8 mb-36 rounded-lg transform hover:scale-105 text-white cursor-pointer w-full transition ease-in duration-200"
+              onClick={openContact}
+            >
+              Contact Us
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

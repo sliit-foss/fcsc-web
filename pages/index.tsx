@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
         <meta name="description" content={title} />
         <meta
           name="description"
-          content="SLIIT Faculty of Students' Community | Official Website"
+          content="SLIIT Faculty of Computing Students' Community | Official Website"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

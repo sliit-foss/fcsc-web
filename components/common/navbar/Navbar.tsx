@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { mobileNavVariants, navElementsVariants } from '../../../animations'
 import { HiMenuAlt2 } from 'react-icons/hi'
 import { RiCloseFill } from 'react-icons/ri'
-import LaunchButton from '../../../components/contactUs/LaunchButton'
+import Contact from '../../contactUs'
 
 function Navbar(): JSX.Element {
   const router = useRouter()
@@ -36,8 +36,8 @@ function Navbar(): JSX.Element {
 
   const onNavItemClick = (navText: string) => {
     if (navText == 'Contact Us' && typeof window !== 'undefined') {
-      const launchButton = document.getElementById('contact-launch-button') as HTMLElement
-      launchButton.click()
+      const btn = document.getElementById('contact-launch-button') as HTMLElement
+      btn.click()
     }
   }
 
@@ -96,7 +96,7 @@ function Navbar(): JSX.Element {
                       router.pathname == nav.href
                         ? 'text-white'
                         : 'text-fcsc-blue'
-                    }`}
+                    } ${nav.text === 'Contact Us' ? 'w-24' : ''}`}
                     onClick={()=>onNavItemClick(nav.text)}
                   >
                     {nav.text}
@@ -241,9 +241,7 @@ function Navbar(): JSX.Element {
             ''
           )}
         </AnimatePresence>
-        <div className={`${router.pathname === '/' ? 'hidden pointer-events-none' : ''}`}>
-          <LaunchButton />
-        </div>
+        <Contact />
       </div>
     </header>
   )

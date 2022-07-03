@@ -2,7 +2,6 @@ import ClubLogo from './ClubLogo'
 import foss from '../../public/clubs/foss.png'
 import ms from '../../public/clubs/ms.png'
 import fcscMedia from '../../public/clubs/fcscMedia.png'
-import mozilla from '../../public/clubs/mozilla.png'
 import cs2 from '../../public/clubs/cs2.png'
 import sesc from '../../public/clubs/sesc.png'
 
@@ -38,9 +37,6 @@ export default function Clubs(): JSX.Element {
             </a>
             <a href="https://www.facebook.com/sliit.fcmu/" target="_blank" rel="noreferrer" data-aos="fade-down">
               <ClubLogo image={fcscMedia} />
-            </a>
-            <a href="https://www.facebook.com/sliitmcc/" target="_blank" rel="noreferrer" data-aos="fade-up">
-              <ClubLogo image={mozilla} />
             </a>
             <a href="https://www.facebook.com/sliit.cscs/" target="_blank" rel="noreferrer" data-aos="fade-down">
               <ClubLogo image={cs2} />

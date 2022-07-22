@@ -18,7 +18,6 @@ import Head from 'next/head'
 import React from 'react'
 
 export default function Community(): JSX.Element {
-
   const pageDescription = `The Faculty of Computing Students' Community was established under
   the Faculty of Computing of SLIIT and consists of Computing
   Undergraduates. Since there is a growing competition in the Sri
@@ -64,9 +63,7 @@ export default function Community(): JSX.Element {
           data-aos="fade-right"
         >
           <div className="grid-cols-1 lg:w-1/2 md:w-1/2">
-            <p className="mt-2 text-center md:text-left">
-              {pageDescription}
-            </p>
+            <p className="mt-2 text-center md:text-left">{pageDescription}</p>
           </div>
         </div>
 
@@ -114,8 +111,9 @@ export default function Community(): JSX.Element {
                 </li>
                 <li>
                   To encourage and provide support to student communities within
-                  the Faculty of Computing to organize events which alin with the aims
-                  and objectives of the Faculty of Computing Student Body.
+                  the Faculty of Computing to organize events which alin with
+                  the aims and objectives of the Faculty of Computing Student
+                  Body.
                 </li>
                 <li>
                   To impart the necessary soft skills to the student in the
@@ -128,7 +126,10 @@ export default function Community(): JSX.Element {
           </div>
         </div>
 
-        <div className="grid grid-rows-1 px-10 lg:px-32 pb-3" data-aos="fade-left">
+        <div
+          className="grid grid-rows-1 px-10 lg:px-32 pb-3"
+          data-aos="fade-left"
+        >
           <div className="grid-cols-1 w-full">
             <p className="text-left">
               The following are some of the Main events organized by Faculty of
@@ -140,34 +141,37 @@ export default function Community(): JSX.Element {
         <div className="grid grid-rows-1 pl-4 mx-10 lg:mx-32 pb-8">
           <div className="grid-cols-1 w-full">
             <ol className="list-decimal font-bold mb-2" data-aos="fade-left">
-              <li>Wiramaya</li>
+              <li>Viramaya</li>
             </ol>
 
             <p data-aos="fade-left">
-              <b>Wiramaya</b> is arguably the most prominent event organized by
+              <b>Viramaya</b> is arguably the most prominent event organized by
               the Student Community of SLIIT. This event is organized by the
-              Faculty of Computing Students&apos; Community (FCSC) of SLIIT and pays
-              homage to the Classical aspect of Sri Lankan music. The Faculty of
-              Computing Student community, being the largest student body of the
-              university, puts together an event of alluring musical
+              Faculty of Computing Students&apos; Community (FCSC) of SLIIT and
+              pays homage to the Classical aspect of Sri Lankan music. The
+              Faculty of Computing Student community, being the largest student
+              body of the university, puts together an event of alluring musical
               performances of the university students; with the potential to
               blossom in the music industry, alongside well distinguished and
               reputed professional artists of the Sri Lankan music industry. It
               aims bringing together students as well as the academic and
               non-academic staff of SLIIT, to relax and enjoy a musical
               extravaganza unlike any other. Talking about the Initiation,{' '}
-              <b>WIRAMAYA</b> made its debut in the year 2012 at SLIIT main
+              <b>VIRAMAYA</b> made its debut in the year 2012 at SLIIT main
               campus premises, Malabe. It pioneered in showcasing the talents of
               its own students and has since been an event which has unearthed
               hidden gems from the midst of our very own community and attracted
               a keen audience from the university community. After a hiatus of
-              five years, <b>WIRAMAYA</b> made its comeback in the year 2017.
+              five years, <b>VIRAMAYA</b> made its comeback in the year 2017.
             </p>
           </div>
 
           <div className="grid grid-cols-1 mt-4 px-5 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
+              <div
+                className="lg:w-2/5 md:w-full mb-8 lg:mb-0"
+                data-aos="fade-right"
+              >
                 <Image
                   src={viramayaPic01}
                   alt="SLIIT FCSC"
@@ -207,16 +211,19 @@ export default function Community(): JSX.Element {
               Bank. The true meaning of sharing and contribution will be
               portrayed, and students will be joining for this program despite
               what their year is. This service project is one of the signature
-              events organized by the Faculty of Computing Students&apos; Community
-              where thousands of lives are benefited from this. This is
-              organized at the SLIIT Auditorium and Students from all faculties
-              join to donate blood.
+              events organized by the Faculty of Computing Students&apos;
+              Community where thousands of lives are benefited from this. This
+              is organized at the SLIIT Auditorium and Students from all
+              faculties join to donate blood.
             </p>
           </div>
 
           <div className="grid grid-cols-1 mt-4 px-5 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
+              <div
+                className="lg:w-2/5 md:w-full mb-8 lg:mb-0"
+                data-aos="fade-right"
+              >
                 <Image
                   src={bl1}
                   alt="SLIIT FCSC"
@@ -264,7 +271,10 @@ export default function Community(): JSX.Element {
 
           <div className="grid grid-cols-1 mt-4 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
+              <div
+                className="lg:w-2/5 md:w-full mb-8 lg:mb-0"
+                data-aos="fade-right"
+              >
                 <Image
                   src={miniHack1}
                   alt="SLIIT FCSC"
@@ -308,7 +318,10 @@ export default function Community(): JSX.Element {
 
           <div className="grid grid-cols-1 mt-4 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
+              <div
+                className="lg:w-2/5 md:w-full mb-8 lg:mb-0"
+                data-aos="fade-right"
+              >
                 <Image
                   src={pirithC1}
                   alt="SLIIT FCSC"
@@ -430,7 +443,10 @@ export default function Community(): JSX.Element {
 
           <div className="grid grid-cols-1 mt-4 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
+              <div
+                className="lg:w-2/5 md:w-full mb-8 lg:mb-0"
+                data-aos="fade-right"
+              >
                 <Image
                   src={wh01}
                   alt="SLIIT FCSC"
@@ -469,17 +485,21 @@ export default function Community(): JSX.Element {
               This is a project that is organized in order to enhance the
               relationship between students at SLIIT. Sportsmanship is vital for
               human beings and most importantly it is important to all the
-              students as they&apos;re entering a world of competition. At this event
-              the students will get a lot of exposure to the competitiveness and
-              the value of teamwork for their future endeavors. Building strong
-              teamworking individuals and competitive students is the main
-              motive of this and to enhance the Understanding between students.
+              students as they&apos;re entering a world of competition. At this
+              event the students will get a lot of exposure to the
+              competitiveness and the value of teamwork for their future
+              endeavors. Building strong teamworking individuals and competitive
+              students is the main motive of this and to enhance the
+              Understanding between students.
             </p>
           </div>
 
           <div className="grid grid-cols-1 mt-4 pb-8">
             <div className="lg:flex lg:flex-row md:flex md:flex-col w-full justify-around mt-12">
-              <div className="lg:w-2/5 md:w-full mb-8 lg:mb-0" data-aos="fade-right">
+              <div
+                className="lg:w-2/5 md:w-full mb-8 lg:mb-0"
+                data-aos="fade-right"
+              >
                 <Image
                   src={bash01}
                   alt="SLIIT FCSC"

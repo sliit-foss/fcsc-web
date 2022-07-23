@@ -15,7 +15,9 @@ function Navbar(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    const launchButton = document.getElementById('contact-launch-button') as HTMLElement
+    const launchButton = document.getElementById(
+      'contact-launch-button'
+    ) as HTMLElement
     launchButton.style.display = 'none'
   })
 
@@ -36,7 +38,9 @@ function Navbar(): JSX.Element {
 
   const onNavItemClick = (navText: string) => {
     if (navText == 'Contact Us' && typeof window !== 'undefined') {
-      const btn = document.getElementById('contact-launch-button') as HTMLElement
+      const btn = document.getElementById(
+        'contact-launch-button'
+      ) as HTMLElement
       btn.click()
     }
   }
@@ -57,7 +61,10 @@ function Navbar(): JSX.Element {
 
   return (
     <header className="sticky top-0 flex flex-row w-full h-14 justify-between items-center shadow-noOffset z-30 bg-white">
-      <a className="w-28 h-12 flex flex-row items-center ml-9 z-10 bg-white" href='/'>
+      <a
+        className="w-28 h-12 flex flex-row items-center ml-9 z-10 bg-white"
+        href="/"
+      >
         <Image src={fcscLogo} alt="FCSC Logo" className="w-max" />
       </a>
       <div className="flex flex-row justify-end  items-center w-4/6 h-14 bg-white">
@@ -65,7 +72,7 @@ function Navbar(): JSX.Element {
           {navs.map((nav, key) => (
             <div
               key={key}
-              className={`flex flex-row hidden lg:block  items-center justify-center mr-10 h-8 rounded-md text-center font-semibold transition ease-in duration-150 
+              className={`flex flex-row hidden lg:block  items-center justify-center mr-10  h-8 rounded-md text-center font-semibold transition ease-in duration-150 md:mr-8
               ${
                 router.pathname == nav.href
                   ? 'bg-fcsc-orange filter hover:brightness-110 w-16'
@@ -90,14 +97,16 @@ function Navbar(): JSX.Element {
                   Logout
                 </div>
               ) : (
-                <Link href={nav.text != 'Contact Us' ? nav.href : router.pathname}>
+                <Link
+                  href={nav.text != 'Contact Us' ? nav.href : router.pathname}
+                >
                   <div
                     className={`h-full flex items-center justify-center cursor-pointer ${
                       router.pathname == nav.href
                         ? 'text-white'
                         : 'text-fcsc-blue'
                     } ${nav.text === 'Contact Us' ? 'w-24' : ''}`}
-                    onClick={()=>onNavItemClick(nav.text)}
+                    onClick={() => onNavItemClick(nav.text)}
                   >
                     {nav.text}
                   </div>
@@ -202,7 +211,12 @@ function Navbar(): JSX.Element {
                   className="font-medium text-2xl hover:text-gray-light text-fcsc-blue  transition ease-in"
                   onClick={() => setIsOpen(false)}
                 >
-                  <div className="cursor-pointer" onClick={()=>onNavItemClick('Contact Us')}>Contact Us</div>
+                  <div
+                    className="cursor-pointer"
+                    onClick={() => onNavItemClick('Contact Us')}
+                  >
+                    Contact Us
+                  </div>
                 </li>
                 {loginStatus ? (
                   <li

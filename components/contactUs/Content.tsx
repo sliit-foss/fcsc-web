@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { ImLocation2 } from 'react-icons/im'
-import { MdEmail } from 'react-icons/md'
 import { MailEndpoints } from '../../pages/api/mail'
 import LoadingOverlay from '../common/LoadingOverlay'
 import Swal from 'sweetalert2'
@@ -85,10 +84,11 @@ export default function Content(props: ContentProps): JSX.Element {
                 Contact Us
               </div>
               <div className="text-base font-bold md:text-left text-center mb-3 md:mb-5 ">
-                Fill up the form and we will get back to you as soon as possible.
+                Fill up the form and we will get back to you as soon as
+                possible.
               </div>
             </div>
-            <div className="container flex flex-col md:flex-row">
+            <div className="container flex flex-col md:flex-row items-center">
               <div className="w-full md:w-1/2">
                 <div className="w-full rounded-lg flex flex-row  ">
                   <div className="flex flex-col w-full md:mr-16 ">
@@ -103,18 +103,6 @@ export default function Content(props: ContentProps): JSX.Element {
                       <h2 className="text-sm md:text-base font-medium text-center">
                         SLIIT Malabe
                       </h2>
-                    </div>
-                    <div className="group bg-gray-200 hover:bg-fcsc-orange_light transition ease-in duration-200 flex flex-col my-4 md:my-6 py-4 md:py-6  rounded-lg shadow-lg">
-                      <MdEmail
-                        size={30}
-                        className="hidden md:flex w-full my-3 mt-2 fill-current text-fcsc-orange group-hover:text-black transition ease-in duration-200"
-                      />
-                      <h2 className="text-sm md:text-base font-bold text-center">
-                        Email Us
-                      </h2>
-                      <p className="text-sm md:text-base font-medium text-center truncate">
-                        <a href="mailto:students.foc@sliit.lk">students.foc@sliit.lk</a>
-                      </p>
                     </div>
                   </div>
                 </div>

@@ -124,7 +124,7 @@ export default function Content(props: ContentProps): JSX.Element {
                     name="email"
                     placeholder="Email"
                     pattern="[IT/it0-9@my.sliit.lk]{22}"
-                    title="Email must be in the format it23217654@my.sliit.lk"
+                    title="Email address must be in the format itXXXXXXXX@my.sliit.lk"
                     required
                     className="w-full bg-white rounded border border-gray-300 focus:border-fcsc-orange focus:ring-2 focus:ring-fcsc-orange_light text-base outline-none text-gray-700 py-0 md:py-1 px-3 leading-8 shadow-lg transition-colors duration-200 ease-in-out"
                   />

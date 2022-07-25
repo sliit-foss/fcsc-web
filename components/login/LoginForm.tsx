@@ -34,6 +34,7 @@ const LoginForm = ({
         setShowLoading(false)
         window.localStorage.setItem('RememberMe', rememberMeValue.toString())
         window.localStorage.setItem('LoggedIn', 'true')
+        document.dispatchEvent(new Event('login'))
         let timerInterval: any
         Swal.fire({
           heightAuto: false,

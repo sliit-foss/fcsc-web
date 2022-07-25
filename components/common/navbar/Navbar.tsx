@@ -13,24 +13,47 @@ function Navbar(): JSX.Element {
   const router = useRouter()
 
   const [isOpen, setIsOpen] = useState(false)
+  const [navs, setNavs] = useState([
+    { text: 'Home', href: '/' },
+    { text: 'About', href: '/about' },
+    { text: 'Community', href: '/community' },
+    { text: 'Events', href: '/events' },
+    { text: 'Notices', href: '/notices' },
+    { text: 'Contact Us', href: '/contact' },
+    { text: 'Login', href: '/login' },
+  ])
+
+  const [loginStatus, setLoginStatus] = useState(false)
 
   useEffect(() => {
     const launchButton = document.getElementById(
       'contact-launch-button'
     ) as HTMLElement
     launchButton.style.display = 'none'
-  })
 
-  let loginStatus = false
-  if (process.browser) {
-    loginStatus = window.localStorage.getItem('LoggedIn') === 'true'
-  }
+    if (process.browser) {
+      setLoginStatus(window.localStorage.getItem('LoggedIn') === 'true')
+      document.addEventListener('login', () => setLoginStatus(true))
+    }
+
+    if (loginStatus) {
+      if (navs.filter((item) => item.text === 'Management').length === 0) {
+        const mod = [...navs]
+        mod.splice(navs.length - 1, 0, { text: 'Management', href: '/admin' })
+        setNavs(mod)
+      }
+    } else {
+      setNavs(navs.filter((item) => item.text !== 'Management'))
+    }
+  }, [loginStatus])
+
   const toggleNav = () => {
     setIsOpen((prev) => !prev)
   }
 
   const logOut = () => {
     window.localStorage.clear()
+    setLoginStatus(false)
     router.replace({
       pathname: '/',
     })
@@ -43,20 +66,6 @@ function Navbar(): JSX.Element {
       ) as HTMLElement
       btn.click()
     }
-  }
-
-  const navs = [
-    { text: 'Home', href: '/' },
-    { text: 'About', href: '/about' },
-    { text: 'Community', href: '/community' },
-    { text: 'Events', href: '/events' },
-    { text: 'Notices', href: '/notices' },
-    { text: 'Contact Us', href: '/contact' },
-    { text: 'Login', href: '/login' },
-  ]
-
-  if (loginStatus) {
-    navs.splice(navs.length - 1, 0, { text: 'Management', href: '/admin' })
   }
 
   return (
@@ -78,8 +87,10 @@ function Navbar(): JSX.Element {
                   ? 'bg-fcsc-orange filter hover:brightness-110 w-16'
                   : 'bg-white'
               } ${
-                nav.text == 'Community' || nav.text == 'Management'
+                nav.text == 'Community'
                   ? 'w-28'
+                  : nav.text == 'Management'
+                  ? 'w-32'
                   : 'w-20'
               }
               `}

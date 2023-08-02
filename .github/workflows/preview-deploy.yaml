@@ -1,0 +1,24 @@
+name: Deploy PR preview
+
+on:
+  workflow_run:
+    workflows:
+      - Build PR preview
+    types:
+      - completed
+
+jobs:
+  deploy-preview:
+    name: Deploy preview
+    runs-on: ubuntu-latest
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    steps:
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v3
+
+      - name: Deploy preview 🚀
+        uses: sliit-foss/actions/preview-deployments/deploy@main
+        with:
+          site_domain: fcsc.sliitfoss.org

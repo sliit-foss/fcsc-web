@@ -1,0 +1,14 @@
+name: Close PR
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  send-pr-number-to-clean:
+    name: Record PR number to clean
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload PR number 📤
+        uses: sliit-foss/actions/preview-deployments/upload-pr-number@main

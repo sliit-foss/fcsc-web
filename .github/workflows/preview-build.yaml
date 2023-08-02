@@ -1,0 +1,33 @@
+name: Build PR preview
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+concurrency:
+  group: preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-preview:
+    name: Build preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v3
+      
+      - name: Change router base path 🛣️
+        run: |
+          sed -i "s/basePath: ''/basePath: '\/preview\/pr-${{ github.event.number }}'/" next.config.js
+
+      - name: Build 🏗️
+        uses: ./.github/actions/build
+
+      - name: Create .nojekyll file 🚧
+        run: touch ./dist/.nojekyll
+
+      - name: Upload build files 📤
+        uses: sliit-foss/actions/preview-deployments/postbuild@main

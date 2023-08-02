@@ -1,0 +1,21 @@
+name: Clean PR preview
+
+on:
+  workflow_run:
+    workflows: ['Close PR']
+    types:
+      - completed
+
+jobs:
+  close-preview:
+    name: Close PR preview
+    runs-on: ubuntu-latest
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    steps:
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v3
+
+      - name: Clean preview 🧹
+        uses: sliit-foss/actions/preview-deployments/clean@main
